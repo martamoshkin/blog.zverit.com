@@ -119,77 +119,77 @@ public RecipientActor()
 
 ```cs
 public class DeliveryActor : AtLeastOnceDeliveryReceiveActor
+{
+    public override string PersistenceId => Context.Self.Path.Name;
+    private int counter = 0;
+    private class DoSend { }
+    private class CleanSnapshots { }
+    private ICancelable messageSend;
+    private readonly IActorRef targetActor;
+    private ICancelable snapshotCleanup;
+    
+    const string Characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    public DeliveryActor(IActorRef targetActor)
     {
-        public override string PersistenceId => Context.Self.Path.Name;
-        private int counter = 0;
-        private class DoSend { }
-        private class CleanSnapshots { }
-        private ICancelable messageSend;
-        private readonly IActorRef targetActor;
-        private ICancelable snapshotCleanup;
-        
-        const string Characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        this.targetActor = targetActor;
 
-        public DeliveryActor(IActorRef targetActor)
+        // восстановим последнее состояние доставки
+        Recover<SnapshotOffer>(offer => offer.Snapshot is AtLeastOnceDeliverySnapshot, offer =>
         {
-            this.targetActor = targetActor;
-
-            // восстановим последнее состояние доставки
-            Recover<SnapshotOffer>(offer => offer.Snapshot is AtLeastOnceDeliverySnapshot, offer =>
-            {
-                var snapshot = offer.Snapshot as AtLeastOnceDeliverySnapshot;
-                SetDeliverySnapshot(snapshot);
-            });
-            Command<DoSend>(send =>
-            {
-                Self.Tell(new Write("Сообщение " + Characters[this.counter++ % Characters.Length]));
-            });
-
-            Command<Write>(write =>
-            {
-                Deliver(this.targetActor.Path, messageId => new DeliveryEnvelope<Write>(write, messageId));
-
-                // сохраняем полное состояние
-                SaveSnapshot(GetDeliverySnapshot());
-            });
-
-            Command<DeliveryAck>(ack =>
-            {
-                ConfirmDelivery(ack.MessageId);
-            });
-
-            Command<CleanSnapshots>(clean =>
-            {
-                // сохранить текущее состояние подтверждений
-                SaveSnapshot(GetDeliverySnapshot());
-            });
-
-            Command<SaveSnapshotSuccess>(saved =>
-            {
-                var seqNo = saved.Metadata.SequenceNr;
-                DeleteSnapshots(new SnapshotSelectionCriteria(seqNo, saved.Metadata.Timestamp.AddMilliseconds(-1))); //удалить все, кроме текущего состояния            
-	});
-        }
-
-        protected override void PreStart()
+            var snapshot = offer.Snapshot as AtLeastOnceDeliverySnapshot;
+            SetDeliverySnapshot(snapshot);
+        });
+        Command<DoSend>(send =>
         {
-            this.messageSend = Context.System.Scheduler.ScheduleTellRepeatedlyCancelable(TimeSpan.FromSeconds(1),
-                TimeSpan.FromSeconds(10), Self, new DoSend(), Self);
+            Self.Tell(new Write("Сообщение " + Characters[this.counter++ % Characters.Length]));
+        });
 
-            this.snapshotCleanup =
-                Context.System.Scheduler.ScheduleTellRepeatedlyCancelable(TimeSpan.FromSeconds(10),
-                    TimeSpan.FromSeconds(10), Self, new CleanSnapshots(), ActorRefs.NoSender);
-
-            base.PreStart();
-        }
-        protected override void PostStop()
+        Command<Write>(write =>
         {
-            this.snapshotCleanup?.Cancel();
-            this.messageSend?.Cancel();
+            Deliver(this.targetActor.Path, messageId => new DeliveryEnvelope<Write>(write, messageId));
 
-            base.PostStop();
-        }
+            // сохраняем полное состояние
+            SaveSnapshot(GetDeliverySnapshot());
+        });
+
+        Command<DeliveryAck>(ack =>
+        {
+            ConfirmDelivery(ack.MessageId);
+        });
+
+        Command<CleanSnapshots>(clean =>
+        {
+            // сохранить текущее состояние подтверждений
+            SaveSnapshot(GetDeliverySnapshot());
+        });
+
+        Command<SaveSnapshotSuccess>(saved =>
+        {
+            var seqNo = saved.Metadata.SequenceNr;
+            DeleteSnapshots(new SnapshotSelectionCriteria(seqNo, saved.Metadata.Timestamp.AddMilliseconds(-1))); //удалить все, кроме текущего состояния            
+});
     }
+
+    protected override void PreStart()
+    {
+        this.messageSend = Context.System.Scheduler.ScheduleTellRepeatedlyCancelable(TimeSpan.FromSeconds(1),
+            TimeSpan.FromSeconds(10), Self, new DoSend(), Self);
+
+        this.snapshotCleanup =
+            Context.System.Scheduler.ScheduleTellRepeatedlyCancelable(TimeSpan.FromSeconds(10),
+                TimeSpan.FromSeconds(10), Self, new CleanSnapshots(), ActorRefs.NoSender);
+
+        base.PreStart();
+    }
+    protected override void PostStop()
+    {
+        this.snapshotCleanup?.Cancel();
+        this.messageSend?.Cancel();
+
+        base.PostStop();
+    }
+}
 ```
 
 {:.center}
