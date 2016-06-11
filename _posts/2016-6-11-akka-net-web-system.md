@@ -23,7 +23,7 @@ Akka.NET предоставляет все эти возможности на я
 Устройство актора в Akka.NET включает себя поведение, «почтовый ящик», состояние, его «детей» и стратегию руководителя.
 
 {:.center}
-![Результат выполнения программы](http://blog.zverit.com/assets/aktor-body.png)
+![Устройство актора в Akka.NET](http://blog.zverit.com/assets/aktor-body.png)
 
 Актор должен быть защищен от воздействия извне. Таким образом, акторы доступны извне по ссылке, которые представлены объектом. Деление на внутренний и внешний объект обеспечивает прозрачность для всех операций. Но более важным аспектом является то, что нет возможности заглянуть во внутрь актора и получить его состояние снаружи.
 
@@ -38,12 +38,17 @@ Akka.NET предоставляет все эти возможности на я
 Стратегия руководителя. В последней части актора находится стратегия для обработки ошибок его «детей». Устранение неисправностей в Akka становится довольно прозрачным, применяя стратегию отписки наблюдения и мониторинга, для всех кто вышел из строя.
 
 {:.center}
-![Результат выполнения программы](http://blog.zverit.com/assets/error-kernel-akka.png)
+![Стратегия наблюдателя «один для одного»](http://blog.zverit.com/assets/error-kernel-akka.png)
 
-Akka.NET — это благо для производительности, так как программирование ее моделей просты — вместо того, чтобы писать код, который, к примеру, пытается  присвоить права компании для 100 000 пользователей параллельно, вместо этого мы можем написать не большую часть кода, который делает это определение для одного пользователя и запускает 100 000 экземпляров с минимальными затратами. 
+Акторы в C# реализуются путем расширения класса `ReceiveActor` и настройки, что получает сообщения используя `Receive<TMessage>` метод.
 
-Благодаря идеологии Akka.NET легко построить сложные, но надежные системы с простой реализацией, что гораздо облегчает дальнейшее их сопровождение. 
+Props это объект который используется для создания актора в главной `ActorSystem` или в рамках другого актора.
 
+```cs
+Props sampleActorProps = Props.Create<SampleActor>();
+```
+
+При помощи Akka.NET построим систему явного подтверждения обработки сообщений. В точке входа в приложение создадим актор-систему, принимающий актор и актор доставки.
 
 ```cs
 using (var actorSystem = ActorSystem.Create("DeliverySystem"))
@@ -54,5 +59,143 @@ using (var actorSystem = ActorSystem.Create("DeliverySystem"))
 }
 ```
 
+Опишем типы сообщений.
+
+```cs
+public class DeliveryEnvelope<TMessage>
+  {
+      public DeliveryEnvelope(TMessage message, long messageId)
+      {
+          Message = message;
+          MessageId = messageId;
+      }
+      public TMessage Message { get; private set; }
+      public long MessageId { get; private set; }
+  }
+  public class DeliveryAck
+  {
+      public DeliveryAck(long messageId)
+      {
+          MessageId = messageId;
+      }
+
+      public long MessageId { get; private set; }
+  }
+  public class Write
+  {
+      public Write(string content)
+      {
+          Content = content;
+      }
+      public string Content { get; private set; }
+  }
+}
+```
+
+Далее опишем принимающий актор. 
+
+```cs
+public RecipientActor()
+{
+    Receive<DeliveryEnvelope<Write>>(write =>
+    {
+        Console.WriteLine("Получено сообщение {0} [id: {1}] от {2} - подтвердить?", write.Message.Content, write.MessageId, Sender);
+        var response = Console.ReadLine()?.ToLowerInvariant();
+        if (!string.IsNullOrEmpty(response) && (response.Equals("да") || response.Equals("д")))
+        {
+            // подтверждаем доставку
+            Sender.Tell(new DeliveryAck(write.MessageId));
+            Console.WriteLine($"Подтверждение сообщения {write.MessageId}",);
+        }
+        else
+        {
+            Console.WriteLine($"Сообщение {write.MessageId} не подтверждено");
+        }
+    });
+}
+```
+
+Затем опишем актор доставки сообщений. 
+
+```cs
+public class DeliveryActor : AtLeastOnceDeliveryReceiveActor
+    {
+        public override string PersistenceId => Context.Self.Path.Name;
+        private int counter = 0;
+        private class DoSend { }
+        private class CleanSnapshots { }
+        private ICancelable messageSend;
+        private readonly IActorRef targetActor;
+        private ICancelable snapshotCleanup;
+        
+        const string Characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        public DeliveryActor(IActorRef targetActor)
+        {
+            this.targetActor = targetActor;
+
+            // восстановим последнее состояние доставки
+            Recover<SnapshotOffer>(offer => offer.Snapshot is AtLeastOnceDeliverySnapshot, offer =>
+            {
+                var snapshot = offer.Snapshot as AtLeastOnceDeliverySnapshot;
+                SetDeliverySnapshot(snapshot);
+            });
+            Command<DoSend>(send =>
+            {
+                Self.Tell(new Write("Сообщение " + Characters[this.counter++ % Characters.Length]));
+            });
+
+            Command<Write>(write =>
+            {
+                Deliver(this.targetActor.Path, messageId => new DeliveryEnvelope<Write>(write, messageId));
+
+                // сохраняем полное состояние
+                SaveSnapshot(GetDeliverySnapshot());
+            });
+
+            Command<DeliveryAck>(ack =>
+            {
+                ConfirmDelivery(ack.MessageId);
+            });
+
+            Command<CleanSnapshots>(clean =>
+            {
+                // сохранить текущее состояние подтверждений
+                SaveSnapshot(GetDeliverySnapshot());
+            });
+
+            Command<SaveSnapshotSuccess>(saved =>
+            {
+                var seqNo = saved.Metadata.SequenceNr;
+                DeleteSnapshots(new SnapshotSelectionCriteria(seqNo, saved.Metadata.Timestamp.AddMilliseconds(-1))); //удалить все, кроме текущего состояния            
+	});
+        }
+
+        protected override void PreStart()
+        {
+            this.messageSend = Context.System.Scheduler.ScheduleTellRepeatedlyCancelable(TimeSpan.FromSeconds(1),
+                TimeSpan.FromSeconds(10), Self, new DoSend(), Self);
+
+            this.snapshotCleanup =
+                Context.System.Scheduler.ScheduleTellRepeatedlyCancelable(TimeSpan.FromSeconds(10),
+                    TimeSpan.FromSeconds(10), Self, new CleanSnapshots(), ActorRefs.NoSender);
+
+            base.PreStart();
+        }
+        protected override void PostStop()
+        {
+            this.snapshotCleanup?.Cancel();
+            this.messageSend?.Cancel();
+
+            base.PostStop();
+        }
+    }
+```
+
 {:.center}
-->![Результат выполнения программы](http://blog.zverit.com/assets/akka-sample-result.png)<-
+->![Результат выполнения программы](http://blog.zverit.com/assets/akka-sample-result.png)
+
+Akka.NET — это благо для производительности, так как программирование ее моделей просты — вместо того, чтобы писать код, который, к примеру, пытается  присвоить права компании для 100 000 пользователей параллельно, вместо этого мы можем написать не большую часть кода, который делает это определение для одного пользователя и запускает 100 000 экземпляров с минимальными затратами. 
+
+Благодаря идеологии Akka.NET легко построить сложные, но надежные системы с простой реализацией, что гораздо облегчает дальнейшее их сопровождение. 
+
