@@ -1,4 +1,9 @@
-
+---
+layout: post
+title:  "Welcome to Jekyll!"
+date:   2016-06-11 15:15:29 +0300
+categories: jekyll update
+---
 {% highlight ruby %}
 def print_hi(name)
   puts "Hi, #{name}"
