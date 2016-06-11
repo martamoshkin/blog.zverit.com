@@ -4,6 +4,10 @@
 .highlight {
     background: #fff;
     @extend %vertical-rhythm;
+    
+    code {
+        font-size: 13px;
+    }
 
     .highlighter-rouge & {
       background: #eef;
