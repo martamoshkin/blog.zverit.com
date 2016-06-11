@@ -167,7 +167,7 @@ public class DeliveryActor : AtLeastOnceDeliveryReceiveActor
         Command<SaveSnapshotSuccess>(saved =>
         {
             var seqNo = saved.Metadata.SequenceNr;
-            DeleteSnapshots(new SnapshotSelectionCriteria(seqNo, saved.Metadata.Timestamp.AddMilliseconds(-1))); //удалить все, кроме текущего состояния            
+            DeleteSnapshots(new SnapshotSelectionCriteria(seqNo, saved.Metadata.Timestamp.AddMilliseconds(-1)));          
 });
     }
 
