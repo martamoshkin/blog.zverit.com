@@ -14,7 +14,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://blog.zverit.com" # the base hostname & protocol for your site
-twitter_username: zverit
+twitter_username: zverit 
 github_username:  Zverit 
 
 # Build settings 
