@@ -22,7 +22,7 @@ Akka.NET предоставляет все эти возможности на я
 
 Устройство актора в Akka.NET включает себя поведение, «почтовый ящик», состояние, его «детей» и стратегию руководителя.
 
-![Результат выполнения программы](blog.zverit.com/assets/akka-sample-result.png)
+![Результат выполнения программы](http://blog.zverit.com/assets/akka-sample-result.png)
 
 ```cs
 using (var actorSystem = ActorSystem.Create("DeliverySystem"))
