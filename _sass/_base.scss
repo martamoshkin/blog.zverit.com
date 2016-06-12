@@ -501,7 +501,6 @@ pre {
 
 	ul li {
 		font-size: 15px;
-		color: #cfdee7;
 		padding: 0;
 	}
 
@@ -564,7 +563,7 @@ pre {
 	}
 
 	.knob {
-		color: White !important;
+		color: #000 !important;
 		text-shadow: 1px 1px 0px #0d4667;
 		font-size: 25px !important;
 	}
@@ -604,7 +603,6 @@ pre {
 		white-space: nowrap;
 		cursor: pointer;
 		outline: none;
-		background-color: #0D4667;
 		-webkit-background-clip: padding;
 		-moz-background-clip: padding;
 		-o-background-clip: padding-box;
@@ -727,12 +725,10 @@ pre {
 		display: block;
 		float: right;
 		padding-left: 20px;
-		color: #00495A;
 		font-weight: bold;
 	}
 
 	.contact-item {
-		color: #fff;
 		border-bottom: 1px solid #A7C4D7;
 		padding-bottom: 5px;
 		padding-top: 5px;
@@ -742,13 +738,10 @@ pre {
 
 	.contact-type {
 		display: inline-block;
-		color: white;
 		height: auto;
 		text-decoration: none;
 		width: auto;
 		font-size: 20px;
-		font-family: 'OstrichSansBlack', Arial, sans-serif;
-		;
 		padding-left: 10px;
 		text-transform: uppercase;
 	}
