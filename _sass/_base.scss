@@ -246,6 +246,7 @@ pre {
 		border: none;
 		background: none;
 		margin: 0;
+		list-style: none;
 		padding: 0;
 	}
 
@@ -290,12 +291,10 @@ pre {
 	}
 
 	div#container h3.page_title {
-		font-family: 'OstrichSansBlack';
 		margin-left: 25px;
 		font-size: 35px;
 		color: #fff;
-		border-bottom: 1px solid #fff;
-		text-shadow: 1px 1px 2px #185477;
+		border-bottom: 1px solid #000;
 		line-height: 2;
 		padding: 5px 0 0px 0px;
 	}
@@ -564,7 +563,6 @@ pre {
 
 	.knob {
 		color: #000 !important;
-		text-shadow: 1px 1px 0px #0d4667;
 		font-size: 25px !important;
 	}
 
