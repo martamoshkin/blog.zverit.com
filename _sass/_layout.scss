@@ -170,6 +170,7 @@
  */
 .page-content {
     padding: $spacing-unit 0;
+    font-family: "PT Serif",Georgia,"Times New Roman",serif;
 }
 
 .page-heading {
@@ -186,7 +187,7 @@
 }
 
 .post-meta {
-    font-size: $small-font-size;
+    font-size: $base-font-size;
     color: $grey-color;
 }
 
