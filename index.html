@@ -10,6 +10,10 @@ layout: default
     {% for post in site.posts %}
       <li>
         <span class="post-meta">
+          <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
+          
           {{ post.date | date: "%b %-d, %Y" }}
           {% if post.tags != empty %}
           |
@@ -17,11 +21,15 @@ layout: default
           <a class="codinfox-tag-mark" href="/blog/tag/#{{ tag | slugify }}">{{ tag }}</a>
           {% endfor %}
           {% endif %}
+          
+          {{ post.content | split:"<!-- more -->" | first % }}
+          
+          <div class="codinfox-post-more">
+            <a href="{{ post.url }}#disqus_thread">Comment</a>&nbsp;
+            <a href="{{ post.url }}">Read more</a>
+        </div>
+        <hr/>
         </span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
       </li>
     {% endfor %}
   </ul>
