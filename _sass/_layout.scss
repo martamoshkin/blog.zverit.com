@@ -205,6 +205,23 @@
     margin-bottom: $spacing-unit;
 }
 
+.post-tag{
+    display: inline-block;
+    background: #3d3d3d;
+    padding: 0 .5rem;
+    margin-right: .5rem;
+    border-radius: 4px;
+    color: #fff;
+    font-family: "PT Sans",Helvetica,Arial,sans-serif;
+    font-size: 90%;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+
+}
+
 .post-title {
     font-size: 38px;
     letter-spacing: -1px;
