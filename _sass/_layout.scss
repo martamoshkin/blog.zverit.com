@@ -226,7 +226,9 @@
     -moz-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
 }
-
+.post-tag:hover{ 
+    color: #fff;
+}
 .post-title {
     font-size: 38px;
     letter-spacing: -1px;
