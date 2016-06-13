@@ -207,6 +207,11 @@
 .post-header {
     margin-bottom: $spacing-unit;
 }
+post-tag:before {
+    content: "\f02b";
+    font-family: FontAwesome;
+    padding-right: .5em;
+}
 
 .post-tag{
     display: inline-block;
