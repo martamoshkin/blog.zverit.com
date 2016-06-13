@@ -22,7 +22,7 @@ layout: default
           <div class="post-preview">
           {{ post.content | split:"<!-- more -->" | first % }}
           </div>
-          <div class="codinfox-post-more">
+          <div class="post-more">
             <a href="{{ post.url }}#disqus_thread"><i class="fa fa-comments"></i>  Comment</a>&nbsp;
             <a href="{{ post.url }}"><i class="fa fa-plus-circle" aria-hidden="true"></i> Read more</a>
         </div>
