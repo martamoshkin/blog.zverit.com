@@ -19,8 +19,9 @@ layout: default
           {% endfor %}
           {% endif %}
           
+          <div class="post-preview">
           {{ post.content | split:"<!-- more -->" | first % }}
-          
+          </div>
           <div class="codinfox-post-more">
             <a href="{{ post.url }}#disqus_thread">Comment</a>&nbsp;
             <a href="{{ post.url }}">Read more</a>
