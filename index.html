@@ -23,7 +23,7 @@ layout: default
           {{ post.content | split:"<!-- more -->" | first % }}
           </div>
           <div class="codinfox-post-more">
-            <a href="{{ post.url }}#disqus_thread">Comment</a>&nbsp;
+            <a href="{{ post.url }}#disqus_thread"> <i class="fa fa-plus-circle" aria-hidden="true"></i> Comment</a>&nbsp;
             <a href="{{ post.url }}">Read more</a>
         </div>
         </span>
