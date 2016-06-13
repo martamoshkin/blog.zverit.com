@@ -189,7 +189,9 @@
     font-size: $base-font-size;
     color: $grey-color;
 }
-
+.post-preview{
+    color: $text-color;
+}
 .post-link {
     display: block;
     font-size: 24px;
