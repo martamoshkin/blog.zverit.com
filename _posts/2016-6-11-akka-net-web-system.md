@@ -100,7 +100,8 @@ public RecipientActor()
 {
     Receive<DeliveryEnvelope<Write>>(write =>
     {
-        Console.WriteLine("Получено сообщение {0} [id: {1}] от {2} - подтвердить?", write.Message.Content, write.MessageId, Sender);
+        Console.WriteLine("Получено сообщение {0} [id: {1}] от {2} - подтвердить?",
+          write.Message.Content, write.MessageId, Sender);
         var response = Console.ReadLine()?.ToLowerInvariant();
         if (!string.IsNullOrEmpty(response) && (response.Equals("да") || response.Equals("д")))
         {
