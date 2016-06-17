@@ -25,7 +25,7 @@ public interface IJob
 
 Для начала зарегистрируем имеющиеся джобы, удобным нам DI-контейнером. Для примера используем Castle Windsor. 
 
-Регистрируем все джобы на базе интерфейса IJob.
+Регистрируем все джобы на базе интерфейса `IJob`.
 
 ```cs
 container.Register(Classes.FromThisAssembly().BasedOn<IJob>());
@@ -46,7 +46,7 @@ GlobalConfiguration.Configuration.UseActivator(new WindsorJobActivator(container
 
 
 После того как наши джобы зарегистрированы, приступим непосредственно к механизму конфигурации шедулера. 
-Создаем файл конфигурации config.json. И определим формат записи задач. 
+Создаем файл конфигурации `config.json`. И определим формат записи задач. 
 
 ```json
 [
