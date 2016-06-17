@@ -98,6 +98,8 @@ private void UpdateConfiguration()
 }
 ```
 
+Напишем функцию которая будет наблюдать за файлом конфигурации и обновлять задачи, в случае его изменения.\
+
 ```cs
 [PermissionSet(SecurityAction.Demand, Name = "FullTrust")]
 private FileSystemWatcher CreateWatcher()
