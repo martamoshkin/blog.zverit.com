@@ -22,3 +22,44 @@ public interface IJob
 	void Execute(Dictionary<string, string> parameters);
 }
 ```
+
+Для начала зарегистрируем имеющиеся джобы, удобным нам DI-контейнером. Для примера используем Castle Windsor. 
+
+Регистрируем все джобы на базе интерфейса IJob.
+
+```cs
+container.Register(Classes.FromThisAssembly().BasedOn<IJob>());
+```
+
+
+Устанавливаем из NuGet дополнительный пакет:
+
+```
+Install-Package HangFire.Windsor
+```
+
+И подключаем `JobActivator`
+
+```cs
+GlobalConfiguration.Configuration.UseActivator(new WindsorJobActivator(container.Kernel));
+```
+
+
+После того как наши джобы зарегистрированы, приступим непосредственно к механизму конфигурации шедулера. 
+Создаем файл конфигурации config.json. И определим формат записи задач. 
+
+```js
+[
+  {
+    "Id": "1",
+    "Name": "ExampleJob",
+    "CronExpression": "0 0 * * *",
+    "Parameters": {
+      "Parameter1": "Text",
+      "Parameter2": "123"
+    }
+  },…
+]
+```
+
+`Name` будет выступать как в роли названия джобы, так и названия ее класса.
