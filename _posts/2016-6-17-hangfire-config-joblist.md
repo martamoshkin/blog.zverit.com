@@ -84,14 +84,13 @@ private void UpdateConfiguration()
 {
     var jobs = this.GetJobsList();
     
-
     foreach (var item in jobs)
     {
         var jobType = this.container.Kernel.GetAssignableHandlers(typeof(IJob))
-					.Single(
-						h =>
-							h.ComponentModel.Implementation.Name.Equals(item.Name, StringComparison.InvariantCultureIgnoreCase))
-					.ComponentModel.Implementation;
+			.Single(
+				h => h.ComponentModel.Implementation.Name
+						.Equals(item.Name, StringComparison.InvariantCultureIgnoreCase))
+							.ComponentModel.Implementation;
 		var job = (IJob) this.container.Resolve(jobType);
 
         RecurringJob.AddOrUpdate(item.Id, () => job.Execute(item.Parameters), item.CronExpression);
