@@ -62,4 +62,6 @@ GlobalConfiguration.Configuration.UseActivator(new WindsorJobActivator(container
 ]
 ```
 
-`Name` будет выступать как в роли названия джобы, так и названия ее класса.
+`Name` будет выступать как в роли названия джобы, так и названия ее класса. 
+`CronExpression`- `Cron` выражения. `Parameters' - неограниченный список параметров, которые можно передать в тело джобы.
+
