@@ -97,3 +97,38 @@ private void UpdateConfiguration()
     }
 }
 ```
+
+```cs
+[PermissionSet(SecurityAction.Demand, Name = "FullTrust")]
+private FileSystemWatcher CreateWatcher()
+{
+    var path = Path.IsPathRooted(this.configPath)
+        ? this.configPath
+        : Path.Combine(Directory.GetCurrentDirectory(), this.configPath);
+    var configDir = Path.GetDirectoryName(path) ?? string.Empty;
+    var extension = Path.GetExtension(path);
+
+    var watcher = new FileSystemWatcher
+    {
+        Path = configDir,
+        NotifyFilter = NotifyFilters.LastWrite,
+        Filter = "*" + extension
+    };
+
+    watcher.Changed += this.OnConfigChanged;
+    watcher.EnableRaisingEvents = true;
+
+    return watcher;
+}
+
+private void OnConfigChanged(object sender, FileSystemEventArgs e)
+{
+    if (DateTime.UtcNow < this.lastConfigChange.AddMilliseconds(200))
+    {
+        return;
+    }
+
+    this.lastConfigChange = DateTime.UtcNow;
+    this.UpdateConfiguration();
+}
+```
