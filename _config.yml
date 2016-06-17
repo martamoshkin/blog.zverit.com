@@ -9,7 +9,9 @@
 title: Artamoshkin Maxim
 email: admin@zverit.com
 description: > # this means to ignore newlines until "baseurl:"
-  Добро пожаловать в блог разработчика. Здесь я пишу в основном о веб-разработке, в частности
+  Добро пожаловать на блог разработчика. 
+  
+  Здесь я пишу в основном о веб-разработке, в частности
   о ASP.NET, С<span>#</span>, JavaScript. А также пишу об околокодинговых темах. 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://blog.zverit.com" # the base hostname & protocol for your site
