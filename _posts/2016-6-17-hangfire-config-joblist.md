@@ -63,5 +63,38 @@ GlobalConfiguration.Configuration.UseActivator(new WindsorJobActivator(container
 ```
 
 `Name` будет выступать как в роли названия джобы, так и названия ее класса. 
-`CronExpression`- `Cron` выражения. `Parameters' - неограниченный список параметров, которые можно передать в тело джобы.
+`CronExpression`- `Cron` выражения. `Parameters` - неограниченный список параметров, которые можно передать в тело джобы.
 
+Создадим метод который будет загружать и сериализовать эти задачи:
+
+```cs
+private IList<JobItem> GetJobsList()
+{
+    using (var sr = new StreamReader(this.configPath))
+    {
+        return JsonConvert.DeserializeObject<IList<JobItem>>(sr.ReadToEnd());
+    }
+}
+```
+
+После того как наш шедулер может получать конфигурацию джоб извне создадим метод который будет добавлять в расписание и обновлять их конфигурацию. 		
+
+```cs
+private void UpdateConfiguration()
+{
+    var jobs = this.GetJobsList();
+    
+
+    foreach (var item in jobs)
+    {
+        var jobType = this.container.Kernel.GetAssignableHandlers(typeof(IJob))
+					.Single(
+						h =>
+							h.ComponentModel.Implementation.Name.Equals(item.Name, StringComparison.InvariantCultureIgnoreCase))
+					.ComponentModel.Implementation;
+		var job = (IJob) this.container.Resolve(jobType);
+
+        RecurringJob.AddOrUpdate(item.Id, () => job.Execute(item.Parameters), item.CronExpression);
+    }
+}
+```
