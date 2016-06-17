@@ -48,7 +48,7 @@ GlobalConfiguration.Configuration.UseActivator(new WindsorJobActivator(container
 После того как наши джобы зарегистрированы, приступим непосредственно к механизму конфигурации шедулера. 
 Создаем файл конфигурации config.json. И определим формат записи задач. 
 
-```js
+```json
 [
   {
     "Id": "1",
