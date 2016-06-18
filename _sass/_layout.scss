@@ -228,9 +228,14 @@
     -webkit-transition: all 0.1s ease-in-out;
     -moz-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
-}
-.post-tag:hover{ 
-    color: #fff;
+
+    .post-tag:hover{ 
+        color: #fff;
+    }
+    
+    a:visited{
+        color: #fff;
+    }
 }
 .post-title {
     font-size: 38px;
