@@ -232,7 +232,9 @@
     .post-tag:hover{ 
         color: #fff;
     }
-    
+    &:visited {
+        color: #fff;
+    }
     a:visited{
         color: #fff;
     }
