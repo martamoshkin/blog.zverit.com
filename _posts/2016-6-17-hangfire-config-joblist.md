@@ -2,8 +2,8 @@
 layout: post
 title:  "JSON конфигурация списка задач Hangfire и их runtime обновление"
 date:   2016-06-17 23:30:29 +0300
-category: dev
-tags: [hangfire, scheduler]
+category: Development
+tags: [hangfire, scheduler, C#]
 ---
 
 Явное описание задач в коде делает их достаточно неповоротливыми и неудобными в поддержке. 
