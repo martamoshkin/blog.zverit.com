@@ -18,6 +18,20 @@ layout: default
   </div>
 
 </article>
+
+<div class="related">
+          <h3>Related Posts</h3>
+          <ul>
+            {% for post in site.related_posts limit:3 %}
+              <a href="{{ post.url }}">
+                  <li>
+                  <h3>{{ post.title }}&nbsp;&nbsp;{{ post.date | date_to_string }}</h3>
+                  </li>
+              </a>
+            {% endfor %}
+          </ul>
+</div>
+
 <div id="disqus_thread"></div>
 <script>
     /**
