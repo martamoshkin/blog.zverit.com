@@ -18,5 +18,8 @@ url: "http://blog.zverit.com" # the base hostname & protocol for your site
 twitter_username: zverit 
 github_username:  Zverit
 
+gems:
+  - jekyll-sitemap
+  
 # Build settings   
 markdown: kramdown
