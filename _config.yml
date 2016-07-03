@@ -25,3 +25,6 @@ gems:
   
 # Build settings   
 markdown: kramdown
+
+url: https://blog.zverit.com   # with the https protocol
+enforce_ssl: blog.zverit.com   # without any protocol
