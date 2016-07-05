@@ -134,3 +134,5 @@ private void OnConfigChanged(object sender, FileSystemEventArgs e)
     this.UpdateConfiguration();
 }
 ```
+
+Если происходит изменение файла конфигурации, выполняется событие `OnConfigChanged`. И так как оно срабатывает несколько раз, то пропишем условие `if (DateTime.UtcNow < this.lastConfigChange.AddMilliseconds(200))`. Этого достаточно, чтобы оно сработало ровно один раз.
