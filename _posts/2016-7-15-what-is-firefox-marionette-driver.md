@@ -5,6 +5,8 @@ date:   2016-07-15 00:19:29 +0300
 category: Development
 tags: [Firefox, Marionette, Selenium]
 ---
+Marionette относится к инструментам для автоматизированного тестирования в Firefox.
+
 
 Marionette представляет собой драйвер для удаленного управления  ПО построенными на основе Gecko платформе.
 <!-- more -->
