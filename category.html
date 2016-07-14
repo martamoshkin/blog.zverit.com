@@ -11,7 +11,7 @@ Here we generate all the categories.
 {% assign tcats = post.category | join:'|' | append:'|' %}
 {% assign rawcats = rawcats | append:tcats %}
 {% endfor %}
-
+ 
 {% assign rawcats = rawcats | split:'|' | sort %}
 
 {% assign cats = "" %}
