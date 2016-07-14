@@ -22,7 +22,7 @@ safe: true
 
 gems:
   - jekyll-sitemap
-  
+   
 # Build settings   
 markdown: kramdown
 
