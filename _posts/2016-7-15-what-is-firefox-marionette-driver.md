@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Что такое Firefox Marionette Driver"
+title:  "Что такое Firefox Marionette Driver?"
 date:   2016-07-15 00:19:29 +0300
 category: Development
 tags: [Firefox, Marionette, Selenium]
