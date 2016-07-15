@@ -14,7 +14,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Здесь я пишу в основном о веб-разработке, в частности
   о ASP.NET, С<span>#</span>, JavaScript. А также пишу об околокодинговых темах. 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://blog.zverit.com" # the base hostname & protocol for your site
+url: "https://blog.zverit.com" # the base hostname & protocol for your site
 twitter_username: zverit 
 github_username:  Zverit
 
