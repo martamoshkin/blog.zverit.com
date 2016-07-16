@@ -179,6 +179,10 @@
 .post-list {
     margin-left: 0;
     list-style: none;
+    
+    img{
+        display: none;
+    }
 
     > li {
         margin-bottom: $spacing-unit;
