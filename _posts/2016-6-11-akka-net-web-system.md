@@ -5,6 +5,8 @@ date:   2016-06-11 15:15:29 +0300
 category: Development
 tags: [akka.net, aktor, C#]
 ---
+<img class="post-logo" src="https://blog.zverit.com/assets/akkalogo.png" />
+
 Для 99% сложных технических проблем, с которыми разработчики сталкиваются сегодня, было найдено решение в начале 1970 году: модель 
 акторов.<!-- more -->
 
