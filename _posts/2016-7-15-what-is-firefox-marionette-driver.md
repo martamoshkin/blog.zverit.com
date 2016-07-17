@@ -5,7 +5,7 @@ date:   2016-07-15 00:19:29 +0300
 category: Development
 tags: [Firefox, Marionette, Selenium]
 ---
-<img class="post-logo" src="https://blog.zverit.com/assets/marionette.jpeg" />
+<img class="post-logo" src="https://blog.zverit.com/assets/marionette.png" />
 
 **Marionette Driver** относится к инструментам для автоматизированного тестирования в Firefox.
 
