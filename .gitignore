@@ -35,6 +35,7 @@ build-iPhoneSimulator/
 /doc/
 /rdoc/
 /.sass-cache
+/._site
 
 ## Environment normalization:
 /.bundle/
