@@ -5,8 +5,8 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
 
+title: Artamoshkin Maxim · Blog
 # Site settings
-title: Artamoshkin Maxim - Blog
 email: admin@zverit.com
 description: > # this means to ignore newlines until "baseurl:"
   Добро пожаловать на блог разработчика. 
