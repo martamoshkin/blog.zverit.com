@@ -33,7 +33,7 @@ title:    Category
 {% for ct in cats %}
 <a href="#{{ ct | slugify }}" class="codinfox-category-mark" style="color:#999;text-decoration: none;"> {{ ct }} </a> &nbsp;&nbsp;
 {% endfor %}
-<a href="#no-category" class="codinfox-category-mark" style="color:#999;text-decoration: none;"> No Category </a> &nbsp;&nbsp;
+<a href="#no-category" class="codinfox-category-mark post-tag" style="color:#999;text-decoration: none;"> No Category </a> &nbsp;&nbsp;
 </p>
 
 {% for ct in cats %}
@@ -45,7 +45,7 @@ title:    Category
     <h3>
       <a href="{{ post.url }}">
         {{ post.title }}
-        <small> | {{ post.date | date_to_string }}</small>
+        <small class="post-meta"> | {{ post.date | date_to_string }}</small>
       </a>
     </h3>
   </li>
