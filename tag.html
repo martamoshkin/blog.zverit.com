@@ -49,9 +49,6 @@ Here we generate all the tags.
         {{ post.title }}
         <small class="post-meta">{{ post.date | date_to_string }}</small>
       </a>
-      {% for tag in post.tags %}
-      <a class="codinfox-tag-mark" href="/blog/tag/#{{ tag | slugify }}"> | {{ tag }}</a>
-      {% endfor %}
     </h4>
   </li>
   {% endif %}
