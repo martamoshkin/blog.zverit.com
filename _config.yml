@@ -6,7 +6,7 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Artamoshkin Maxim
+title: Artamoshkin Maxim - Blog
 email: admin@zverit.com
 description: > # this means to ignore newlines until "baseurl:"
   Добро пожаловать на блог разработчика. 
