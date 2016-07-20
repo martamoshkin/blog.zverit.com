@@ -20,7 +20,7 @@ github_username:  Zverit
 
 safe: true
 
-gems:
+gems: 
   - jekyll-sitemap
    
 # Build settings   
