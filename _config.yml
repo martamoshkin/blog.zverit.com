@@ -22,6 +22,7 @@ safe: true
 
 gems: 
   - jekyll-sitemap
+  - bourbon
    
 # Build settings   
 markdown: kramdown
