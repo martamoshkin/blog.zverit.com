@@ -28,7 +28,7 @@ jekyll-archives:
   enabled:
   - year
   - month
-  layout: archive
+  layout: 'archive'
   permalinks:
     year: '/:year/'
     month: '/:year/:month/'
