@@ -21,7 +21,7 @@ github_username:  Zverit
 safe: true
 
 gems: 
-  - jekyll-sitemap
+  - jekyll-sitemap 
   - bourbon
    
 # Build settings   
