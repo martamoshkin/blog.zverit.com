@@ -332,41 +332,11 @@
     margin-bottom: 5px;
 }
 
-    /* Button */
-    .button {
-      display: inline-block;
-      position: relative;
-      width: 120px;
-      height: 32px;
-      line-height: 32px;
-      border-radius: 2px;
-      font-size: 0.9em;
-      background-color: #fff;
-      color: #646464;
-    }
-    
-    .button > paper-ripple {
-      border-radius: 2px;
-      overflow: hidden;
-    }
-    
-    .button.narrow {
-      width: 60px;
-    }
-    
-    .button.grey {
-      background-color: #eee;
-    }
-    
-    
-    .button.raised {
-      transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-      transition-delay: 0.2s;
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-    }
-    
-    .button.raised:active {
-      box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
-      transition-delay: 0s;
-    }
+#mc_embed_signup form{
+	padding: 0;
+}
+#mc_embed_signup .button{ 
+	background: #3d3d3d;
+}
+#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
     
