@@ -25,7 +25,9 @@ url: https://blog.zverit.com   # with the https protocol
 enforce_ssl: blog.zverit.com   # without any protocol
 
 jekyll-archives:
-  enabled: []
+  enabled:
+  - year
+  - month
   layout: 'archive'
   permalinks:
     year: '/:year/'
