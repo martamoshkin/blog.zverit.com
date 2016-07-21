@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Organization",
+    "name" : "Artamoshkin Maxim",
+    "url" : "https://zverit.com",
+    "sameAs" : [
+      "https://twitter.com/Zverit",
+      "https://plus.google.com/b/114908284667574282591",
+      "https://www.facebook.com/maximArtamoshkin"
+   ]
+  }
+  </script> 
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>
+
