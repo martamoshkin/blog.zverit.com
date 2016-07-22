@@ -3,7 +3,7 @@ layout: post
 title:  "AKKA.NET для построения высоконадежных и слабосвязанных Web-систем"
 date:   2016-06-11 15:15:29 +0300
 category: Development
-tags: [akka.net, aktor, C#]
+tags: [Akka.net, Aktor, C#]
 ---
 <img class="post-logo" src="https://blog.zverit.com/assets/akkalogo.png" />
 
