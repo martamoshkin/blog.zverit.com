@@ -15,8 +15,6 @@ safe: true
 
 gems: 
   - jekyll-sitemap 
-  - bourbon
-  - jekyll-archives
    
 # Build settings   
 markdown: kramdown
@@ -24,14 +22,3 @@ markdown: kramdown
 url: https://blog.zverit.com   # with the https protocol
 enforce_ssl: blog.zverit.com   # without any protocol
 
-jekyll-archives:
-  enabled:
-  - year
-  - month
-  layout: 'archive'
-  permalinks:
-    year: '/:year/'
-    month: '/:year/:month/'
-    day: '/:year/:month/:day/'
-    tag: '/tag/:name/'
-    category: '/category/:name/'
