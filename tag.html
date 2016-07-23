@@ -10,7 +10,7 @@ Here we generate all the tags.
 {% for post in site.posts %}
 {% assign ttags = post.tags | join:'|' | append:'|' %}
 {% assign rawtags = rawtags | append:ttags %}
-{% endfor %}
+{% endfor %} 
 
 {% assign rawtags = rawtags | split:'|' | sort %}
 
