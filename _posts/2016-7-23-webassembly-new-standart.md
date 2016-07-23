@@ -33,7 +33,7 @@ int main() {
 
 Примерно так выглядит уже транслированный код C в wasm: 
 
-```c
+```py
 (module
   (memory 16777216 16777216)
   (type $FUNCSIG$iiii (func (param i32 i32 i32) (result i32)))
