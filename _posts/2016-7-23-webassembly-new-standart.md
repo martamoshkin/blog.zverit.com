@@ -32,7 +32,8 @@ int main() {
 `emcc file.cpp -o file.js -s ‘BINARYEN=”путь для двоичного файла”’`
 
 Примерно так выглядит уже транслированный код C в wasm: 
-```
+
+```c
 (module
   (memory 16777216 16777216)
   (type $FUNCSIG$iiii (func (param i32 i32 i32) (result i32)))
