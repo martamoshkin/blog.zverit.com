@@ -384,6 +384,10 @@ $transparent: rgba(white, 0);
         margin: $unit 0 $unit/3*5 -0.5*$unit;
         padding: $unit/2 $unit/2 $unit/3 $unit/2;
         border-radius: $border-width $border-width $border-width 0;
+        
+        $article-width: 36*$base-font-size;
+	$padding: 5%;
+	$padding-factor: 1/0.8999;
 
         @include media($article-width) {
             margin-left: -$padding-factor*$padding;
