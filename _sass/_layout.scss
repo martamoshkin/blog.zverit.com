@@ -341,6 +341,34 @@
 #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
     
     /********************************* BLOCKQUOTE *****************************/
+    $font:      "proxima-nova-alt", "Proxima Nova", Helvetica, sans-serif;
+$font-sc:   "proxima-nova-sc-osf-condensed", "Proxima Nova Condensed", Helvetica, sans-serif;
+$alt-font:  "abril-titling-condensed", Helvetica, sans-serif;
+$mono-font: "courier prime", "courier-prime", monospace, serif;
+
+$base-font-size:  17px;
+$small-font-size: $base-font-size * 0.875;
+
+$unit: 24px;
+
+$text-color:           #17181d;
+$background-color:     #fafcfc;
+$action-color:         #67a492;
+$alt-action-color:     #8167ad;
+$alt-background-color: #2c2f38;
+$alt-background-color: lighten($text-color, 10%);
+$gray-color:           lighten($text-color, 30%);
+
+$color0: #eeedcf;
+$color1: #98c3d4;
+$color2: #88c1af;
+$color3: #c1a070;
+$color4: #9b7ecb;
+$color5: #666a81;
+$color6: #87a1eb;
+
+$transparent: rgba(white, 0);
+
     blockquote {
         position: relative;
         $border-color: $gray-color;
