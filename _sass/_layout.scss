@@ -342,7 +342,7 @@
 
 
     /********************************* BLOCKQUOTE *****************************/
-/*    @mixin media($max-width) {
+    @mixin media($max-width) {
     @media (max-width: #{$max-width}) {
         @content;
     }
@@ -376,7 +376,7 @@ $article-width: 36*$base-font-size;
 $padding: 5%;
 $padding-factor: 1/0.8999;
 $transparent: rgba(white, 0);
-
+/*
     blockquote {
         position: relative;
         $border-color: $gray-color;
@@ -522,4 +522,5 @@ $transparent: rgba(white, 0);
             }
         }
     }
- */    
+    */
+     
