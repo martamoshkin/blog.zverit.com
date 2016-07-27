@@ -366,7 +366,9 @@ $color3: #c1a070;
 $color4: #9b7ecb;
 $color5: #666a81;
 $color6: #87a1eb;
-
+$article-width: 36*$base-font-size;
+$padding: 5%;
+$padding-factor: 1/0.8999;
 $transparent: rgba(white, 0);
 
     blockquote {
