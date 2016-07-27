@@ -339,9 +339,10 @@
 	background: #3d3d3d;
 }
 #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-    
+
+
     /********************************* BLOCKQUOTE *****************************/
-    @mixin media($max-width) {
+/*    @mixin media($max-width) {
     @media (max-width: #{$max-width}) {
         @content;
     }
@@ -521,3 +522,4 @@ $transparent: rgba(white, 0);
             }
         }
     }
+ */    
