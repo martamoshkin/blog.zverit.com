@@ -341,6 +341,11 @@
 #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
     
     /********************************* BLOCKQUOTE *****************************/
+    @mixin media($max-width) {
+    @media (max-width: #{$max-width}) {
+        @content;
+    }
+}
     $font:      "proxima-nova-alt", "Proxima Nova", Helvetica, sans-serif;
 $font-sc:   "proxima-nova-sc-osf-condensed", "Proxima Nova Condensed", Helvetica, sans-serif;
 $alt-font:  "abril-titling-condensed", Helvetica, sans-serif;
