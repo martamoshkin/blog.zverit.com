@@ -331,11 +331,16 @@
     color: #fff;
     margin-top: 10px;
     border-radius: 50px;
-}
-
-.rss-subscribe a{
+    a{
 	color: #fff;
 }
+
+	a:visited{
+		color:#fff;
+	}
+}
+
+.rss-subscribe 
 
 #mc_embed_signup form{
 	padding: 0;
