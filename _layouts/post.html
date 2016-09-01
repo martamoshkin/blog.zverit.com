@@ -8,9 +8,12 @@ layout: default
 <script type="text/javascript" src="/js/kudos.js"></script>
 <script type="text/javascript" src="/js/kudos.firebase.js"></script>
 
-<script type="text/javascript">$('figure.kudo').kudoable({
-    dataStore: window.firebaseStorage
-});</script>
+<script type="text/javascript">
+  $(function(){
+    $('figure.kudo').kudoable({
+        dataStore: window.firebaseStorage
+    });
+  });</script>
 
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
