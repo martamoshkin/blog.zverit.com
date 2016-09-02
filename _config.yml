@@ -19,7 +19,7 @@ gems:
   - jekyll-sitemap 
   - jekyll-feed
   
-# Build settings   
+# Build settings
 markdown: kramdown
 
 url: https://blog.zverit.com   # with the https protocol
