@@ -9,10 +9,12 @@
         var deferred = $.Deferred();
 
         var authData = firebase.getAuth();
+        console.log(authData);
         if(authData == null){
             // authenticate the user
             firebase.authAnonymously(function(err, authenticationData) {
                 authData = authenticationData
+                console.log(authData);
                 deferred.resolve(authenticationData);
             });
         }else{
