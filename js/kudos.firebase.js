@@ -2,7 +2,7 @@
 
     // replace this url with yours!!
     var firebase = new Firebase('https://zveritblog.firebaseio.com/'),
-        firebaseKudos = firebase.child('kudos'),
+        firebaseKudos = firebase.child('zveritblog'),
         key = document.location.pathname.replace(/[\/-]/g,'');
 
     var getAuthData = function(){
