@@ -12,7 +12,7 @@
         if(authData == null){
             // authenticate the user
             firebase.authAnonymously(function(err, authenticationData) {
-                //authData = authenticationData
+                authData = authenticationData
                 deferred.resolve(authenticationData);
             });
         }else{
