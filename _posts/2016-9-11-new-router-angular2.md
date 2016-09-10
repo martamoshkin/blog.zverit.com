@@ -14,10 +14,13 @@ router 2.0, затем в вериси RC2 снова выходит новая 
 
 <h2>Импортирование</h2>
 Раньше было так:
+
 ```ts
 import { RouteConfig, ROUTER_DIRECTIVES } from '@angular/router-deprected';
 ```
+
 Теперь так:
+
 ```ts
 import { Routes, RouterModule }   from '@angular/router';
 ```
@@ -53,7 +56,6 @@ export class AppComponent {}
 ```
 
 ```ts
-
 // routes.ts
 import { provideRouter, RouterConfig } from '@angular/router';
 
