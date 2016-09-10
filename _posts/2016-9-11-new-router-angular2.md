@@ -12,7 +12,7 @@ router 2.0, затем в вериси RC2 снова выходит новая 
 Итак, рассмотрим основные изменения.
 <!-- more -->
 
-<h2>Импортирование</h2>
+<h3>Импортирование</h3>
 Раньше было так:
 
 ```ts
@@ -25,7 +25,7 @@ import { RouteConfig, ROUTER_DIRECTIVES } from '@angular/router-deprected';
 import { Routes, RouterModule }   from '@angular/router';
 ```
 
-<h2>Конфигурация</h2>
+<h3>Конфигурация</h3>
 
 ```ts
 import { Component } from '@angular/core';
