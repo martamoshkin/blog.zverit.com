@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Переносим Angular 2 на новый router 3.0"
+title:  "Переносим Angular 2 на новый Router 3.0"
 date:   2016-09-11 01:53:10 +0300
 category: Frontend
 tags: [Angular2, TypeScript, Router]
