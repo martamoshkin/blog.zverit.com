@@ -2,7 +2,7 @@
 layout: post
 title:  "JSON конфигурация списка задач Hangfire и их runtime обновление"
 date:   2016-06-17 23:30:29 +0300
-category: Development
+category: Backend
 tags: [Hangfire, Scheduler, C#]
 ---
 
