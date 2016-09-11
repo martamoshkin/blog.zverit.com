@@ -150,6 +150,9 @@ export class BooActionComponent implements OnInit {
 }
 ```
 
+Во-первых, ``RouteParams`` был заменен на ``ActivatedRoute``.
+Во-вторых, свойство ``params`` теперь выступает как ``observable``, и получить значения можно только через коллбэк.
+
 ```ts
 //new components/actions/boo-action.component.ts
 import { Component, OnInit } from '@angular/core';
@@ -172,6 +175,7 @@ export class BooActionComponent implements OnInit {
 
 <h3>Защита путей</h3>
 
+Проверки аутидентификации на старом роутере можно было добиться при помощи ``@CanActivate, @CanDeactivate`` декораторов.
 ```ts
 // components/actions/boo-aciton.component.ts
 import { Component } from '@angular/core';
@@ -184,6 +188,8 @@ import { CanActivate, ComponentInstruction } from '@angular/router-deprecated';
 })
 export class BooActionComponent { ... }
 ```
+
+В новом роутере это определено внутри конфигурации и доступно через DI. 
 
 ```ts
 // auth-guard.ts
@@ -212,8 +218,9 @@ export class AuthGuard implements CanActivate {
 }
 ```
 
-```ts
+Можно просто сделать инъекцию ``AuthService`` и маршрутизатор сам направит пользователя на страницу входа.
 
+```ts
 // routes.ts
 import { provideRouter, RouterConfig } from '@angular/router';
 
