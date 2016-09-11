@@ -227,8 +227,8 @@ export class AuthGuard implements CanActivate {
 // routes.ts
 import { provideRouter, RouterConfig } from '@angular/router';
 
-import { HeroesComponent } from './components/actions.component';
-import { HeroDetailComponent } from './components/actions/boo-action.component';
+import { ActionsComponent } from './components/actions.component';
+import { BooActionComponent } from './components/actions/boo-action.component';
 import { LoginComponent } from './components/login/login.component';
 import { AuthGuard } from './auth-guard';
 
