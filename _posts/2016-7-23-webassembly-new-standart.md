@@ -2,7 +2,7 @@
 layout: post
 title:  "WebAssembly – новый стандарт который изменит Web"
 date:   2016-07-23 13:40:00 +0300
-category: Development
+category: Frontend
 tags: [WebAssembly, JavaScript]
 ---
 <img class="post-logo" src="https://blog.zverit.com/assets/wasm-logo.png" />
