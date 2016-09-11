@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Переносим Angular 2 на новый Router 3.0"
+title:  "Переносим Angular2 на новый Router 3.0"
 date:   2016-09-11 01:53:10 +0300
 category: Frontend
 tags: [Angular2, TypeScript, Router]
@@ -16,12 +16,14 @@ router 2.0, затем в вериси RC2 снова выходит новая 
 Раньше было так:
 
 ```ts
+//old
 import { RouteConfig, ROUTER_DIRECTIVES } from '@angular/router-deprected';
 ```
 
 Теперь так:
 
 ```ts
+//new
 import { Routes, RouterModule }   from '@angular/router';
 ```
 
@@ -54,6 +56,7 @@ bootstrap(AppComponent, [
 <h3>Конфигурация</h3>
 
 ```ts
+//old
 import { Component } from '@angular/core';
 import { RouteConfig, ROUTER_DIRECTIVES } from '@angular/router-deprected';
 
@@ -84,7 +87,7 @@ export class AppComponent {}
 Новый роутер теперь не привязан к какому либо компоненту, и теперь выступает в роли провайдера. 
 
 ```ts
-// routes.ts
+//new routes.ts
 import { provideRouter, RouterConfig } from '@angular/router';
 
 import { ActionsComponent } from './components/actions.component';
@@ -110,7 +113,6 @@ export const APP_ROUTER_PROVIDER = provideRouter(appRoutes);
 В новом же роутере идентифицируется по пути, без начального слеша, и параметр передается без объекта.
 
 ```html
-/new
 <a [routerLink]="['']">Home</a>
 <a [routerLink]="['boo', 1]">Boo</a>
 ```
@@ -130,7 +132,7 @@ this.router.navigate(['error', 404]);
 <h3>Доступ к параметрам пути</h3>
 
 ```ts
-// components/boo-action.component.ts
+//old components/actions/boo-action.component.ts
 import { Component, OnInit } from '@angular/core';
 import { RouteParams } from '@angular/router-deprected';
 
@@ -149,7 +151,7 @@ export class BooActionComponent implements OnInit {
 ```
 
 ```ts
-// components/actions/boo-action.component.ts
+//new components/actions/boo-action.component.ts
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
