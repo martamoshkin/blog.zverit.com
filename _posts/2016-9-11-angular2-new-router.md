@@ -97,6 +97,7 @@ export const appRoutes: RouterConfig = [
 
 export const APP_ROUTER_PROVIDER = provideRouter(appRoutes);
 ```
+
 Роутер все также биндится к ``<router-outlet></router-outlet>``, но необходимость в декораторе ``@RouteConfig`` отпала.
 При определении пути теперь не нужно писать его имя, и сам путь пишется без слеша в начале. 
 
@@ -115,6 +116,7 @@ export const APP_ROUTER_PROVIDER = provideRouter(appRoutes);
 ```
 
 Те же самые изменения потерпел вызов ``navigate``.
+
 ```ts
 //old
 this._router.navigate(['Error',{ error: 404 }]);
@@ -126,6 +128,7 @@ this.router.navigate(['error', 404]);
 ```
 
 <h3>Доступ к параметрам пути</h3>
+
 ```ts
 // components/boo-action.component.ts
 import { Component, OnInit } from '@angular/core';
@@ -166,6 +169,7 @@ export class BooActionComponent implements OnInit {
 ```
 
 <h3>Защита путей</h3>
+
 ```ts
 // components/actions/boo-aciton.component.ts
 import { Component } from '@angular/core';
