@@ -28,6 +28,7 @@ import { Routes, RouterModule }   from '@angular/router';
 Также в ``boot.ts`` заменяем определение ``ROUTER_PROVIDERS``
 
 С ``router-deprecated`` выглядело так:
+
 ```ts
 // old boot.ts
 import { ROUTER_PROVIDERS } from '@angular/router-deprecated';
@@ -37,7 +38,9 @@ bootstrap(AppComponent, [
   ROUTER_PROVIDERS
 ]);
 ```
+
 Теперь должно выглядить следующим образом
+
 ```ts
 // new boot.ts
 import { APP_ROUTER_PROVIDER } from './routes';
