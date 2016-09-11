@@ -234,7 +234,7 @@ import { AuthGuard } from './auth-guard';
 
 export const appRoutes: RouterConfig = [
   { path: '', component: ActionsComponent, terminal: true },
-  { path: 'detail/:id', component: BooActionComponent, canActivate: [AuthGuard] },
+  { path: 'boo/:id', component: BooActionComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
 ];
 
