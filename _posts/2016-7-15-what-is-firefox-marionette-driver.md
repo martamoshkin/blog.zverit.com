@@ -2,7 +2,7 @@
 layout: post
 title:  "Что такое Firefox Marionette Driver?"
 date:   2016-07-15 00:19:29 +0300
-category: Development
+category: Backend
 tags: [Firefox, Marionette, Selenium]
 ---
 <img class="post-logo" src="https://blog.zverit.com/assets/marionette.png" />
