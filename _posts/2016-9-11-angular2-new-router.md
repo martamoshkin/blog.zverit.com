@@ -105,10 +105,12 @@ export const APP_ROUTER_PROVIDER = provideRouter(appRoutes);
 При определении пути теперь не нужно писать его имя, и сам путь пишется без слеша в начале. 
 
 <h3> Привязка к маршрутам </h3>
+
 ```html
 <a [routerLink]="['/Home']">Home</a>
 <a [routerLink]="['/Boo', { id: 1 }]">Boo</a>
 ```
+
 Мы видим, что каждый путь устанавливался по его имени и передаваемым в него параметрам, в виде объекта.
 В новом же роутере идентифицируется по пути, без начального слеша, и параметр передается без объекта.
 
@@ -176,6 +178,7 @@ export class BooActionComponent implements OnInit {
 <h3>Защита путей</h3>
 
 Проверки аутидентификации на старом роутере можно было добиться при помощи ``@CanActivate, @CanDeactivate`` декораторов.
+
 ```ts
 // components/actions/boo-aciton.component.ts
 import { Component } from '@angular/core';
