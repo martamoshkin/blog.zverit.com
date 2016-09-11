@@ -5,7 +5,7 @@ date:   2016-09-11 04:53:10 +0300
 category: Frontend
 tags: [Angular2, TypeScript, Router]
 ---
-
+<img class="post-logo" src="https://blog.zverit.com/assets/angular2-router.png" />
 Во время альфа и бета версий Angular2 router-deprecated вполне справлялся со своими задачами. С появлением RC1 вышел и переработанный 
 router 2.0, затем в вериси RC2 снова выходит новая версия роутера — 3.0. Полная его переработка была связана с тем, что возникли серьезные
 проблемы, такие как глубокая линковка в lazy-loaded секциях. 
