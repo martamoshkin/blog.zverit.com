@@ -163,17 +163,26 @@ import { ActivatedRoute } from '@angular/router';
 import { BooService } from '../../services/boo.service'
 
 @Component({ ... })
-export class BooActionComponent implements OnInit {
+export class BooActionComponent implements OnInit, OnDestroy {
+  public boo: string
+  private booSubscription: Subscription
+  
   constructor(private route: ActivatedRoute, private booService: BooService) {}
 
   ngOnInit() {
-    this.route.params
+    this.booSubscription = this.route.params
       .map(params => params.id)
       .flatMap(id => this.booService.getBoo(id))
       .subscribe(boo => this.boo = boo);
   }
+  
+  ngOnDestroy() {
+    this.booSubscription.unsubscribe();
+  }
 }
 ```
+
+Желательно подписываться в ``ngOnInit`` методе и отписываться в ``ngOnDestroy`` 
 
 <h3>Защита путей</h3>
 
