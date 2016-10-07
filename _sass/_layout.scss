@@ -301,7 +301,7 @@
         }
     }
     
-    img {
+    img, code {
 	  -webkit-filter: grayscale(100%);
 	  -moz-filter: grayscale(100%);
 	  -ms-filter: grayscale(100%);
@@ -314,7 +314,7 @@
 	  transition: all 1s;
 	}
     
-    img:hover {
+    img, code:hover {
 	  -webkit-filter: none;
 	  -moz-filter: none;
 	  -ms-filter: none;
