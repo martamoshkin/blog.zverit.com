@@ -50,12 +50,12 @@
 		var js, fjs = d.getElementsByTagName(s)[0];
 		if (d.getElementById(id)) return;
 		js = d.createElement(s);js.async = 1;js.id = id;js.src = src;fjs.parentNode.insertBefore(js, fjs);
-	})(document, '//analytics.truvisibility.net/content/tracking/mg-sdk.min.js', 'script', 'mg-jssdk');
+	})(document, '//analytics.truvisibility.com/content/tracking/mg-sdk.min.js', 'script', 'mg-jssdk');
     (function () {
         var chain = window.onload;
         window.onload = function () {
 			if (chain) chain.apply(this, arguments);
-			_mg.register('//analytics.truvisibility.net/api/tracking', 'blog.zverit.com');
+			_mg.register('//analytics.truvisibility.com/api/tracking', 'blog.zverit.com');
 		}
 	})();
 </script>
