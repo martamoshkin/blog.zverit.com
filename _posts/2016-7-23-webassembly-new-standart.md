@@ -5,7 +5,7 @@ date:   2016-07-23 13:40:00 +0300
 category: Frontend
 tags: [WebAssembly, JavaScript]
 ---
-<img class="post-logo" src="https://blog.zverit.com/assets/wasm-logo.png" />
+<img class="post-logo" src="https://blog.zverit.com/assets/wasm-logo.png" alt="Webassembly"/>
 WebAssembly (сокр. wasm) – это эффективный низкоуровневый язык программирования. Главное его предназначение заключается в повышении производительности JavaScript. 
 
 
