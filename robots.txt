@@ -1,1 +1,5 @@
-
+User-agent: *
+Disallow: 
+Disallow: /tag
+Disallow: /categories
+Sitemap: https://blog.zverit.com/sitemap.xml
