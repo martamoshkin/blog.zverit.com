@@ -6,7 +6,7 @@ category: Backend
 tags: [Hangfire, Scheduler, C#]
 ---
 
-<img class="post-logo" src="https://blog.zverit.com/assets/hangfire-logo.png" />
+<img class="post-logo" src="https://blog.zverit.com/assets/hangfire-logo.png" alt="Hangfire scheduler"/>
 
 Явное описание задач в коде делает их достаточно неповоротливыми и неудобными в поддержке. 
 Также было бы явным излишеством описывать однотипные задачи.
