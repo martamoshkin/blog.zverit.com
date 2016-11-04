@@ -4,6 +4,7 @@ title:  "Что такое Firefox Marionette Driver?"
 date:   2016-07-15 00:19:29 +0300
 category: Backend
 tags: [Firefox, Marionette, Selenium]
+description: "**Marionette Driver** относится к инструментам для автоматизированного тестирования в Firefox. Marionette представляет собой драйвер для удаленного управления  ПО построенными на основе Gecko платформе."
 ---
 <img class="post-logo" src="https://blog.zverit.com/assets/marionette.png" alt="Firefox Marionette Driver"/>
 
