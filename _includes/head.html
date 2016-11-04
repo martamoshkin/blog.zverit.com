@@ -1,6 +1,11 @@
 <head>
   <html lang="ru">
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  {% if page.description %}
+      <meta name="description" content="{{ page.description }}">
+   {% else %} 
+      <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+   {% endif %}
+    
   <meta name="keywords" content="{{ page.tags | join: ', ' | escape }}"/>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
