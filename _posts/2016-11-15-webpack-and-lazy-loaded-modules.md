@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Webpack и lazy load модули Angular2"
+title:  "Webpack и LazyLoad модули Angular2"
 date:   2016-11-15 21:25:43 +0300
 category: Frontend
 tags: [Angular2, TypeScript, Webpack]
 description: ""
 ---
 
-<img class="post-logo" src="https://blog.zverit.com/assets/webpack-failed-to-load.png" alt=""/>
+<img class="post-logo" style="max-width: 100%" src="https://blog.zverit.com/assets/webpack-failed-to-load.png" alt=""/>
 
 После выхода на свет версии Angular RC5 у роутера появилась возможность lazy подгрузки. Что позволяет загружать части приложения по востребованию, тоесть модули подгружаются после перехода по определенным маршрутам. Что существенно сокращает время загрузки и распределяет время отклика. 
 
@@ -16,7 +16,6 @@ description: ""
 Нужно просто задать поле ``loadChildren`` у роута, и дальше Angular будет сам извлекать модуль по этому пути и загружать в конфигурацию роутера.
 
 ```ts
-
 @NgModule({
   declarations: [ AppComponent, HomeComponent ],
   bootstrap: [ AppComponent ],
@@ -28,7 +27,6 @@ description: ""
 })
 
 export class RoutingModule {}
-
 ```
 
 Не забывайте указывать после хештега название импортируемого модуля. 
@@ -62,7 +60,6 @@ module.exports = {
 Который заменит наш путь до модуля на следующий код:
 
 ```ts
-
 {
   path: 'lazy',
   loadChildren: () => new Promise(function (resolve) {
@@ -71,7 +68,6 @@ module.exports = {
     });
   })
 }
-
 ```
 
 При помощи ``require.ensure`` webpack кладет эти модули в отдельные файлы называемые chunk'ами. 
@@ -86,7 +82,6 @@ module.exports = {
 К примеру gulp таской:
 
 ```js
-
 gulp.task('clean-src', function() {
     return del([
     paths.tsOutput + '/**/*.js',
@@ -96,7 +91,6 @@ gulp.task('clean-src', function() {
     'polyfills.js',
     '*.chunk.js']);
 });
-
 ```
 
 Ошибки об отсутствующих файлах могут быть не только для модулей, а для темплейтов и стилей. Для их загрузки также нужно указывать относительные пути и добавить в поле loaders 'awesome-typescript-loader' и 'angular2-template-loader' (соответственно, прежде эти пактеы должны быть установлены)
