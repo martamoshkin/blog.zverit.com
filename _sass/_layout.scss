@@ -556,10 +556,21 @@ $transparent: rgba(white, 0);
 ul.share-buttons{
   list-style: none;
   padding: 0;
-}
 
-ul.share-buttons li{
-  display: inline;
+	li{
+	  display: inline;
+	}
+	
+	span{
+		background-color: $grey-color-dark;
+	    border-radius: 50%;
+	    color: #fff;
+	    width: 25px;
+	    height: 25px;
+	    text-align: center;
+	    line-height: 25px;
+	    margin-right: .25em;
+	}
 }
 
 ul.share-buttons .sr-only {
