@@ -16,7 +16,7 @@ permalink: pretty
  
 safe: true
 
-paginate: 10
+paginate: 6
 
 gems: 
   - jekyll-sitemap 
