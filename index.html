@@ -33,9 +33,9 @@ layout: default
 {% if paginator.total_pages > 1 %}
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><span class="fa fa-arrow-left"></span></a>
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"></a>
   {% else %}
-    <span>&laquo; Prev</span>
+    <span class="fa fa-arrow-left"></span>
   {% endif %}
 
   {% for page in (1..paginator.total_pages) %}
