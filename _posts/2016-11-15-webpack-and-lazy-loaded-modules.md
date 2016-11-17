@@ -60,6 +60,8 @@ module.exports = {
 Он заменит наш путь до модуля на следующий код:
 
 ```ts
+//app.routing.js
+
 {
   path: 'lazy',
   loadChildren: () => new Promise(function (resolve) {
