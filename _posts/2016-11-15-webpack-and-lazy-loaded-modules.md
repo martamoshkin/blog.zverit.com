@@ -7,7 +7,7 @@ tags: [Angular2, TypeScript, Webpack]
 description: ""
 ---
 
-<img class="post-logo" style="max-width: 100%" src="https://blog.zverit.com/assets/webpack-failed-to-load.png" alt=""/>
+<img class="post-logo" style="max-width: 100%" src="https://blog.zverit.com/assets/webpack-failed-to-load.png" alt="Chrome console"/>
 
 После выхода на свет версии Angular RC5 у роутера появилась возможность lazy подгрузки. Что позволяет загружать части приложения по востребованию, тоесть модули подгружаются после перехода по определенным маршрутам. Что существенно сокращает время загрузки и более равномерно распределяет время отклика. 
 
@@ -81,6 +81,8 @@ module.exports = {
 К примеру gulp таской:
 
 ```js
+//gulpfile.js
+
 gulp.task('clean-src', function() {
     return del([
     paths.tsOutput + '/**/*.js',
