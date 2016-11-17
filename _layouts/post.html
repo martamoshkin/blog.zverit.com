@@ -19,11 +19,11 @@ layout: default
 
 </article>
 <ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblog.zverit.com%2Ffrontend%2F2016%2F11%2F15%2Fwebpack-and-lazy-loaded-modules%2F&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><span class="fa fa-facebook"></span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fblog.zverit.com%2Ffrontend%2F2016%2F11%2F15%2Fwebpack-and-lazy-loaded-modules%2F&text=:%20https%3A%2F%2Fblog.zverit.com%2Ffrontend%2F2016%2F11%2F15%2Fwebpack-and-lazy-loaded-modules%2F" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><span class="fa fa-twitter"> </span></a></li>
-  <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fblog.zverit.com%2Ffrontend%2F2016%2F11%2F15%2Fwebpack-and-lazy-loaded-modules%2F" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><span class="fa fa-google-plus"></span></a></li>
-  <li><a href="https://getpocket.com/save?url=https%3A%2F%2Fblog.zverit.com%2Ffrontend%2F2016%2F11%2F15%2Fwebpack-and-lazy-loaded-modules%2F&title=" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><span class="fa fa-pocket"> </span></a></li>
-  <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fblog.zverit.com%2Ffrontend%2F2016%2F11%2F15%2Fwebpack-and-lazy-loaded-modules%2F&title=&summary=&source=https%3A%2F%2Fblog.zverit.com%2Ffrontend%2F2016%2F11%2F15%2Fwebpack-and-lazy-loaded-modules%2F" target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><span class="fa fa-linkedin"></span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}&t=" rel="nofollow" title="Share on Facebook" target="_blank"><span class="fa fa-facebook"></span></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source={{ site.url }}{{ page.url }}&text={{ page.title }}" rel="nofollow" target="_blank" title="Tweet" ><span class="fa fa-twitter"> </span></a></li>
+  <li><a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Google+"><span class="fa fa-google-plus"></span></a></li>
+  <li><a href="https://getpocket.com/save?url={{ site.url }}{{ page.url }}&title={{ page.title }}" rel="nofollow" target="_blank" title="Add to Pocket" ><span class="fa fa-get-pocket"> </span></a></li>
+  <li><a href="http://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}&summary=&source={{ site.title }}" rel="nofollow" target="_blank" title="Share on LinkedIn" ><span class="fa fa-linkedin"></span></a></li>
 </ul>
 <div class="related expo-section">
           <h3>Related Posts:</h3>
