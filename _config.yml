@@ -16,6 +16,8 @@ permalink: pretty
  
 safe: true
 
+paginate: 10
+
 gems: 
   - jekyll-sitemap 
   - jekyll-feed
