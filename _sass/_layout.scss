@@ -555,6 +555,7 @@ $transparent: rgba(white, 0);
      
 ul.share-buttons{
   list-style: none;
+float: right;
   padding: 0;
 
 	li{
@@ -565,10 +566,10 @@ ul.share-buttons{
 		background-color: $grey-color-dark;
 	    border-radius: 50%;
 	    color: #fff;
-	    width: 25px;
-	    height: 25px;
+	    width: 27px;
+	    height: 27px;
 	    text-align: center;
-	    line-height: 25px;
+	    line-height: 27px;
 	    margin-right: .25em;
 	}
 }
