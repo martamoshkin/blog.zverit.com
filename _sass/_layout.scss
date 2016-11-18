@@ -585,6 +585,11 @@ ul.share-buttons .sr-only {
   overflow: hidden;
 }
 
-.disqus-footer{
-	display: none;
+.disqus_thread{
+	.disqus-footer{
+		display: none;
+	}
+	.notification-icon{
+		display: none;
+	}
 }
