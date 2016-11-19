@@ -308,10 +308,10 @@
 	  -o-filter: grayscale(100%);
 	  filter: grayscale(100%);
 	  filter: gray; /* IE 6-9 */
-	  -webkit-transition: all 1s;
-	  -moz-transition: all 1s;
-	  -o-transition: all 1s;
-	  transition: all 1s;
+	  -webkit-transition: all .7s;
+	  -moz-transition: all .7s;
+	  -o-transition: all .7s;
+	  transition: all .7s;
 	}
     
     img:hover {
