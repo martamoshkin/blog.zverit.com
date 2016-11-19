@@ -370,192 +370,9 @@
 #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
 
 
-    /********************************* BLOCKQUOTE *****************************/
-    @mixin media($max-width) {
-    @media (max-width: #{$max-width}) {
-        @content;
-    }
-}
-    $font:      "proxima-nova-alt", "Proxima Nova", Helvetica, sans-serif;
-$font-sc:   "proxima-nova-sc-osf-condensed", "Proxima Nova Condensed", Helvetica, sans-serif;
-$alt-font:  "abril-titling-condensed", Helvetica, sans-serif;
-$mono-font: "courier prime", "courier-prime", monospace, serif;
-
-$base-font-size:  17px;
-$small-font-size: $base-font-size * 0.875;
-
-$unit: 24px;
-
-$text-color:           #17181d;
-$background-color:     #fafcfc;
-$action-color:         #67a492;
-$alt-action-color:     #8167ad;
-$alt-background-color: #2c2f38;
-$alt-background-color: lighten($text-color, 10%);
-$gray-color:           lighten($text-color, 30%);
-
-$color0: #eeedcf;
-$color1: #98c3d4;
-$color2: #88c1af;
-$color3: #c1a070;
-$color4: #9b7ecb;
-$color5: #666a81;
-$color6: #87a1eb;
-$article-width: 36*$base-font-size;
-$padding: 5%;
-$padding-factor: 1/0.8999;
-$transparent: rgba(white, 0);
-/*
-    blockquote {
-        position: relative;
-        $border-color: $gray-color;
-        $border-width: 5px;
-
-        $border-color-light: rgba($gray-color, 0.05);
-        $border-color-light: #f1f3f4;
-
-        border-left: $border-width solid $border-color;
-        background: $border-color-light;
-        width: $article-width + $unit;
-        box-sizing: border-box;
-        margin: $unit 0 $unit/3*5 -0.5*$unit;
-        padding: $unit/2 $unit/2 $unit/3 $unit/2;
-        border-radius: $border-width $border-width $border-width 0;
-        
-        $article-width: 36*$base-font-size;
-	$padding: 5%;
-	$padding-factor: 1/0.8999;
-
-        @include media($article-width) {
-            margin-left: -$padding-factor*$padding;
-            margin-right: -$padding-factor*$padding;
-            width: $padding-factor*100%;
-            box-sizing: border-box;
-            padding-left: 5%;
-            padding-right: 5%;
-            border-left: none;
-            border-top: 1px solid darken($border-color-light, 10%);
-            border-radius: 0;
-        }
-
-        p {
-            margin: 0;
-            font-family: $alt-font;
-            font-size: 1.1*$base-font-size;
-            font-weight: 400;
-            font-style: italic;
-            text-align: left;
-            position: relative;
-            text-indent: 1.6*$unit;
-            color: $border-color;
-            line-height: 1.35;
-
-            a {
-                color: inherit;
-            }
-
-            &:last-of-type::after, &:first-child::before {
-                font-family: $font-sc;
-                font-size: 3.5*$unit;
-                font-weight: 600;
-                color: $border-color;
-                display: inline-block;
-                width: 1.5em;
-            }
-
-            &:first-child::before {
-                content: '\201C';
-                position: absolute;
-                top: -1.05*$unit;
-                left: -2.1*$unit;
-            }
-
-            &:last-of-type::after {
-                content: '\201D';
-                font-size: 2.25*$unit;
-                color: lighten($border-color, 2%);
-                position: relative;
-                top: 0.875*$unit;
-                left: -1.85*$unit;
-                line-height: $unit/8;
-            }
-
-            a::before {
-                content: "\2014";
-                padding-right: 0.5em;
-            }
-        }
-
-        & > cite {
-            display: block;
-            position: absolute;
-            top: 100%;
-            left: -$border-width;
-            padding: 0 0 0 3*$unit;
-            height: $unit/3*2;
-            border-radius: 0 0 0 $border-width;
-
-            box-sizing: border-box;
-            background: $border-color;
-            color: $background-color;
-
-            font-family: $font-sc;
-            text-transform: lowercase;
-            font-size: 0.9*$base-font-size;
-            font-weight: 600;
-            font-style: normal;
-            text-align: left;
-            line-height: 1.1em;
-
-
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 1.2*$unit;
-                height: 0;
-                width: 0;
-                pointer-events: none;
-                border: solid $transparent;
-                border-top-color: $border-color-light;
-                border-width: $unit/2;
-            }
-
-            &::after {
-                content: " ";
-                width: 2*$unit;
-                height: $unit/3*2;
-                position: absolute;
-                top: 0;
-                left: 100%;
-                background: $border-color;
-                border-radius: 0 0 100% 0;
-            }
-
-            @include media($article-width) {
-                margin-right: -$padding-factor*$padding;
-                width: $padding-factor*100%;
-
-                &::before {
-                    left: 7%;
-                }
-
-                &::after {
-                    display: none;
-                }
-            }
-
-            a, a:hover, a:focus {
-                color: $border-color-light;
-                text-decoration: none;
-            }
-        }
-    }
-    */
-     
 ul.share-buttons{
   list-style: none;
-float: right;
+  float: right;
   padding: 0;
 
 	li{
@@ -572,9 +389,8 @@ float: right;
 	    line-height: 27px;
 	    margin-right: .25em;
 	}
-}
 
-ul.share-buttons .sr-only {
+	.sr-only {
   position: absolute;
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
@@ -583,5 +399,6 @@ ul.share-buttons .sr-only {
   height: 1px;
   width: 1px;
   overflow: hidden;
-}
+  }
 
+}

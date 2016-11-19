@@ -8,7 +8,7 @@
         </ul>
         <a href="http://www.copyscape.com/" target="_blank"><img src="https://blog.zverit.com/assets/copyscape-banner-gray-110x36.png" width="110" height="36" border="0" alt="Protected by Copyscape" title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page." /></a>
       </div>
-<link rel="publisher" href="https://plus.google.com/b/114908284667574282591" />
+		<link rel="publisher" href="https://plus.google.com/b/114908284667574282591" />
       <div class="footer-col footer-col-2">
         <ul class="social-media-list">     
           <li>
@@ -35,18 +35,13 @@
   </div>
 </footer>
 <script type="text/javascript">
-	(function (d, src, s, id) {
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) return;
-		js = d.createElement(s);js.async = 1;js.id = id;js.src = src;fjs.parentNode.insertBefore(js, fjs);
-	})(document, '//analytics.truvisibility.com/content/tracking/mg-sdk.min.js', 'script', 'mg-jssdk');
-    (function () {
-        var chain = window.onload;
-        window.onload = function () {
-			if (chain) chain.apply(this, arguments);
-			_mg.register('//analytics.truvisibility.com/api/tracking', 'blog.zverit.com');
-		}
-	})();
+    (function(w,d,o,s,i,a,m){
+        w[i]=w[i]||function(){(w[i].queue=w[i].queue||[]).push(arguments)},
+        a=d.createElement(o);a.async=1;a.src=s;m=d.getElementsByTagName(o)[0];m.parentNode.insertBefore(a,m);
+    })(window,document,'script','https://analytics.truvisibility.com/content/tracking/mg-sdk.min.js','_mg');
+
+    _mg('init', 'blog.zverit.com');
+    _mg('send', 'impression');
 </script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
