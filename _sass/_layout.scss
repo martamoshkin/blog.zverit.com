@@ -330,6 +330,7 @@
       list-style-position: inside;
       padding: 0;
       li {
+	    
           -webkit-transition: all .1s ease-in-out;
      -moz-transition: all .1s ease-in-out;
      -o-transition: all .1s ease-in-out;
@@ -339,6 +340,10 @@
           list-style-type: disc;
           padding: 0 .5rem;
         }
+	      
+	      h3{
+	      	display: inline-block;
+	      }
       }
     }
     a {
