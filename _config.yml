@@ -21,6 +21,7 @@ paginate: 6
 gems: 
   - jekyll-sitemap 
   - jekyll-feed
+  - jekyll-minifier
   
 # Build settings
 markdown: kramdown
