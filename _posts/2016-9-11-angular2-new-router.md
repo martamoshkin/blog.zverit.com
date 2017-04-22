@@ -12,7 +12,7 @@ router 2.0, затем в вериси RC2 снова выходит новая 
 Итак, рассмотрим основные изменения.
 <!-- more -->
 
-<h3>Импортирование</h3>
+<h4>Импортирование</h4>
 Раньше было так:
 
 ```ts
@@ -53,7 +53,7 @@ bootstrap(AppComponent, [
 ]);
 ```
 
-<h3>Конфигурация</h3>
+<h4>Конфигурация</h4>
 
 ```ts
 //old
@@ -104,7 +104,7 @@ export const APP_ROUTER_PROVIDER = provideRouter(appRoutes);
 Роутер все также биндится к ``<router-outlet></router-outlet>``, но необходимость в декораторе ``@RouteConfig`` отпала.
 При определении пути теперь не нужно писать его имя, и сам путь пишется без слеша в начале. 
 
-<h3> Привязка к маршрутам </h3>
+<h4> Привязка к маршрутам </h4>
 
 ```html
 <a [routerLink]="['/Home']">Home</a>
@@ -131,7 +131,7 @@ this._router.navigate(['Error',{ error: 404 }]);
 this.router.navigate(['error', 404]);
 ```
 
-<h3>Доступ к параметрам пути</h3>
+<h4>Доступ к параметрам пути</h4>
 
 ```ts
 //old components/actions/boo-action.component.ts
@@ -184,7 +184,7 @@ export class BooActionComponent implements OnInit, OnDestroy {
 
 Желательно подписываться в ``ngOnInit`` методе и отписываться в ``ngOnDestroy`` 
 
-<h3>Защита путей</h3>
+<h4>Защита путей</h4>
 
 Проверки аутидентификации на старом роутере можно было добиться при помощи ``@CanActivate, @CanDeactivate`` декораторов.
 
