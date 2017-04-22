@@ -21,7 +21,6 @@ paginate: 6
 gems: 
   - jekyll-sitemap 
   - jekyll-feed
-  - jekyll-minifier
   - jekyll-paginate
   
 # Build settings
@@ -41,3 +40,14 @@ jekyll-archives:
     day: '/:year/:month/:day/'
     tag: '/tag/:name/'
     category: '/category/:name/'
+
+kramdown:
+  auto_ids:       true
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  input:          GFM
+  hard_wrap:      false
+  footnote_nr:    1
+  coderay_line_number_start: 1
+  coderay_line_numbers: inline
+  hard_wrap: false
