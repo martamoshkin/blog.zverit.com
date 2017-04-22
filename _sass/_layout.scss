@@ -291,7 +291,6 @@ article, .arcives, .expo-section, #disqus_thread {
 .post-title {
   font-size: 28px;
   letter-spacing: -1px;
-  line-height: 1;
   font-family: "Roboto Slab", serif;
 
   @include media-query($on-laptop) {
