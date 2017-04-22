@@ -16,17 +16,17 @@ layout: default
   <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
-
+    <ul class="share-buttons">
+        <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}&t=" rel="nofollow" title="Share on Facebook" target="_blank"><span class="fa fa-facebook"></span></a></li>
+        <li><a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}" rel="nofollow" target="_blank" title="Tweet" ><span class="fa fa-twitter"> </span></a></li>
+        <li><a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Google+"><span class="fa fa-google-plus"></span></a></li>
+        <li><a href="https://getpocket.com/save?url={{ site.url }}{{ page.url }}&title={{ page.title }}" rel="nofollow" target="_blank" title="Add to Pocket" ><span class="fa fa-get-pocket"> </span></a></li>
+        <li><a href="http://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}&summary=&source={{ site.title }}+#zveritblog" rel="nofollow" target="_blank" title="Share on LinkedIn" ><span class="fa fa-linkedin"></span></a></li>
+    </ul>
 </article>
-<ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}&t=" rel="nofollow" title="Share on Facebook" target="_blank"><span class="fa fa-facebook"></span></a></li>
-  <li><a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}" rel="nofollow" target="_blank" title="Tweet" ><span class="fa fa-twitter"> </span></a></li>
-  <li><a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Google+"><span class="fa fa-google-plus"></span></a></li>
-  <li><a href="https://getpocket.com/save?url={{ site.url }}{{ page.url }}&title={{ page.title }}" rel="nofollow" target="_blank" title="Add to Pocket" ><span class="fa fa-get-pocket"> </span></a></li>
-  <li><a href="http://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}&summary=&source={{ site.title }}+#zveritblog" rel="nofollow" target="_blank" title="Share on LinkedIn" ><span class="fa fa-linkedin"></span></a></li>
-</ul>
+
 <div class="related expo-section">
-          <h3>Related Posts:</h3>
+              <h3>Также рекомендуем:</h3>
           <ul>
             {% for post in site.related_posts limit:3 %}
               <a href="{{ post.url }}">
