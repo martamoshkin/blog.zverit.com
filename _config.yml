@@ -22,6 +22,7 @@ gems:
   - jekyll-sitemap 
   - jekyll-feed
   - jekyll-minifier
+  - jekyll-pagination
   
 # Build settings
 markdown: kramdown
