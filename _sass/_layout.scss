@@ -345,7 +345,7 @@ article, .arcives, .expo-section, #disqus_thread {
   }
 
   span {
-    background-color: $grey-color-dark;
+    background-color: #9E9E9E;
     border-radius: 50%;
     color: #fff;
     width: 27px;
@@ -353,6 +353,10 @@ article, .arcives, .expo-section, #disqus_thread {
     text-align: center;
     line-height: 27px;
     margin-right: .25em;
+
+    &:hover{
+      background-color: #212121;
+    }
   }
 
   .sr-only {
