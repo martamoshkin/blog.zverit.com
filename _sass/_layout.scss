@@ -337,7 +337,7 @@ article, .arcives, .expo-section, #disqus_thread {
   }
 .share-buttons {
   list-style: none;
-  text-align: right;
+  text-align: center;
   padding: 0;
 
   li {
@@ -345,17 +345,14 @@ article, .arcives, .expo-section, #disqus_thread {
   }
 
   span {
-    background-color: #9E9E9E;
-    border-radius: 50%;
-    color: #fff;
-    width: 27px;
-    height: 27px;
+    color: #9E9E9E;
+    width: 16%;
     text-align: center;
     line-height: 27px;
-    margin-right: .25em;
+    font-size: 20px;
 
     &:hover{
-      background-color: #212121;
+      color: #212121;
     }
   }
 
