@@ -390,8 +390,6 @@ this.cardForm.controls.card.setValue('1234567890123456');
 <details> 
   <summary>Весь код</summary>
 
-</details>
-
 ```ts
 import {Component, ElementRef, forwardRef, Input, OnDestroy, OnInit, ViewChild, ViewEncapsulation} from "@angular/core";
 import {ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR} from "@angular/forms";
@@ -693,3 +691,4 @@ export class MaskedInputComponent implements ControlValueAccessor, OnInit {
     }
 }
 ```
+</details>
