@@ -386,4 +386,4 @@ this.cardForm.controls.card.setValue('1234567890123456');
 
 <img class="post-logo" src="https://blog.zverit.com/assets/card-mask-component.png" alt="Card mask Angular form control" /> 
 
-<iframe style="width: 100%; height: 600px" src="https://embed.plnkr.co/UViP4NEUY4Lh7o4z13Z0/?show=preview" frameborder="0" allowfullscren="allowfullscren"></iframe>
+<iframe style="width: 100%; height: 600px" src="https://embed.plnkr.co/UViP4NEUY4Lh7o4z13Z0" frameborder="0" allowfullscren="allowfullscren"></iframe>

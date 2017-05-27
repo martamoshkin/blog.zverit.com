@@ -366,28 +366,6 @@ article, .arcives, .expo-section, #disqus_thread {
     overflow: hidden;
   }
 
-  //img {
-  //  -webkit-filter: grayscale(100%);
-  //  -moz-filter: grayscale(100%);
-  //  -ms-filter: grayscale(100%);
-  //  -o-filter: grayscale(100%);
-  //  filter: grayscale(100%);
-  //  filter: gray; /* IE 6-9 */
-  //  -webkit-transition: all .7s;
-  //  -moz-transition: all .7s;
-  //  -o-transition: all .7s;
-  //  transition: all .7s;
-  //}
-  //
-  //img:hover {
-  //  -webkit-filter: none;
-  //  -moz-filter: none;
-  //  -ms-filter: none;
-  //  -o-filter: none;
-  //  filter: none;
-  //  filter: none; /* IE 6-9 */
-  //}
-
   p {
     line-height: 1.6;
   }
@@ -468,3 +446,29 @@ article, .arcives, .expo-section, #disqus_thread {
     border-radius: 4px;
 }
 
+.pagination 
+{
+	text-align: center;
+	margin-top: 40px;
+
+	li {
+	    display: inline-block;
+	    border-radius: 2px;
+	    text-align: center;
+	    vertical-align: top;
+	    height: 30px;
+	    color: #444;
+	    font-size: 1.2rem;
+	    padding: 0 10px;
+	    line-height: 30px;
+	}
+
+	li.active {
+	    background-color: #424242;
+	    color: #fff;
+	}
+
+	.disabled {
+		opacity: .6;
+	}
+}
