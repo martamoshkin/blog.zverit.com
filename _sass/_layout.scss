@@ -184,6 +184,12 @@ article, .arcives, .expo-section, #disqus_thread {
   box-shadow: 0 0.005em 0.01em 0 rgba(0, 0, 0, .12), 0 2px 10px 0 rgba(0, 0, 0, .12) !important;
 }
 
+@include media-query($on-palm) {
+	article, .arcives, .expo-section, #disqus_thread {
+  		padding: 35px 25px 22px 25px;
+	}
+}
+
 .page-content {
   padding: $spacing-unit 0;
   min-height: 70vh;
@@ -218,6 +224,14 @@ article, .arcives, .expo-section, #disqus_thread {
     box-shadow: 0 0.005em 0.01em 0 rgba(0, 0, 0, .12), 0 2px 10px 0 rgba(0, 0, 0, .12) !important;
     margin-bottom: $spacing-unit;
   }
+}
+
+@include media-query($on-palm) {
+	.post-list{
+		> li {
+			padding: 15px 25px 22px 25px;
+		}
+	}
 }
 
 .post-meta {
