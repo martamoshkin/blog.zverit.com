@@ -6,13 +6,17 @@ category: Frontend
 tags: [Angular2, TypeScript, Router]
 ---
 <img class="post-logo" src="https://blog.zverit.com/assets/angular2-router.png" alt="Angular2 router" />
+
+
 Во время альфа и бета версий Angular2 router-deprecated вполне справлялся со своими задачами. С появлением RC1 вышел и переработанный 
 router 2.0, затем в вериси RC2 снова выходит новая версия роутера — 3.0. Полная его переработка была связана с тем, что возникли серьезные
 проблемы, такие как глубокая линковка в lazy-loaded секциях. 
 Итак, рассмотрим основные изменения.
 <!-- more -->
 
-<h4>Импортирование</h4>
+<br>
+
+<h3>Импортирование</h3>
 Раньше было так:
 
 ```ts
@@ -53,7 +57,7 @@ bootstrap(AppComponent, [
 ]);
 ```
 
-<h4>Конфигурация</h4>
+<h3>Конфигурация</h3>
 
 ```ts
 //old
@@ -104,7 +108,7 @@ export const APP_ROUTER_PROVIDER = provideRouter(appRoutes);
 Роутер все также биндится к ``<router-outlet></router-outlet>``, но необходимость в декораторе ``@RouteConfig`` отпала.
 При определении пути теперь не нужно писать его имя, и сам путь пишется без слеша в начале. 
 
-<h4> Привязка к маршрутам </h4>
+<h3> Привязка к маршрутам </h3>
 
 ```html
 <a [routerLink]="['/Home']">Home</a>
@@ -131,7 +135,7 @@ this._router.navigate(['Error',{ error: 404 }]);
 this.router.navigate(['error', 404]);
 ```
 
-<h4>Доступ к параметрам пути</h4>
+<h3>Доступ к параметрам пути</h3>
 
 ```ts
 //old components/actions/boo-action.component.ts
@@ -184,7 +188,7 @@ export class BooActionComponent implements OnInit, OnDestroy {
 
 Желательно подписываться в ``ngOnInit`` методе и отписываться в ``ngOnDestroy`` 
 
-<h4>Защита путей</h4>
+<h3>Защита путей</h3>
 
 Проверки аутидентификации на старом роутере можно было добиться при помощи ``@CanActivate, @CanDeactivate`` декораторов.
 
