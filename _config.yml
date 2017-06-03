@@ -27,12 +27,6 @@ markdown: kramdown
 url: https://blog.zverit.com   # with the https protocol
 enforce_ssl: blog.zverit.com   # without any protocol
 
-defaults: 
-  - scope:
-      path: "tag/"
-    values:
-      sitemap: false
-
 jekyll-archives:
   enabled:
   - year
