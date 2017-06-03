@@ -11,7 +11,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://blog.zverit.com" # the base hostname & protocol for your site
 twitter_username: zverit 
 github_username:  Zverit
- 
+permalink: pretty
 # safe: true
 
 paginate: 4
