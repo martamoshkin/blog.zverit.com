@@ -471,7 +471,7 @@ this.cardForm = this._formBuilder.group({
 this.cardForm.controls.card.setValue('1234567890123456');
 ```
 
-
+### Результат ###
 
 <img src="https://blog.zverit.com/assets/card-mask-component.png" alt="Card mask Angular form control" /> 
 
