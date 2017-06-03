@@ -29,7 +29,7 @@ enforce_ssl: blog.zverit.com   # without any protocol
 
 defaults: 
   - scope:
-      path: "tag"
+      path: "tag/"
     values:
       sitemap: false
 
