@@ -241,6 +241,80 @@ private _conformValue(value: string, placeholder: string): { conformed: string, 
 }
 ```
 
+```ts
+if (!isAddition) {
+    let compensatingPlaceholderChars = '';
+
+    for (let i = indexOfFirstChange; i < indexOfLastChange; i++) {
+        if (placeholder[i] === this._placeholderChar) {
+            compensatingPlaceholderChars += this._placeholderChar;
+        }
+    }
+
+    value =
+        (value.slice(0, indexOfFirstChange) +
+        compensatingPlaceholderChars +
+        value.slice(indexOfFirstChange, value.length)
+    );
+}
+```
+
+Этот блок выполнится в случае удаления. На позиции удаленного символа подставляется знак маски.
+
+Следующий цикл удаляет символы маски из ввода.
+
+```ts
+for (let i = value.length - 1; i >= 0; i--) {
+    let char = value[i];
+
+    if (char !== this._placeholderChar) {
+        const shouldOffset = i >= indexOfFirstChange &&
+            this._previousValue.length === this._maxInputValue;
+
+        if (char === placeholder[(shouldOffset) ? i - editDistance : i]) {
+            valueArr.splice(i, 1);
+        }
+    }
+}
+
+```
+
+К примеру до ввода маска zip кода была `00000 ____` и пользователь ввел еще одну цифру, то цикл удалит знак "_" и на этом месте окажется введнная цифра: `00000 1___` .
+
+И вот он, 'главный' цикл, который составляет значения шаблона в соответствии с маской.
+
+```ts
+placeholderLoop: for (let i = 0; i < placeholder.length; i++) {
+    const charInPlaceholder = placeholder[i];
+
+    if (charInPlaceholder === this._placeholderChar) {
+        if (valueArr.length > 0) {
+            while (valueArr.length > 0) {
+                let valueChar = valueArr.shift();
+
+                if (valueChar === this._placeholderChar) {
+                    conformedValue += this._placeholderChar;
+
+                    continue placeholderLoop;
+                } else if (this.mask[i].test(valueChar)) {
+                    conformedValue += valueChar;
+                    cleanedValue += valueChar;
+
+                    continue placeholderLoop;
+                }
+            }
+        }
+
+        conformedValue += placeholder.substr(i, placeholder.length);
+        break;
+    } else {
+        conformedValue += charInPlaceholder;
+    }
+}
+```
+
+Основной принцип которого: i-й символ это символ шаблона или же это регулярка по маске и значение подходит под ее условие - добавляем к значению, в ином случае игнор.
+
 
 ### Вычисление позиции курсора ###
 
