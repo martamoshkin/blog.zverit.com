@@ -449,8 +449,7 @@ private _getCursorPosition(value: string, placeholder: string, conformedValue: s
     }
 }
 ```
-
-Следующая проверка на случай если в шаблоне `111__ ____` с маской zip индекса (`\d\d\d\d\d \d\d\d\d`) была введен символ `111r_ ____`, то значение не должно измениться и курсор остаться на своем месте.
+В целом все проверки имеют соответствующие названия и ясно их предназначение. Но на всякий случай объясню некоторые.
 
 ```ts 
 const possiblyHasRejectedChar = isAddition && (
@@ -458,7 +457,13 @@ const possiblyHasRejectedChar = isAddition && (
     conformedValue === placeholder);
 ```
 
+Эта проверка на случай если в шаблоне `111__ ____` с маской zip индекса (`\d\d\d\d\d \d\d\d\d`) была введен символ `111r_ ____`, то значение не должно измениться и курсор остаться на своем месте.
+
+
+```
+
 Проверяем, это символ маски и есть ли смещение влево:
+
 ```ts
 const targetIsMaskMovingLeft = (
             this._previousPlaceholder[intersection.length - 1] !== undefined &&
@@ -467,14 +472,6 @@ const targetIsMaskMovingLeft = (
             this._previousPlaceholder[intersection.length - 1] !== placeholder[intersection.length - 1] &&
             this._previousPlaceholder[intersection.length - 1] === placeholder[intersection.length - 2]
         );
-```
-
-Теперь контрол маски ввода готов к использованию.
-
-Задается маска следующим образом:
-
-```ts
- public cardMask = [/\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/];
 ```
 
 
@@ -491,6 +488,16 @@ this.cardForm.controls.card.setValue('1234567890123456');
 ```
 
 ### Результат ###
+
+
+Теперь контрол маски ввода готов к использованию.
+
+Задается маска следующим образом:
+
+```ts
+ public cardMask = [/\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/];
+```
+
 
 <img src="https://blog.zverit.com/assets/card-mask-component.png" alt="Card mask Angular form control" /> 
 
