@@ -283,7 +283,7 @@ for (let i = value.length - 1; i >= 0; i--) {
 
 К примеру до ввода маска zip кода была `00000 ____` и пользователь ввел еще одну цифру, то цикл удалит знак "_" и на этом месте окажется введнная цифра: `00000 1___` .
 
-И вот он, 'главный' цикл, который составляет значения шаблона в соответствии с маской.
+И вот он, "главный" цикл, который составляет значения шаблона в соответствии с маской.
 
 ```ts
 placeholderLoop: for (let i = 0; i < placeholder.length; i++) {
@@ -448,6 +448,25 @@ private _getCursorPosition(value: string, placeholder: string, conformedValue: s
         }
     }
 }
+```
+
+Следующая проверка на случай если в шаблоне `111__ ____` с маской zip индекса (`\d\d\d\d\d \d\d\d\d`) была введен символ `111r_ ____`, то значение не должно измениться и курсор остаться на своем месте.
+
+```ts 
+const possiblyHasRejectedChar = isAddition && (
+    this._previousValue === conformedValue ||
+    conformedValue === placeholder);
+```
+
+Проверяем, это символ маски и есть ли смещение влево:
+```ts
+const targetIsMaskMovingLeft = (
+            this._previousPlaceholder[intersection.length - 1] !== undefined &&
+            placeholder[intersection.length - 2] !== undefined &&
+            this._previousPlaceholder[intersection.length - 1] !== this._placeholderChar &&
+            this._previousPlaceholder[intersection.length - 1] !== placeholder[intersection.length - 1] &&
+            this._previousPlaceholder[intersection.length - 1] === placeholder[intersection.length - 2]
+        );
 ```
 
 Теперь контрол маски ввода готов к использованию.
