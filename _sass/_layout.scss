@@ -471,13 +471,21 @@ article, .arcives, .expo-section, #disqus_thread {
 	li {
 	    display: inline-block;
 	    border-radius: 2px;
-	    text-align: center;
+	    text-align: initial;
 	    vertical-align: top;
 	    height: 30px;
 	    color: #444;
 	    font-size: 1.2rem;
-	    padding: 0 10px;
 	    line-height: 30px;
+
+	     >a, >b, >span { 
+	   		padding: 0 10px;
+	    }
+
+	    &:hover{
+	    	background-color: #e5e5e5;
+	    	color: #fff;
+	    }
 	}
 
 	li.active {
