@@ -7,6 +7,7 @@ tags:
 - Angular
 - Form Control
 - ControlValueAccessor
+description: "В статье рассматривается разработка простого Mask Form Control для Angular, основные принципы использования ControlValueAccessor" 
 ---
 
 <img class="post-logo" src="https://blog.zverit.com/assets/angular-mask.png" alt="Card mask Angular form control" />

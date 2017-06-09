@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Webpack и LazyLoad модули Angular2"
+title:  "Webpack и LazyLoad модули Angular"
 date:   2016-11-15 21:25:43 +0300
 category: Frontend
-tags: [Angular2, TypeScript, Webpack]
-description: ""
+tags: [Angular, TypeScript, Webpack]
+description: "Обзор возможности создания LazyLoad компонентов в Angular, возможность ленивой загрузки в Router 3.0"
 ---
 
 <img class="post-logo" style="max-width: 100%" src="https://blog.zverit.com/assets/webpack-failed-to-load.png" alt="Chrome console"/>
