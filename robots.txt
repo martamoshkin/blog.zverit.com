@@ -2,3 +2,4 @@ User-agent: *
 Disallow: /tag
 Disallow: /categories
 Sitemap: https://blog.zverit.com/sitemap.xml
+Host: blog.zverit.com
