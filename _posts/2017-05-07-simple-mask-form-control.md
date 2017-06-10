@@ -460,10 +460,30 @@ const possiblyHasRejectedChar = isAddition && (
 
 Эта проверка на случай если в шаблоне `111__ ____` с маской zip индекса (`\d\d\d\d\d \d\d\d\d`) был введен символ `111r_ ____`, то значение не должно измениться и курсор остаться на своем месте.
 
+Если произошло удаление и `targetChar` это символ от шаблона, и также изменилась длина шаблона или маска сместилась влево, то отслеживаем на символ справа от курсора:
 
+```ts
+if (!isAddition &&
+    (maskLengthChanged || targetIsMaskMovingLeft) &&
+    previousLeftMaskChars > 0 &&
+    placeholder.indexOf(targetChar) > -1 &&
+    value[this._currentCursorPosition] !== undefined) {
+    trackRightCharacter = true;
+    targetChar = value[this._currentCursorPosition];
+}
 ```
 
-Проверяем, это символ маски и есть ли смещение влево:
+```ts
+const countTargetCharInPlaceholder = placeholder
+    .substr(0, placeholder.indexOf(this._placeholderChar))
+    .split('')
+    .filter((char, index) => (
+        char === targetChar &&
+        value[index] !== char
+    )).length;
+```
+
+Проверяем, символ маски ли это и есть ли смещение влево:
 
 ```ts
 const targetIsMaskMovingLeft = (
