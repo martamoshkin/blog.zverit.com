@@ -186,7 +186,7 @@ article, .arcives, .expo-section, #disqus_thread {
 
 @include media-query($on-palm) {
 	article, .arcives, .expo-section, #disqus_thread {
-  		padding: 35px 25px 22px 25px;
+  		padding: 35px 20px 22px 20px;
 	}
 }
 
@@ -229,7 +229,7 @@ article, .arcives, .expo-section, #disqus_thread {
 @include media-query($on-palm) {
 	.post-list{
 		> li {
-			padding: 15px 25px 22px 25px;
+			padding: 15px 20px 22px 20px;
 		}
 	}
 }
@@ -316,7 +316,6 @@ article, .arcives, .expo-section, #disqus_thread {
   margin-bottom: $spacing-unit;
   padding-bottom: $spacing-unit;
   border-bottom: 1px solid rgba(0,0,0,0.1);
-  text-align: justify;
 
   h2 {
     font-size: 32px;
@@ -473,6 +472,7 @@ article, .arcives, .expo-section, #disqus_thread {
 	    border-radius: 2px;
 	    text-align: initial;
 	    vertical-align: top;
+	    
 	    height: 30px;
 	    color: #444;
 	    font-size: 1.2rem;
