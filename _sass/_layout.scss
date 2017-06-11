@@ -188,6 +188,10 @@ article, .arcives, .expo-section, #disqus_thread {
   float: right;
   max-width: 270px;
   margin-left: 10px;
+
+  &:hover{
+  	opacity: .8;
+  }
 }
 
 .page-heading {

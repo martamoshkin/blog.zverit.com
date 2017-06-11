@@ -460,28 +460,6 @@ const possiblyHasRejectedChar = isAddition && (
 
 Эта проверка на случай если в шаблоне `111__ ____` с маской zip индекса (`\d\d\d\d\d \d\d\d\d`) был введен символ `111r_ ____`, то значение не должно измениться и курсор остаться на своем месте.
 
-Если произошло удаление и `targetChar` это символ от шаблона, и также изменилась длина шаблона или маска сместилась влево, то отслеживаем на символ справа от курсора:
-
-```ts
-if (!isAddition &&
-    (maskLengthChanged || targetIsMaskMovingLeft) &&
-    previousLeftMaskChars > 0 &&
-    placeholder.indexOf(targetChar) > -1 &&
-    value[this._currentCursorPosition] !== undefined) {
-    trackRightCharacter = true;
-    targetChar = value[this._currentCursorPosition];
-}
-```
-
-```ts
-const countTargetCharInPlaceholder = placeholder
-    .substr(0, placeholder.indexOf(this._placeholderChar))
-    .split('')
-    .filter((char, index) => (
-        char === targetChar &&
-        value[index] !== char
-    )).length;
-```
 
 Проверяем, символ маски ли это и есть ли смещение влево:
 
@@ -495,6 +473,97 @@ const targetIsMaskMovingLeft = (
         );
 ```
 
+Если произошло удаление и `targetChar` это символ от шаблона, и также изменилась длина шаблона или маска сместилась влево, то отслеживаем на символ справа от курсора:
+
+```ts
+if (!isAddition &&
+    (maskLengthChanged || targetIsMaskMovingLeft) &&
+    previousLeftMaskChars > 0 &&
+    placeholder.indexOf(targetChar) > -1 &&
+    value[this._currentCursorPosition] !== undefined) {
+    trackRightCharacter = true;
+    targetChar = value[this._currentCursorPosition];
+}
+```
+
+Далее подсчитываем сколько раз `targetChar` встречается в пересечениях и в шаблоне.
+
+```ts
+const countTargetCharInIntersection = intersection.filter((char) => char === targetChar).length;
+
+const countTargetCharInPlaceholder = placeholder
+    .substr(0, placeholder.indexOf(this._placeholderChar))
+    .split('')
+    .filter((char, index) => (
+        char === targetChar &&
+        value[index] !== char
+    )).length;
+```
+
+Следущим циклом ищем расположение `targetChar`.
+
+```ts
+let numberOfEncounteredMatches = 0;
+for (let i = 0; i < conformedValue.length; i++) {
+    const conformedValueChar = normalizedConformedValue[i];
+
+    startingSearchIndex = i + 1;
+
+    if (conformedValueChar === targetChar) {
+        numberOfEncounteredMatches++;
+    }
+
+    if (numberOfEncounteredMatches >= requiredNumberOfMatches) {
+        break;
+    }
+}
+```
+После первого совпадения выходим из цикла. Если идет поиск второй единицы в `1234`, то `startingSearchIndex` после выполнения будет иметь значение `4`.
+
+Следующая логика выполняется при добавлении символов.
+
+```ts
+if (isAddition) {
+    let lastPlaceholderChar = startingSearchIndex;
+
+    for (let i = startingSearchIndex; i <= placeholder.length; i++) {
+        if (placeholder[i] === this._placeholderChar) {
+            lastPlaceholderChar = i;
+        }
+
+        if (placeholder[i] === this._placeholderChar || i === placeholder.length) {
+            return lastPlaceholderChar;
+        }
+    }
+}
+```
+Запоминается последний символ шаблона, и если маска содержит после него еще символы, то курсор не в право уже не должен перемещаться, а остановиться у последнего символа шаблона.
+
+Следующая логика выполняется если не `isAddition`, т.е. в случае удаления.
+
+```ts
+if (trackRightCharacter) {
+    for (let i = startingSearchIndex - 1; i >= 0; i--) {
+        if (
+            conformedValue[i] === targetChar ||
+            i === 0
+        ) {
+            return i;
+        }
+    }
+} else {
+    for (let i = startingSearchIndex; i >= 0; i--) {
+        if (placeholder[i - 1] === this._placeholderChar || i === 0) {
+            return i;
+        }
+    }
+}
+```
+
+Ищем символ который стоял справа от курсора. Поиск начинается с `startingSearchIndex - 1` потому, что в ином случае будет включен лишний символ справа. 
+Поиск перемещается влево, пока не будет найдено то место и тот символ. Затем будет выставлен курсор справа от удаленного символа.
+
+На этом работы с положением курсора достаточно, основные случаи описаны.
 
 
 ### Валидация ###
