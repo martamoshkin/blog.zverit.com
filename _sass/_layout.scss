@@ -1,3 +1,40 @@
+
+body::-webkit-scrollbar-track
+{
+    background-color: #EEEEEE;
+}
+
+body::-webkit-scrollbar
+{
+    width: 7px;
+    height: 7px;
+    background-color: #F5F5F5;
+}
+body::-webkit-scrollbar-thumb
+{
+    background-color: #b5b5b5;
+    border-radius: 4px;
+}
+
+
+.highlight::-webkit-scrollbar-track
+{
+    background-color: #EEEEEE;
+}
+
+.highlight::-webkit-scrollbar
+{
+    width: 7px;
+    height: 7px;
+    background-color: #F5F5F5;
+}
+.highlight::-webkit-scrollbar-thumb
+{
+    background-color: #b5b5b5;
+    border-radius: 4px;
+}
+
+
 .site-header {
   border-bottom: 1px solid $grey-color-light;
   box-shadow: 0 0.005em 0.01em 0 rgba(0, 0, 0, .12), 0 2px 10px 0 rgba(0, 0, 0, .12) !important;
@@ -432,24 +469,6 @@ article, .arcives, .expo-section, #disqus_thread {
   background: #fff;
   clear: left;
   font: 14px Helvetica, Arial, sans-serif;
-}
-
-.highlight::-webkit-scrollbar-track
-{
-    background-color: #EEEEEE;
-}
-
-.highlight::-webkit-scrollbar
-{
-    width: 7px;
-    height: 7px;
-    background-color: #F5F5F5;
-}
-
-.highlight::-webkit-scrollbar-thumb
-{
-    background-color: #9E9E9E;
-    border-radius: 4px;
 }
 
 .pagination 
