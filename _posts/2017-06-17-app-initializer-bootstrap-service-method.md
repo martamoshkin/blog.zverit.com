@@ -71,6 +71,8 @@ export class AppModule { }
 Далее определить сервис `AppConfig` и функцию `load`, которую мы хотели бы вызвать при инициализации приложения.
 
 ```ts
+// app.config.ts
+
 @Injectable()
 export class AppConfig {
 
