@@ -6,7 +6,13 @@ category: Frontend
 tags: [Webpack, TypeScript, Loaders, CommonJS, AMD]
 description: "Существует огромное множество способов подключения сторонних js/css библиотек при помощи средств Webpack. Не все js модули совместимы и могут напрямую использоваться с Webpack. На этот случай Webpack имеет несколько загрузчиков, для работы с такими модулями."
 ---
-<img class="post-logo" src="https://blog.zverit.com/assets/webpack-loaders.png" alt="Webpack loaders" itemprop="image" itemscope itemtype="https://schema.org/ImageObject"/>
+
+<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img class="post-logo" src="https://blog.zverit.com/assets/webpack-loaders.png" alt="Webpack loaders" />
+      <meta itemprop="url" content="https://blog.zverit.com/assets/webpack-loaders.png">
+      <meta itemprop="width" content="270">
+      <meta itemprop="height" content="140">
+</div>
 
 Существует несколько путей подключения сторонних *js/css* библиотек при помощи средств *Webpack*.
 Не все *js* модули совместимы и могут напрямую использоваться с Webpack. На этот случай Webpack имеет несколько загрузчиков, для работы с такими модулями. Далее рассмотрим большинство из них. 
