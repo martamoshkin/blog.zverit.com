@@ -1,21 +1,18 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-	<meta itemprop="keywords" content="{{ page.tags | join: ',' }}" />
-	<meta itemprop="description" content="{{ content | strip_html | truncatewords: 40 }}" />
-	
+<article class="post">
 	<header class="post-header">
-		<h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-		<p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%-d %B %Y" }}</time> |
+		<h1 class="post-title">{{ page.title }}</h1>
+		<p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time> |
 			{% for tag in page.tags %}
 			<a class="codinfox-tag-mark post-tag" href="/tag#{{ tag | slugify }}">{{ tag }}</a>
 			{% endfor %}
 			{% if page.author %} •
-			<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+			<span><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
 		</header>
 
-		<div class="post-content" itemprop="articleBody">
+		<div class="post-content">
 			{{ content }}
 		</div>
 		<ul class="share-buttons">
@@ -26,7 +23,48 @@ layout: default
 			<li><a href="http://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}&summary=&source={{ site.title }}+#zveritblog" rel="nofollow" target="_blank" title="Share on LinkedIn" ><span class="fa fa-linkedin"></span></a></li>
 		</ul>
 	</article>
-
+	<script type="application/ld+json">
+		{  
+			"@context":"http://schema.org",
+			"@type":"BlogPosting",
+			"headline":"{{ include.headline }}",
+			"genre":"{{ include.category }}",
+			"keywords":"{{ include.keywords }}",
+			"wordCount":"{{ wordcount }}",
+			"url":"https://blog.zverit.com{{ include.link }}",
+			"datePublished":"{{ include.date | | date: '%Y-%m-%d' }}",
+			"author":{  
+				"@type": "Person",
+				"name": "Artamoshkin Maxim",
+				"sameAs" : [
+				"https://twitter.com/Zverit",
+				"https://plus.google.com/b/114908284667574282591",
+				"https://www.facebook.com/maximArtamoshkin"
+				]
+			},
+			"publisher":{  
+				"@type": "Person",
+				"name": "Artamoshkin Maxim",
+				"sameAs" : [
+				"https://twitter.com/Zverit",
+				"https://plus.google.com/b/114908284667574282591",
+				"https://www.facebook.com/maximArtamoshkin"
+				]
+			},
+			"image":{  
+				"@type":"ImageObject",
+				"contentUrl":"https://pauldambra.github.io/images/cardboard.jpg",
+				"url":"blog.zverit.com",
+				"height":"450",
+				"width":"1000"
+			},
+			"mainEntityOfPage":{  
+				"@type":"WebPage",
+				"@id":"https://blog.zverit.com{{ include.link }}"
+			},
+			"articleBody":"{{ include.content | strip_html | xml_escape | normalize_whitepace | strip_newlines | strip }}"
+		}
+	</script>
 	<div class="related expo-section">
 		<h3>Также рекомендуем:</h3>
 		<ul>
