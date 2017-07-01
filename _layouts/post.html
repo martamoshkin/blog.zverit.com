@@ -1,18 +1,20 @@
 ---
 layout: default
 ---
-<article class="post">
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<meta itemprop="keywords" content="{{ page.tags | join: ',' }}" />
+	<meta itemprop="description" content="{{ content | strip_html | truncatewords: 40 }}" />
 	<header class="post-header">
-		<h1 class="post-title">{{ page.title }}</h1>
-		<p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time> |
+		<h1 class="post-title"  itemprop="name headline">{{ page.title }}</h1>
+		<p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}"  itemprop="datePublished">{{ page.date | date: "%-d %B %Y" }}</time> |
 			{% for tag in page.tags %}
 			<a class="codinfox-tag-mark post-tag" href="/tag#{{ tag | slugify }}">{{ tag }}</a>
 			{% endfor %}
 			{% if page.author %} •
-			<span><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+			<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
 		</header>
 
-		<div class="post-content">
+		<div class="post-content"  itemprop="articleBody">
 			{{ content }}
 		</div>
 		<ul class="share-buttons">
@@ -23,7 +25,7 @@ layout: default
 			<li><a href="http://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}&summary=&source={{ site.title }}+#zveritblog" rel="nofollow" target="_blank" title="Share on LinkedIn" ><span class="fa fa-linkedin"></span></a></li>
 		</ul>
 	</article>
-	<script type="application/ld+json">
+<!-- 	<script type="application/ld+json">
 		{  
 			"@context":"http://schema.org",
 			"@type":"BlogPosting",
@@ -66,7 +68,7 @@ layout: default
 			},
 			"articleBody":"{{ page.content | strip_html | xml_escape | slugify: 'none' | escape | strip_newlines }}"
 		}
-	</script>
+	</script> -->
 	<div class="related expo-section">
 		<h3>Также рекомендуем:</h3>
 		<ul>
