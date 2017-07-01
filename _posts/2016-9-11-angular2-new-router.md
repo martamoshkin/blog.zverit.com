@@ -2,6 +2,7 @@
 layout: post
 title:  "Миграция Angular2 на новый Router 3.0"
 date:   2016-09-11 04:53:10 +0300
+image: "/assets/angular2-router.png"
 category: Frontend
 tags: [Angular2, TypeScript, Router]
 ---

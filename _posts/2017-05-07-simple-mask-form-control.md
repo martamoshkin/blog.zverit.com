@@ -1,6 +1,7 @@
 ---
 title: Простой Form Control с маской ввода
 layout: post
+image: "/assets/angular-mask.png"
 date: '2017-05-31 11:25:11 +0300'
 category: Frontend
 tags:
