@@ -27,12 +27,12 @@ layout: default
 		{  
 			"@context":"http://schema.org",
 			"@type":"BlogPosting",
-			"headline":"{{ include.headline }}",
-			"genre":"{{ include.category }}",
-			"keywords":"{{ include.keywords }}",
+			"headline":"{{ page.title }}",
+			"genre":"{{ page.category }}",
+			"keywords":"{{ page.tags }}",
 			"wordCount":"{{ wordcount }}",
-			"url":"https://blog.zverit.com{{ include.link }}",
-			"datePublished":"{{ include.date | | date: '%Y-%m-%d' }}",
+			"url":"https://blog.zverit.com{{ page.link }}",
+			"datePublished":"{{ page.date | date: "%-d %B %Y" }}",
 			"author":{  
 				"@type": "Person",
 				"name": "Artamoshkin Maxim",
@@ -60,9 +60,9 @@ layout: default
 			},
 			"mainEntityOfPage":{  
 				"@type":"WebPage",
-				"@id":"https://blog.zverit.com{{ include.link }}"
+				"@id":"https://blog.zverit.com{{ page.link }}"
 			},
-			"articleBody":"{{ include.content | strip_html | xml_escape | normalize_whitepace | strip_newlines | strip }}"
+			"articleBody":"{{ content | strip_html | xml_escape | normalize_whitepace | strip_newlines | strip }}"
 		}
 	</script>
 	<div class="related expo-section">
