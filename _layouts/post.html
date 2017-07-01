@@ -63,7 +63,7 @@ layout: default
 				"@type":"WebPage",
 				"@id":"https://blog.zverit.com{{ page.link }}"
 			},
-			"articleBody":"{{ page.content | xml_escape | slugify: 'pretty' | normalize_whitepace | strip_newlines | strip | escape }}"
+			"articleBody":"{{ page.content | strip_html | xml_escape | slugify: 'pretty' | escape | cgi_escape |  normalize_whitepace | strip_newlines | strip | smartify | textilize }}"
 		}
 	</script>
 	<div class="related expo-section">
