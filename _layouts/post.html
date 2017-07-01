@@ -33,6 +33,7 @@ layout: default
 			"wordCount":"{{  page.content | number_of_words }}",
 			"url":"https://blog.zverit.com{{ page.link }}",
 			"datePublished":"{{ page.date | date: "%-d %B %Y" }}",
+			"dateModified":"{{ page.date | date: "%-d %B %Y" }}",
 			"author":{  
 				"@type": "Person",
 				"name": "Artamoshkin Maxim",
@@ -63,7 +64,7 @@ layout: default
 				"@type":"WebPage",
 				"@id":"https://blog.zverit.com{{ page.link }}"
 			},
-			"articleBody":"{{ page.content | strip_html | xml_escape | slugify: 'pretty' | escape | strip_newlines }}"
+			"articleBody":"{{ page.content | strip_html | xml_escape | slugify: 'raw' | escape | strip_newlines }}"
 		}
 	</script>
 	<div class="related expo-section">
