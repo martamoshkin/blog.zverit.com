@@ -2,60 +2,56 @@
 layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<meta itemprop="keywords" content="{{ page.tags | join: ',' }}" />
+	<meta itemprop="description" content="{{ content | strip_html | truncatewords: 40 }}" />
+	
+	<header class="post-header">
+		<h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+		<p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%-d %B %Y" }}</time> |
+			{% for tag in page.tags %}
+			<a class="codinfox-tag-mark post-tag" href="/tag#{{ tag | slugify }}">{{ tag }}</a>
+			{% endfor %}
+			{% if page.author %} •
+			<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+		</header>
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%-d %B %Y" }}</time> |
-    {% for tag in page.tags %}
-       <a class="codinfox-tag-mark post-tag" href="/tag#{{ tag | slugify }}">{{ tag }}</a>
-    {% endfor %}
-    {% if page.author %} •
-    <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
-  </header>
+		<div class="post-content" itemprop="articleBody">
+			{{ content }}
+		</div>
+		<ul class="share-buttons">
+			<li><a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}&t=" rel="nofollow" title="Share on Facebook" target="_blank"><span class="fa fa-facebook"></span></a></li>
+			<li><a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}" rel="nofollow" target="_blank" title="Tweet" ><span class="fa fa-twitter"> </span></a></li>
+			<li><a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Google+"><span class="fa fa-google-plus"></span></a></li>
+			<li><a href="https://getpocket.com/save?url={{ site.url }}{{ page.url }}&title={{ page.title }}" rel="nofollow" target="_blank" title="Add to Pocket" ><span class="fa fa-get-pocket"> </span></a></li>
+			<li><a href="http://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}&summary=&source={{ site.title }}+#zveritblog" rel="nofollow" target="_blank" title="Share on LinkedIn" ><span class="fa fa-linkedin"></span></a></li>
+		</ul>
+	</article>
 
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
-  </div>
-    <ul class="share-buttons">
-        <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}&t=" rel="nofollow" title="Share on Facebook" target="_blank"><span class="fa fa-facebook"></span></a></li>
-        <li><a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}" rel="nofollow" target="_blank" title="Tweet" ><span class="fa fa-twitter"> </span></a></li>
-        <li><a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Google+"><span class="fa fa-google-plus"></span></a></li>
-        <li><a href="https://getpocket.com/save?url={{ site.url }}{{ page.url }}&title={{ page.title }}" rel="nofollow" target="_blank" title="Add to Pocket" ><span class="fa fa-get-pocket"> </span></a></li>
-        <li><a href="http://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}&summary=&source={{ site.title }}+#zveritblog" rel="nofollow" target="_blank" title="Share on LinkedIn" ><span class="fa fa-linkedin"></span></a></li>
-    </ul>
-</article>
+	<div class="related expo-section">
+		<h3>Также рекомендуем:</h3>
+		<ul>
+			{% for post in site.related_posts limit:3 %}
+			<a href="{{ post.url }}">
+				<li>
+					<h3>{{ post.title }}</h3>
+				</li>
+			</a>
+			{% endfor %}
+		</ul>
+	</div>
+	<div id="disqus_thread"></div>
+	<script>
+		var disqus_config = function () {
+			this.page.url = "{{site.url}}{{page.url}}"; 
+			this.page.identifier = "{{page.url}}";
+		};
+		(function() {
+			var d = document, s = d.createElement('script');
 
-<div class="related expo-section">
-              <h3>Также рекомендуем:</h3>
-          <ul>
-            {% for post in site.related_posts limit:3 %}
-              <a href="{{ post.url }}">
-                  <li>
-                  <h3>{{ post.title }}</h3>
-                  </li>
-              </a>
-            {% endfor %}
-          </ul>
-</div>
-<div id="disqus_thread"></div>
-<script>
-    /**
-     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-     */
-    /*
-    var disqus_config = function () {
-        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() {  // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        
-        s.src = '//blogzverit.disqus.com/embed.js';
-        
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the comments</noscript>
+			s.src = '//blogzverit.disqus.com/embed.js';
+
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the comments</noscript>
