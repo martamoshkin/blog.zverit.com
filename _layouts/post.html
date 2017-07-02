@@ -15,15 +15,17 @@ layout: default
 		</header>
 
 		<div class="post-content"  itemprop="articleBody">
+			{% if page.image %}
 			<figure itemscope itemprop="image" itemtype="http://schema.org/ImageObject">
 				<picture>
-				<img class="post-logo" itemprop="url contentUrl" src="{{ site.url }}{{ page.image }}" alt="{{ page.image_alt }}">
+					<img class="post-logo" itemprop="url contentUrl" src="{{ site.url }}{{ page.image }}" alt="{{ page.image_alt }}">
 				</picture>
 				<meta itemprop="width" content="120">
 				<meta itemprop="height" content="90">
 				<meta itemprop="datePublished" content="{{ page.date | date: "%-d %B %Y" }}"/>
 				<figcaption itemprop="caption description">{{ page.image_alt }}</figcaption>
 			</figure>
+			{% endif %}
 			{{ content }}
 		</div>
 		{% if page.author %}

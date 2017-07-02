@@ -1,7 +1,6 @@
 ---
 title: Выполнение кода до старта приложения через APP_INITIALIZER
 layout: post
-image: "/favicon.png"
 date: '2017-06-17 15:05:11 +0300'
 category: Frontend
 author: "Artamoshkin Maxim"
