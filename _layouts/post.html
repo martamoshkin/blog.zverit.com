@@ -34,35 +34,6 @@ layout: default
 		<li><a href="https://getpocket.com/save?url={{ site.url }}{{ page.url }}&title={{ page.title }}" rel="nofollow" target="_blank" title="Add to Pocket" ><span class="fa fa-get-pocket"> </span></a></li>
 		<li><a href="http://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}&summary=&source={{ site.title }}+#zveritblog" rel="nofollow" target="_blank" title="Share on LinkedIn" ><span class="fa fa-linkedin"></span></a></li>
 	</ul>
-	<script type="application/ld+json">
-		{  
-			"genre":"{{ page.category }}",
-			"keywords":"{{ page.tags }}",
-			"wordCount":"{{  page.content | number_of_words }}",
-			"dateModified":"{{ page.date | date: "%-d %B %Y" }}",
-			"publisher":{  
-				"@type": "Organization",
-				"name": "Artamoshkin Maxim",
-				"logo": "https://blog.zverit.com/favicon.png",
-				"sameAs" : [
-				"https://twitter.com/Zverit",
-				"https://plus.google.com/b/114908284667574282591",
-				"https://www.facebook.com/maximArtamoshkin"
-				]
-			},
-			"image":{  
-				"@type":"ImageObject",
-				"contentUrl":"https://blog.zverit.com{{page.image}}",
-				"url":"https://blog.zverit.com{{page.image}}",
-				"height":"450",
-				"width":"1000"
-			},
-			"mainEntityOfPage":{  
-				"@type":"WebPage",
-				"@id":"https://blog.zverit.com{{ page.link }}"
-			}
-		}
-	</script>
 </article>
 
 <div class="related expo-section">
