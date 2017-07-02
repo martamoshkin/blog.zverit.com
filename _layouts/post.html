@@ -34,27 +34,12 @@ layout: default
 		<li><a href="https://getpocket.com/save?url={{ site.url }}{{ page.url }}&title={{ page.title }}" rel="nofollow" target="_blank" title="Add to Pocket" ><span class="fa fa-get-pocket"> </span></a></li>
 		<li><a href="http://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}&summary=&source={{ site.title }}+#zveritblog" rel="nofollow" target="_blank" title="Share on LinkedIn" ><span class="fa fa-linkedin"></span></a></li>
 	</ul>
-</article>
-<!-- 	<script type="application/ld+json">
+	<script type="application/ld+json">
 		{  
-			"@context":"http://schema.org",
-			"@type":"BlogPosting",
-			"headline":"{{ page.title }}",
 			"genre":"{{ page.category }}",
 			"keywords":"{{ page.tags }}",
 			"wordCount":"{{  page.content | number_of_words }}",
-			"url":"https://blog.zverit.com{{ page.link }}",
-			"datePublished":"{{ page.date | date: "%-d %B %Y" }}",
 			"dateModified":"{{ page.date | date: "%-d %B %Y" }}",
-			"author":{  
-				"@type": "Person",
-				"name": "Artamoshkin Maxim",
-				"sameAs" : [
-				"https://twitter.com/Zverit",
-				"https://plus.google.com/b/114908284667574282591",
-				"https://www.facebook.com/maximArtamoshkin"
-				]
-			},
 			"publisher":{  
 				"@type": "Organization",
 				"name": "Artamoshkin Maxim",
@@ -78,32 +63,34 @@ layout: default
 			},
 			"articleBody":"{{ page.content | strip_html | xml_escape | slugify: 'none' | escape | strip_newlines }}"
 		}
-	</script> -->
-	<div class="related expo-section">
-		<h3>Также рекомендуем:</h3>
-		<ul>
-			{% for post in site.related_posts limit:3 %}
-			<a href="{{ post.url }}">
-				<li>
-					<h3>{{ post.title }}</h3>
-				</li>
-			</a>
-			{% endfor %}
-		</ul>
-	</div>
-	<div id="disqus_thread"></div>
-	<script>
-		var disqus_config = function () {
-			this.page.url = "{{site.url}}{{page.url}}"; 
-			this.page.identifier = "{{page.url}}";
-		};
-		(function() {
-			var d = document, s = d.createElement('script');
-
-			s.src = '//blogzverit.disqus.com/embed.js';
-
-			s.setAttribute('data-timestamp', +new Date());
-			(d.head || d.body).appendChild(s);
-		})();
 	</script>
-	<noscript>Please enable JavaScript to view the comments</noscript>
+</article>
+
+<div class="related expo-section">
+	<h3>Также рекомендуем:</h3>
+	<ul>
+		{% for post in site.related_posts limit:3 %}
+		<a href="{{ post.url }}">
+			<li>
+				<h3>{{ post.title }}</h3>
+			</li>
+		</a>
+		{% endfor %}
+	</ul>
+</div>
+<div id="disqus_thread"></div>
+<script>
+	var disqus_config = function () {
+		this.page.url = "{{site.url}}{{page.url}}"; 
+		this.page.identifier = "{{page.url}}";
+	};
+	(function() {
+		var d = document, s = d.createElement('script');
+
+		s.src = '//blogzverit.disqus.com/embed.js';
+
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the comments</noscript>
