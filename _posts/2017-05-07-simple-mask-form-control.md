@@ -2,6 +2,7 @@
 title: Простой Form Control с маской ввода
 layout: post
 image: "/assets/angular-mask.png"
+image_alt: "Card mask Angular form control"
 date: '2017-05-31 11:25:11 +0300'
 category: Frontend
 author: "Artamoshkin Maxim"
@@ -11,9 +12,6 @@ tags:
 - ControlValueAccessor
 description: "В статье рассматривается разработка простого Mask Form Control для Angular, основные принципы использования ControlValueAccessor" 
 ---
-
-<img class="post-logo" src="https://blog.zverit.com/assets/angular-mask.png" alt="Card mask Angular form control" />
-
 
 В этой статье рассмотрим как создать простую маску ввода, которая будет задаваться массивом RegExp и знаков разделителей. Решение не универсально, но вполне применимо в большинстве случаев. И если вы не хотите включать в зависимость тяжеловесные библиотеки с множеством лишних функций и сложной логикой, то это решение для вас.
 <!-- more -->

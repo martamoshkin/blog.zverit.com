@@ -3,13 +3,12 @@ layout: post
 title:  "Webpack и LazyLoad модули Angular"
 date:   2016-11-15 21:25:43 +0300
 image: "/assets/webpack-failed-to-load.png"
+image_alt: "Chrome console"
 category: Frontend
 author: "Artamoshkin Maxim"
 tags: [Angular, TypeScript, Webpack]
 description: "Обзор возможности создания LazyLoad компонентов в Angular, возможность ленивой загрузки в Router 3.0"
 ---
-
-<img class="post-logo" style="max-width: 100%" src="https://blog.zverit.com/assets/webpack-failed-to-load.png" alt="Chrome console"/>
 
 После выхода на свет версии Angular RC5 у роутера появилась возможность lazy подгрузки. Что позволяет загружать части приложения по востребованию, тоесть модули подгружаются после перехода по определенным маршрутам. Что существенно сокращает время загрузки и более равномерно распределяет время отклика. 
 

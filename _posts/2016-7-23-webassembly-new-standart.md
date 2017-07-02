@@ -3,12 +3,13 @@ layout: post
 title:  "WebAssembly – новый стандарт который изменит Web"
 date:   2016-07-23 13:40:00 +0300
 image: "/assets/compiling-webassembly.png"
+image_alt: "Webassembly"
 category: Frontend
 author: "Artamoshkin Maxim"
 tags: [WebAssembly, JavaScript]
 description: "WebAssembly построен на подмножестве JavaScript – asm.js. Он также хранится в текстовом формате.  Может возникнуть вопрос: как код может быть эффективнее если он также проходит интерпретатор, а затем компилируется? Для этого используется пролог директива, благодаря которой компилятор сразу переводит код на язык ассемблера, пропуская этап интерпретации."
 ---
-<img class="post-logo" src="https://blog.zverit.com/assets/wasm-logo.png" alt="Webassembly"/>
+
 WebAssembly (сокр. wasm) – это эффективный низкоуровневый язык программирования. Главное его предназначение заключается в повышении производительности JavaScript. 
 
 

@@ -3,13 +3,12 @@ layout: post
 title:  "JSON конфигурация списка задач Hangfire и их runtime обновление"
 date:   2016-06-17 23:30:29 +0300
 image: "/assets/hangfire-logo.png"
+image_alt: "Hangfire scheduler"
 category: Backend
 author: "Artamoshkin Maxim"
 tags: [Hangfire, Scheduler, C#]
 description: "Явное описание задач в коде делает их достаточно неповоротливыми и неудобными в поддержке. Также было бы явным излишеством описывать однотипные задачи."
 ---
-
-<img class="post-logo" src="https://blog.zverit.com/assets/hangfire-logo.png" alt="Hangfire scheduler"/>
 
 Явное описание задач в коде делает их достаточно неповоротливыми и неудобными в поддержке. 
 Также было бы явным излишеством описывать однотипные задачи.
