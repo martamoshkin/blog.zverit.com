@@ -4,6 +4,7 @@ title:  "Webpack и LazyLoad модули Angular"
 date:   2016-11-15 21:25:43 +0300
 image: "/assets/webpack-failed-to-load.png"
 category: Frontend
+author: "Artamoshkin Maxim"
 tags: [Angular, TypeScript, Webpack]
 description: "Обзор возможности создания LazyLoad компонентов в Angular, возможность ленивой загрузки в Router 3.0"
 ---

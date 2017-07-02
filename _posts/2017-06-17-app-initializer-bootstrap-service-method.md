@@ -4,6 +4,7 @@ layout: post
 image: "favicon.png"
 date: '2017-06-17 15:05:11 +0300'
 category: Frontend
+author: "Artamoshkin Maxim"
 tags:
 - Angular
 - APP_INITIALIZER

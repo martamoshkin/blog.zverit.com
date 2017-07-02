@@ -6,4 +6,3 @@ gem 'jekyll-archives'
 gem 'jekyll-feed'
 gem 'jekyll-paginate'
 gem 'jekyll-minifier'
-gem 'jekyll-admin', group: :jekyll_plugins

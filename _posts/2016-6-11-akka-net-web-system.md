@@ -3,6 +3,7 @@ layout: post
 title:  "AKKA.NET для построения высоконадежных и слабосвязанных Web-систем"
 date:   2016-06-11 15:15:29 +0300
 image: "/assets/akkalogo.png"
+author: "Artamoshkin Maxim"
 category: Backend
 tags: [Akka.net, Aktor, C#]
 description: "В статье рассматриваются основные принципы разработки на Akka.NET, модель акторов"

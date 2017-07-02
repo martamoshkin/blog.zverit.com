@@ -6,25 +6,35 @@ layout: default
 	<meta itemprop="description" content="{{ content | strip_html | truncatewords: 40 }}" />
 	<header class="post-header">
 		<h1 class="post-title"  itemprop="name headline">{{ page.title }}</h1>
-		<p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}"  itemprop="datePublished">{{ page.date | date: "%-d %B %Y" }}</time> |
+		<p class="post-meta">
+			<time datetime="{{ page.date | date_to_xmlschema }}"  itemprop="datePublished">{{ page.date | date: "%-d %B %Y" }}</time> |
 			{% for tag in page.tags %}
 			<a class="codinfox-tag-mark post-tag" href="/tag#{{ tag | slugify }}">{{ tag }}</a>
 			{% endfor %}
-			{% if page.author %} •
-			<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
 		</header>
 
 		<div class="post-content"  itemprop="articleBody">
 			{{ content }}
 		</div>
-		<ul class="share-buttons">
-			<li><a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}&t=" rel="nofollow" title="Share on Facebook" target="_blank"><span class="fa fa-facebook"></span></a></li>
-			<li><a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}" rel="nofollow" target="_blank" title="Tweet" ><span class="fa fa-twitter"> </span></a></li>
-			<li><a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Google+"><span class="fa fa-google-plus"></span></a></li>
-			<li><a href="https://getpocket.com/save?url={{ site.url }}{{ page.url }}&title={{ page.title }}" rel="nofollow" target="_blank" title="Add to Pocket" ><span class="fa fa-get-pocket"> </span></a></li>
-			<li><a href="http://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}&summary=&source={{ site.title }}+#zveritblog" rel="nofollow" target="_blank" title="Share on LinkedIn" ><span class="fa fa-linkedin"></span></a></li>
-		</ul>
-	</article>
+		{% if page.author %}
+		<span class="signature" itemprop="author" itemscope itemtype="http://schema.org/Person">
+			Автор:
+			<span class="name" itemprop="name">
+				<a href="https://zverit.com" itemprop="url" rel="author">
+					{{ page.author }}
+				</a>
+			</span>
+		</span>
+		{% endif %}
+	</p>
+	<ul class="share-buttons">
+		<li><a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}&t=" rel="nofollow" title="Share on Facebook" target="_blank"><span class="fa fa-facebook"></span></a></li>
+		<li><a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}" rel="nofollow" target="_blank" title="Tweet" ><span class="fa fa-twitter"> </span></a></li>
+		<li><a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Google+"><span class="fa fa-google-plus"></span></a></li>
+		<li><a href="https://getpocket.com/save?url={{ site.url }}{{ page.url }}&title={{ page.title }}" rel="nofollow" target="_blank" title="Add to Pocket" ><span class="fa fa-get-pocket"> </span></a></li>
+		<li><a href="http://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}&summary=&source={{ site.title }}+#zveritblog" rel="nofollow" target="_blank" title="Share on LinkedIn" ><span class="fa fa-linkedin"></span></a></li>
+	</ul>
+</article>
 <!-- 	<script type="application/ld+json">
 		{  
 			"@context":"http://schema.org",

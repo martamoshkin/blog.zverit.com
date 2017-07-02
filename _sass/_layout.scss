@@ -340,10 +340,6 @@ article, .arcives, .expo-section, #disqus_thread {
 }
 
 .post-content {
-  margin-bottom: $spacing-unit;
-  padding-bottom: $spacing-unit;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
-
   h2 {
     font-size: 32px;
 
@@ -373,14 +369,26 @@ article, .arcives, .expo-section, #disqus_thread {
       font-size: 18px;
     }
   }
+}
 
+.signature {
+  text-align: right;
+  margin-bottom: 0px;
+  font-size: smaller;
+  display: flex;
+  justify-content: flex-end;
 
-
+  .name {
+    padding-left: 5px;
   }
+}
+
 .share-buttons {
+  margin-top: $spacing-unit;
+  padding-top: $spacing-unit;
   list-style: none;
   text-align: center;
-  padding: 0;
+  border-top: 1px solid rgba(0,0,0,0.1);
 
   li {
     display: inline;

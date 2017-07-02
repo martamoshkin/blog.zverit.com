@@ -4,6 +4,7 @@ layout: post
 image: "/assets/angular-mask.png"
 date: '2017-05-31 11:25:11 +0300'
 category: Frontend
+author: "Artamoshkin Maxim"
 tags:
 - Angular
 - Form Control

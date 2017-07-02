@@ -3,6 +3,7 @@ layout: post
 title:  "Подключение сторонних библиотек при помощи Webpack"
 date:   2017-02-25 20:19:29 +0300
 category: Frontend
+author: "Artamoshkin Maxim"
 image: "/assets/webpack-loaders.png"
 tags: [Webpack, TypeScript, Loaders, CommonJS, AMD]
 description: "Существует огромное множество способов подключения сторонних js/css библиотек при помощи средств Webpack. Не все js модули совместимы и могут напрямую использоваться с Webpack. На этот случай Webpack имеет несколько загрузчиков, для работы с такими модулями."
