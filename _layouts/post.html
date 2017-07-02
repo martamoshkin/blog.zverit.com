@@ -16,9 +16,9 @@ layout: default
 
 		<div class="post-content"  itemprop="articleBody">
 			{% if page.image %}
-			<figure itemscope itemprop="image" itemtype="http://schema.org/ImageObject">
+			<figure class="post-logo" itemscope itemprop="image" itemtype="http://schema.org/ImageObject">
 				<picture>
-					<img class="post-logo" itemprop="url contentUrl" src="{{ site.url }}{{ page.image }}" alt="{{ page.image_alt }}">
+					<img itemprop="url contentUrl" src="{{ site.url }}{{ page.image }}" alt="{{ page.image_alt }}">
 				</picture>
 				<meta itemprop="width" content="120">
 				<meta itemprop="height" content="90">

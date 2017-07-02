@@ -2,7 +2,7 @@
 layout: post
 title:  "WebAssembly – новый стандарт который изменит Web"
 date:   2016-07-23 13:40:00 +0300
-image: "/assets/compiling-webassembly.png"
+image: "/assets/wasm-logo.png"
 image_alt: "Webassembly"
 category: Frontend
 author: "Artamoshkin Maxim"
