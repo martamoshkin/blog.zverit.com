@@ -60,8 +60,7 @@ layout: default
 			"mainEntityOfPage":{  
 				"@type":"WebPage",
 				"@id":"https://blog.zverit.com{{ page.link }}"
-			},
-			"articleBody":"{{ page.content | strip_html | xml_escape | slugify: 'none' | escape | strip_newlines }}"
+			}
 		}
 	</script>
 </article>
