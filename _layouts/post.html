@@ -9,6 +9,7 @@ layout: default
 		<meta itemprop="dateModified" content="{{ page.date | date_to_xmlschema }}">
 		<p class="post-meta">
 			<time datetime="{{ page.date | date_to_xmlschema }}"  itemprop="datePublished">{{ page.date | date: "%-d %B %Y" }}</time> |
+			<a class="category" href="{{page.category | slugify}}">{{page.category}} </a> |
 			{% for tag in page.tags %}
 			<a class="codinfox-tag-mark post-tag" href="/tag#{{ tag | slugify }}">{{ tag }}</a>
 			{% endfor %}
