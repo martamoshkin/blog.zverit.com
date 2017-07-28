@@ -3,15 +3,6 @@ function handleRegistration(registration){
     const installingWorker = registration.installing;
     installingWorker.onstatechange = (e) => {
       if (installingWorker.state !== 'installed') return;
-      if (navigator.serviceWorker.controller) {
-        console.log('SW is updated');
-      } else {
-        console.log('A Visit without previous SW');
-        createSnackbar({
-          message: 'App ready for offline use.',
-          duration: 3000
-        })
-      }
     };
   }
 }
