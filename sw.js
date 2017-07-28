@@ -5,13 +5,18 @@ const PRECACHE_LIST = [
   "./",
   "//fonts.googleapis.com/css?family=Roboto+Slab%3A400%7CArimo%3A400%2C400italic%2C700%2C700italic%7CArimo%3A400%2C700%7CRoboto+Slab%3A400&subset=latin%2Ccyrillic&ver=4.7.4",
   "fonts/fontawesome-webfont.woff2",
-  "/js/embed.js"
+  "/js/embed.js",
+  "assets/copyscape-seal-white-120x100.png",
+  "//fonts.gstatic.com/s/robotoslab/v6/y7lebkjgREBJK96VQi37ZjUj_cnvWIuuBMVgbX098Mw.woff2",
+  "//fonts.gstatic.com/s/robotoslab/v6/y7lebkjgREBJK96VQi37Zo4P5ICox8Kq3LLUNMylGO4.woff2",
+  "//fonts.gstatic.com/s/arimo/v9/4NN7UQ_VsRBn7NDD9HKUPw.woff2",
+  "//c.disquscdn.com/next/embed/styles/lounge.eceee602870fc4ed49dc5f89e270689e.css"
+  
 ]
 const HOSTNAME_WHITELIST = [
   self.location.hostname,
   "//zverit.com",
-  "cdnjs.cloudflare.com",
-  "google.com"
+  "cdnjs.cloudflare.com"
 ]
 const DEPRECATED_CACHES = ['precache-v1', 'runtime', 'main-precache-v1', 'main-runtime']
 
