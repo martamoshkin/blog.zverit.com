@@ -6,7 +6,7 @@
                     <li style="text-transform:uppercase">{{ site.title }}</li>
                     <li><a class="mail" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
                 </ul>
-                <a href="http://www.copyscape.com/" target="_blank">
+                <a href="http://www.copyscape.com/" target="_blank" rel="noopener">
                     <img class="copyscape" src="https://blog.zverit.com/assets/copyscape-seal-white-120x100.png" width="120" height="100"
                          border="0" alt="Protected by Copyscape"
                          title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page."/></a>
@@ -44,6 +44,7 @@
         </div>
     </div>
 </footer>
+<script src="{{ "/js/sw-registration.js " | prepend: site.baseurl }}"></script>
 <script type="text/javascript">
     (function (w, d, o, s, i, a, m) {
         w[i] = w[i] || function () {

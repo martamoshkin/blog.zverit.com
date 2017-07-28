@@ -1,0 +1,23 @@
+{
+  "name": "Artamoshkin Maxim Blog",
+  "short_name": "Zverit Blog",
+  "description": "Добро пожаловать на блог fullstack-разработчика. 
+  </br>
+  Здесь я пишу в основном о веб-разработке, в частности
+  о ASP.NET, С<span>#</span>, JavaScript, Angular. 
+  </br>А также об околокодинговых темах. ",
+  "icons": [{
+    "src": "icons/128.png",
+    "sizes": "128x128",
+    "type": "image/jpg"
+  }, {
+    "src": "icons/512.png",
+    "sizes": "512x512",
+    "type": "image/jpg"
+  }],
+  "background_color": "#fff",
+  "theme_color": "#000",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}
