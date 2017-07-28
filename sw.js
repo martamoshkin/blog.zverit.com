@@ -4,12 +4,14 @@ const CACHE = CACHE_NAMESPACE + 'precache-then-runtime';
 const PRECACHE_LIST = [
   "./",
   "//fonts.googleapis.com/css?family=Roboto+Slab%3A400%7CArimo%3A400%2C400italic%2C700%2C700italic%7CArimo%3A400%2C700%7CRoboto+Slab%3A400&subset=latin%2Ccyrillic&ver=4.7.4",
-  "fonts/fontawesome-webfont.woff2"
+  "fonts/fontawesome-webfont.woff2",
+  "/js/embed.js"
 ]
 const HOSTNAME_WHITELIST = [
   self.location.hostname,
   "//zverit.com",
-  "cdnjs.cloudflare.com"
+  "cdnjs.cloudflare.com",
+  "google.com"
 ]
 const DEPRECATED_CACHES = ['precache-v1', 'runtime', 'main-precache-v1', 'main-runtime']
 

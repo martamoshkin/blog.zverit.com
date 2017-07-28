@@ -45,6 +45,19 @@
     </div>
 </footer>
 <script src="{{ "/js/sw-registration.js " | prepend: site.baseurl }}"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
 <script type="text/javascript">
     (function (w, d, o, s, i, a, m) {
         w[i] = w[i] || function () {
@@ -60,6 +73,7 @@
     _mg('init', 'blog.zverit.com');
     _mg('send', 'impression');
 </script>
+
 <script>
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
