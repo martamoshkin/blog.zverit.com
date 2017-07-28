@@ -7,10 +7,10 @@ const PRECACHE_LIST = [
 ]
 const HOSTNAME_WHITELIST = [
   self.location.hostname,
-  "zverit.com",
+  "//zverit.com",
   "cdnjs.cloudflare.com",
-  "analytics.truvisibility.com",
-  "google.com"
+  "//analytics.truvisibility.com",
+  "//google.com"
 ]
 const DEPRECATED_CACHES = ['precache-v1', 'runtime', 'main-precache-v1', 'main-runtime']
 
