@@ -10,7 +10,8 @@ const HOSTNAME_WHITELIST = [
   self.location.hostname,
   "//zverit.com",
   "cdnjs.cloudflare.com",
-  "//google-analytics.com"
+  "disqus.com",
+  "google-analytics.com"
 ]
 const DEPRECATED_CACHES = ['precache-v1', 'runtime', 'main-precache-v1', 'main-runtime']
 
