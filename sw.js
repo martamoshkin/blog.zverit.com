@@ -64,7 +64,7 @@ self.addEventListener('activate', event => {
 var fetchHelper = {
 
   fetchThenCache: function(request){
-    const init = { mode: "cors", credentials: "omit" } 
+    const init = { mode: "no-cors", credentials: "omit" } 
 
     const fetched = fetch(request, init)
     const fetchedCopy = fetched.then(resp => resp.clone());
