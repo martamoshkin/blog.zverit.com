@@ -10,7 +10,11 @@ const PRECACHE_LIST = [
   "//fonts.gstatic.com/s/robotoslab/v6/y7lebkjgREBJK96VQi37ZjUj_cnvWIuuBMVgbX098Mw.woff2",
   "//fonts.gstatic.com/s/robotoslab/v6/y7lebkjgREBJK96VQi37Zo4P5ICox8Kq3LLUNMylGO4.woff2",
   "//fonts.gstatic.com/s/arimo/v9/4NN7UQ_VsRBn7NDD9HKUPw.woff2",
-  "//c.disquscdn.com/next/embed/styles/lounge.eceee602870fc4ed49dc5f89e270689e.css"
+  "//c.disquscdn.com/next/embed/styles/lounge.eceee602870fc4ed49dc5f89e270689e.css",
+  "//c.disquscdn.com/next/embed/common.bundle.30c6b83b25e15ac64816c512ae56d158.js",
+  "//c.disquscdn.com/next/embed/lounge.bundle.aafec1a2f3fa1e486216be04908b0e3a.js",
+  "//disqus.com/next/config.js",
+  "//c.disquscdn.com/next/current/embed/lang/ru.js"
   
 ]
 const HOSTNAME_WHITELIST = [
@@ -61,7 +65,6 @@ self.addEventListener('activate', event => {
       .filter(cacheName => DEPRECATED_CACHES.includes(cacheName))
       .map(cacheName => caches.delete(cacheName))
   ))
-  console.log('service worker activated.')
   event.waitUntil(self.clients.claim());
 });
 
@@ -96,7 +99,6 @@ self.addEventListener('fetch', event => {
       return;
     }
 
-    // Cache-only Startgies for ys.static resources
     if (event.request.url.indexOf('ys.static') > -1){
       event.respondWith(fetchHelper.cacheFirst(event.request.url))
       return;
@@ -119,7 +121,6 @@ self.addEventListener('fetch', event => {
     );
 
     if (isNavigationReq(event.request)) {
-      console.log(`fetch ${event.request.url}`)
       event.waitUntil(revalidateContent(cached, fetchedCopy))
     }
   }
@@ -129,7 +130,6 @@ self.addEventListener('fetch', event => {
 function sendMessageToAllClients(msg) {
   self.clients.matchAll().then(clients => {
     clients.forEach(client => {
-      console.log(client);
       client.postMessage(msg)
     })
   })
@@ -146,7 +146,6 @@ function revalidateContent(cachedResp, fetchedResp) {
     .then(([cached, fetched]) => {
       const cachedVer = cached.headers.get('last-modified')
       const fetchedVer = fetched.headers.get('last-modified')
-      console.log(`"${cachedVer}" vs. "${fetchedVer}"`);
       if (cachedVer !== fetchedVer) {
         sendMessageToClientsAsync({
           'command': 'UPDATE_FOUND',
