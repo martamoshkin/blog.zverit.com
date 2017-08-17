@@ -186,6 +186,7 @@ body::-webkit-scrollbar-thumb
   .footer-col-2 {
     width: -webkit-calc(50% - (#{$spacing-unit} / 2));
     width: calc(50% - (#{$spacing-unit} / 2));
+	  	text-align: center;
   }
 
   .footer-col-3 {
@@ -306,6 +307,7 @@ article, .arcives, .expo-section, #disqus_thread{
     padding-left: 15px;
   }
 
+  font-size: 15px;
   text-align: right;
 }
 
@@ -498,8 +500,7 @@ article, .arcives, .expo-section, #disqus_thread{
   font: 14px Helvetica, Arial, sans-serif;
 }
 
-.pagination 
-{
+.pagination {
 	text-align: center;
 	margin-top: 40px;
 
