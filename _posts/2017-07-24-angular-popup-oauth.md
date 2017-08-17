@@ -3,6 +3,8 @@ title: Героический отлов OAuth callback в Angular
 layout: post
 date: '2017-07-24 21:47:11 +0300'
 category: Frontend
+image: "/assets/superhero-catching.png"
+image_alt: "Callback catching"
 author: "Artamoshkin Maxim"
 tags:
 - Angular
