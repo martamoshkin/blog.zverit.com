@@ -19,8 +19,6 @@ description: "Зачастую в Single Page Application необходимо �
 
 <!-- more -->
 
-<br>
-
 Angular предоставляет доступ к токену `APP_INITIALIZER`. Его определение находится в [https://github.com/angular/angular/blob/master/packages/core/src/application_init.ts](https://github.com/angular/angular/blob/master/packages/core/src/application_init.ts "https://github.com/angular/angular/blob/master/packages/core/src/application_init.ts") 
 
 ```ts
