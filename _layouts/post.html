@@ -15,18 +15,20 @@ layout: default
 			{% endfor %}
 		</header>
 
+		{% if page.image %}
+		<figure class="post-logo" itemscope itemprop="image" itemtype="http://schema.org/ImageObject">
+			<picture>
+				<img class="image" itemprop="url contentUrl" src="{{ site.url }}{{ page.image }}" alt="{{ page.image_alt }}">
+				<!-- <img width="920" height="270" itemprop="url contentUrl" src="{{ site.url }}{{ page.image }}" alt="{{ page.image_alt }}"> -->
+			</picture>
+			<meta itemprop="width" content="120">
+			<meta itemprop="height" content="90">
+			<meta itemprop="datePublished" content="{{ page.date | date: "%-d %B %Y" }}"/>
+			<figcaption itemprop="caption description">{{ page.image_alt }}</figcaption>
+		</figure>
+		{% endif %}
+		
 		<div class="post-content"  itemprop="articleBody">
-			{% if page.image %}
-			<figure class="post-logo" itemscope itemprop="image" itemtype="http://schema.org/ImageObject">
-				<picture>
-					<img itemprop="url contentUrl" src="{{ site.url }}{{ page.image }}" alt="{{ page.image_alt }}">
-				</picture>
-				<meta itemprop="width" content="120">
-				<meta itemprop="height" content="90">
-				<meta itemprop="datePublished" content="{{ page.date | date: "%-d %B %Y" }}"/>
-				<figcaption itemprop="caption description">{{ page.image_alt }}</figcaption>
-			</figure>
-			{% endif %}
 			{{ content }}
 		</div>
 		{% if page.author %}
