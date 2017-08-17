@@ -230,7 +230,7 @@ article, .arcives, .expo-section, #disqus_thread{
   height: 300px;
   text-align: center;
   flex-direction: column;
-  background-color: #F5F5F5;
+  background-color: $background-color;
   justify-content: center;
   
   .image {
@@ -348,7 +348,7 @@ article, .arcives, .expo-section, #disqus_thread{
 }
 
 .post-content {
-  padding-top: 5px;
+  padding-top: 25px;
 
   h2 {
     font-size: 32px;
