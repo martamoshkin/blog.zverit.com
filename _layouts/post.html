@@ -6,13 +6,12 @@ layout: default
 	<meta itemprop="description" content="{{ content | strip_html | truncatewords: 40 }}" />
 	<header class="post-header">
 		<h1 class="post-title"  itemprop="name headline">{{ page.title }}</h1>
-		<meta itemprop="dateModified" content="{{ page.date | date: "%-d %B %Y в %T" }}">
-		<p class="post-meta">
-			<time datetime="{{ page.date | date_to_xmlschema }}"  itemprop="datePublished">{{ page.date | date: "%-d %B %Y" }}</time> |
-			<a class="category" href="{{page.category | slugify}}">{{page.category}} </a> |
-			{% for tag in page.tags %}
-			<a class="codinfox-tag-mark post-tag" href="/tag#{{ tag | slugify }}">{{ tag }}</a>
-			{% endfor %}
+		<meta itemprop="dateModified" content="{{ page.date | date_to_xmlschema }}">
+		<div class="post-meta">
+
+			<time datetime="{{ page.date | date_to_xmlschema }}"  itemprop="datePublished">{{ page.date | date: "%-d %B %Y в %T" }}</time>,
+			<a class="category" href="{{page.category | slugify}}">{{page.category}} </a>
+		</div>
 		</header>
 
 		{% if page.image %}
@@ -41,7 +40,13 @@ layout: default
 			</span>
 		</span>
 		{% endif %}
-	</p>
+		
+	<div class="tags"> Метки: 
+	{% for tag in page.tags %}
+		<a class="codinfox-tag-mark post-tag" href="/tag#{{ tag | slugify }}">{{ tag }}</a>
+	{% endfor %}
+	</div>
+		
 	<ul class="share-buttons">
 		<li><a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}&t=" rel="noopener" title="Share on Facebook" target="_blank"><span class="fa fa-facebook"></span></a></li>
 		<li><a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}" rel="noopener" target="_blank" title="Tweet" ><span class="fa fa-twitter"> </span></a></li>
