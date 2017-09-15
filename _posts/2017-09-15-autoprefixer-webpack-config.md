@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Настройка Autoprefixer для Webpack"
+title:  "Настройка Autoprefixer под Webpack"
 date:   2017-09-15 22:13:29 +0300
 category: Frontend
 author: "Artamoshkin Maxim"
