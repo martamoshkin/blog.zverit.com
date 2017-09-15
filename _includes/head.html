@@ -1,5 +1,6 @@
 <head>
 	<title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+	<meta name="twitter:card" content="summary" />
 	{% if page.description %}
 	<meta name="description" content="{{ page.description }}">
 	<meta name="twitter:description" content="{{ content | strip_html | truncatewords: 40 }}"/>
