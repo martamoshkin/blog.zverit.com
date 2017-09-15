@@ -26,7 +26,7 @@ npm install postcss-loader
 npm install autoprefixer
 ```
 
-###2. Конфигурация ###
+### 2. Конфигурация ###
 Импортируем в файл webpack-конфигурации:
 `const autoprefixer = require('autoprefixer');`
 
