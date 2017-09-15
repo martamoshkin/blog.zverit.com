@@ -7,7 +7,7 @@ author: "Artamoshkin Maxim"
 image: "/assets/autoprefixer.png"
 image_alt: "Autoprefixer PostCSS plugin and Webpack"
 tags: [Autoprefixer, PostCSS, Loaders, Webpack]
-description: "Autoprefixer - это плагин PostCSS для добавления вендорных префиксов на основе данных сервиса Can I Use. Благодаря этому плагину, создание кросс-браузерного CSS стало проще, без лишнего мусора в коде, так как PostCSS это постобработчик."
+description: "Autoprefixer - это плагин PostCSS для добавления вендорных префиксов на основе данных сервиса Can I Use. Благодаря этому плагину, создание кроссбраузерного CSS стало проще. Не нужно добавлять 'мусорный' код, так как `PostCSS` является постобработчиком и добавляет уже, непосредственно, при сборке web-приложения."
 ---
 
 [`Autoprefixer`](https://github.com/postcss/autoprefixer) - это плагин  [`PostCSS`](https://github.com/postcss/postcss) для добавления вендорных префиксов на основе данных сервиса [*Can I Use*](https://caniuse.com/). Благодаря этому плагину, создание кроссбраузерного CSS стало проще. Не нужно добавлять 'мусорный' код, так как `PostCSS` является постобработчиком и добавляет уже, непосредственно, при сборке web-приложения.
