@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "Настройка Autoprefixer для Webpack"
-date:   2017-09-15 20:19:29 +0300
+date:   2017-09-15 22:13:29 +0300
 category: Frontend
 author: "Artamoshkin Maxim"
-image: "/assets/webpack-loaders.png"
+image: "/assets/autoprefixer.png"
 image_alt: "Autoprefixer PostCSS plugin"
 tags: [Autoprefixer, PostCSS, Loaders, Webpack]
 description: "Autoprefixer - это плагин PostCSS для добавления вендорных префиксов на основе данных сервиса Can I Use. Благодаря этому плагину, создание кросс-браузерного CSS стало проще, без лишнего мусора в коде, так как PostCSS это постобработчик."
