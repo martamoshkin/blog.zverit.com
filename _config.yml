@@ -14,7 +14,7 @@ github_username:  Zverit
 permalink: pretty
 # safe: true
 
-paginate: 4
+paginate: 5
 paginate_path: "/page/:num"
 gems: 
   - jekyll-sitemap 
