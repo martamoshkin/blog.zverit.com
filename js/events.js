@@ -24,7 +24,7 @@ function pageLinkAboutMeClick() {
   'eventLabel': 'PageLink'});
 }
 
-function pageLinkAboutMeClick() {
+function paginationClick() {
 	ga('send', {
   'hitType': 'event',
   'eventCategory': 'Navigation',
