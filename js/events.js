@@ -10,7 +10,7 @@ window.onload = function () {
 	pagination.onclick = paginationClick;
 
 	var related = document.getElementsByClassName('related')[0];
-	related.onclick = relatedClick;
+	//related.onclick = relatedClick;
 	
 	var share = document.getElementsByClassName('share-buttons')[0];
 	//share.onclick = shareClick;
