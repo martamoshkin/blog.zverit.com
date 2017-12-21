@@ -9,6 +9,12 @@ window.onload = function () {
 	var pagination = document.getElementsByClassName('pagination')[0];
 	pagination.onclick = paginationClick;
 
+	var related = document.getElementsByClassName('related')[0];
+	related.onclick = relatedClick;
+	
+	var share = document.getElementsByClassName('share-buttons')[0];
+	share.onclick = shareClick;
+	
 	function logoClick() {
 		ga('send', {
 	  'hitType': 'event',
@@ -31,5 +37,21 @@ window.onload = function () {
 	  'eventCategory': 'Navigation',
 	  'eventAction': 'Click',
 	  'eventLabel': 'Pagination'});
+	}
+	
+	function relatedClick() {
+		ga('send', {
+	  'hitType': 'event',
+	  'eventCategory': 'Navigation',
+	  'eventAction': 'Click',
+	  'eventLabel': 'Related'});
+	}
+	
+	function shareClick() {
+		ga('send', {
+	  'hitType': 'event',
+	  'eventCategory': 'Share',
+	  'eventAction': 'Click',
+	  'eventLabel': 'Share Buttons'});
 	}
 }
