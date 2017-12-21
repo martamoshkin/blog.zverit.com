@@ -13,7 +13,7 @@ window.onload = function () {
 	related.onclick = relatedClick;
 	
 	var share = document.getElementsByClassName('share-buttons')[0];
-	share.onclick = shareClick;
+	//share.onclick = shareClick;
 	
 	function logoClick() {
 		ga('send', {
