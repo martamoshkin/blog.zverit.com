@@ -82,7 +82,7 @@ var oAuthCallbackEvent = new CustomEvent("OAuthCallback", {'detail': window.loca
 В результате мы получаем абсолютно спокойное приложение, которое без нервных движений реагирует на действия пользователя. 
 
 
-<h3>Update</h3>
+### Update ###
 
 Были изменения в сторону поддержки старых браузеров. [CustomEvent](https://developer.mozilla.org/ru/docs/Web/API/CustomEvent) поддерживается с 9ой версии IE, но наблюдались проблемы и с Edge. Можно было бы использовать простой Event, но в нашем случае необходимо передать данные. Поэтому было решено использовать `postMessage`.
 
@@ -103,9 +103,12 @@ var oAuthCallbackEvent = new CustomEvent("OAuthCallback", {'detail': window.loca
 ```
 
 Соответственно, изменяем наш компонент.
+
 ```ts
 this._globalOAuthCallbackListenFn = this._renderer.listen('window', 'message',
     (evt) => {
         this._globalOAuthCallbackListenFn();
 });
 ```
+
+Важно, для поддержки IE10, новое окно необходимо создавать с начальным url равному домену от которого оно создается.
