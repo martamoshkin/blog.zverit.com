@@ -1,93 +1,97 @@
 <footer class="site-footer">
-    <div class="wrapper">
-        <div class="footer-col-wrapper">
-            <div class="footer-col footer-col-1">
-                <ul class="contact-list">
-                    <li style="text-transform:uppercase">{{ site.title }}</li>
-                    <li><a class="mail" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-                </ul>
-                <a href="http://www.copyscape.com/" target="_blank" rel="noopener">
-                    <img class="copyscape" src="https://blog.zverit.com/assets/copyscape-seal-white-120x100.png" width="120" height="100"
-                         border="0" alt="Protected by Copyscape"
-                         title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page."/></a>
-            </div>
-            <link rel="publisher" href="https://plus.google.com/b/114908284667574282591"/>
-            <div class="footer-col footer-col-2">
-                <ul class="social-media-list">
-                    <li>
-                        <div class="rss-subscribe">
-                            <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer-col footer-col-3">
-                <p>{{ site.description }}</p>
-                <div id="mc_embed_signup">
-                    <form action="//zverit.us13.list-manage.com/subscribe/post?u=a8b392fd06c991f284242671f&amp;id=576b0f82b2"
-                          method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-                          class="validate" target="_blank" novalidate>
-                        <div id="mc_embed_signup_scroll">
+	<div class="wrapper">
+		<div class="footer-col-wrapper">
+			<div class="footer-col footer-col-1">
+				<ul class="contact-list">
+					<li style="text-transform:uppercase">{{ site.title }}</li>
+					<li><a class="mail" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+				</ul>
+				<a href="http://www.copyscape.com/" target="_blank" rel="noopener">
+					<img class="copyscape" src="https://blog.zverit.com/assets/copyscape-seal-white-120x100.png" width="120" height="100"
+					alt="Protected by Copyscape"
+					title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page."/></a>
+				</div>
+				<div class="footer-col footer-col-2">
+					<ul class="social-media-list">
+						<li>
+							<div class="rss-subscribe">
+								<a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-col footer-col-3">
+					<p>{{ site.description }}</p>
+					<div id="mc_embed_signup">
+						<form action="//zverit.us13.list-manage.com/subscribe/post?u=a8b392fd06c991f284242671f&amp;id=576b0f82b2"
+						method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+						class="validate" target="_blank" novalidate>
+						<div id="mc_embed_signup_scroll">
 
-                            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL"
-                                   placeholder="Введите ваш E-mail" required>
-                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-                                                                                                      name="b_a8b392fd06c991f284242671f_576b0f82b2"
-                                                                                                      tabindex="-1"
-                                                                                                      value=""></div>
-                            <div class="clear"><input type="submit" value="Подписаться" name="subscribe"
-                                                      id="mc-embedded-subscribe" class="button raised grey"></div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+							<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL"
+							placeholder="Введите ваш E-mail" required>
+							<div style="position: absolute; left: -5000px;" aria-hidden="true">
+								<input type="text"
+								name="b_a8b392fd06c991f284242671f_576b0f82b2"
+								tabindex="-1"
+								value="">
+							</div>
+							<div class="clear">
+								<input type="submit" value="Подписаться" name="subscribe"
+								id="mc-embedded-subscribe" class="button raised grey">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 </footer>
+
 <script src="{{ "/js/sw-registration.js " | prepend: site.baseurl }}"></script>
 
 <!-- async load function -->
 <script>
-    function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
-    }
+	function async(u, c) {
+		var d = document, t = 'script',
+		o = d.createElement(t),
+		s = d.getElementsByTagName(t)[0];
+		o.src = u;
+		if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+		s.parentNode.insertBefore(o, s);
+	}
 </script>
 
 <script type="text/javascript">
-    (function (w, d, o, s, i, a, m) {
-        w[i] = w[i] || function () {
-                (w[i].queue = w[i].queue || []).push(arguments)
-            },
-            a = d.createElement(o);
-        a.async = 1;
-        a.src = s;
-        m = d.getElementsByTagName(o)[0];
-        m.parentNode.insertBefore(a, m);
-    })(window, document, 'script', 'https://analytics.truvisibility.com/content/tracking/mg-sdk.min.js', '_mg');
+	(function (w, d, o, s, i, a, m) {
+		w[i] = w[i] || function () {
+			(w[i].queue = w[i].queue || []).push(arguments)
+		},
+		a = d.createElement(o);
+		a.async = 1;
+		a.src = s;
+		m = d.getElementsByTagName(o)[0];
+		m.parentNode.insertBefore(a, m);
+	})(window, document, 'script', 'https://analytics.truvisibility.com/content/tracking/mg-sdk.min.js', '_mg');
 
-    _mg('init', 'blog.zverit.com');
-    _mg('send', 'impression');
+	_mg('init', 'blog.zverit.com');
+	_mg('send', 'impression');
 </script>
 
 <script>
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-    ga('create', 'UA-79210631-2', 'auto');
-    ga('send', 'pageview');
+	(function (i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function () {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o),
+		m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+	ga('create', 'UA-79210631-2', 'auto');
+	ga('send', 'pageview');
 </script>
 
 <script src="{{ "/js/events.js " | prepend: site.baseurl }}"></script>
