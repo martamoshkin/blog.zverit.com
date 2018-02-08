@@ -19,7 +19,7 @@ description: "Зачастую в Single Page Application необходимо �
 
 <!-- more -->
 
-Angular предоставляет доступ к токену `APP_INITIALIZER`. Его определение находится в [https://github.com/angular/angular/blob/master/packages/core/src/application_init.ts](https://github.com/angular/angular/blob/master/packages/core/src/application_init.ts "https://github.com/angular/angular/blob/master/packages/core/src/application_init.ts") 
+Angular предоставляет доступ к токену `APP_INITIALIZER`. Его определение находится в [https://github.com/angular/angular/blob/master/packages/core/src/application_init.ts](https://github.com/angular/angular/blob/master/packages/core/src/application_init.ts "https://github.com/angular/angular/blob/master/packages/core/src/application_init.ts"){:target="_blank"} 
 
 ```ts
 export const APP_INITIALIZER = new InjectionToken<Array<() => void>>('Application Initializer');

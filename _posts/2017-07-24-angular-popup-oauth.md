@@ -84,7 +84,7 @@ var oAuthCallbackEvent = new CustomEvent("OAuthCallback", {'detail': window.loca
 
 ### Update ###
 
-Были изменения в сторону поддержки старых браузеров. [CustomEvent](https://developer.mozilla.org/ru/docs/Web/API/CustomEvent) поддерживается с 9ой версии IE, но наблюдались проблемы и с Edge. Можно было бы использовать простой Event, но в нашем случае необходимо передать данные. Поэтому было решено использовать `postMessage`.
+Были изменения в сторону поддержки старых браузеров. [CustomEvent](https://developer.mozilla.org/ru/docs/Web/API/CustomEvent){:target="_blank"} поддерживается с 9ой версии IE, но наблюдались проблемы и с Edge. Можно было бы использовать простой Event, но в нашем случае необходимо передать данные. Поэтому было решено использовать `postMessage`.
 
 ```html
 <!DOCTYPE html>

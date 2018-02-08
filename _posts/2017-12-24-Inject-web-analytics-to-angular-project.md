@@ -60,7 +60,7 @@ export interface ITrackingEvent {
 Имеют место быть и другие поля, кроме ``category`` и ``action``, они обязательно должны содержать значение.
 
 ### Загрузка списка событий ###
-Загрузка событий выполняется до старта приложения, через токен ``APP_INITIALIZER``, про который я уже писал *[здесь](https://blog.zverit.com/frontend/2017/06/17/app-initializer-bootstrap-service-method/ "Выполнение кода до старта приложения через APP_INITIALIZER")*. 
+Загрузка событий выполняется до старта приложения, через токен ``APP_INITIALIZER``, про который я уже писал *[здесь](https://blog.zverit.com/frontend/2017/06/17/app-initializer-bootstrap-service-method/ "Выполнение кода до старта приложения через APP_INITIALIZER"){:target="_blank"}*. 
 
 ```ts
     providers: [
