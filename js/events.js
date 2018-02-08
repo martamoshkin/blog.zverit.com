@@ -21,7 +21,7 @@ window.onload = function () {
 		share.onclick = shareClick;
 	}
 	
-	var pageLinkArchve = document.getElementsByClassName('page-link archive')[0];
+	var pageLinkArchive = document.getElementsByClassName('page-link archive')[0];
 	pageLinkArchive.onclick = pageLinkArchiveClick;
 	
 	var pageLinkCategory = document.getElementsByClassName('page-link category')[0];
