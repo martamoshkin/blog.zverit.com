@@ -47,7 +47,7 @@ window.onload = function () {
 	  'eventLabel': 'RSS'});
 	}	
 	
-	function pageLinkArchveClick() {
+	function pageLinkArchiveClick() {
 		ga('send', {
 	  'hitType': 'event',
 	  'eventCategory': 'Navigation',
