@@ -4,7 +4,7 @@ title:  "Отладка приложений под webpack-dev-server на ло
 date: 2018-02-12 22:37:32 +0300
 category: Frontend
 author: "Artamoshkin Maxim"
-image: ""
+image: "/assets/webpack-dev-server-share.png"
 image_alt: ""
 tags: [Webpack, Development]
 description: "Почти каждый разработчик использовавший webpack-dev-server сталкивался с проблемой отладки локального приложения на мобильных или прочих устройствах находящимися под NAT."
@@ -65,7 +65,7 @@ description: "Почти каждый разработчик использов�
 
 #### 3. Отключаем Firewall ####
 
-Отключаем public Firewall в Windows Defender или другой, если используется сторонний.
+Отключаем Public Firewall в Windows Defender или другой, если используется сторонний.
 
 {:.center}
 ![Disabled Windows Defender Firewall](https://blog.zverit.com/assets/windows-defender-firewall.png)
