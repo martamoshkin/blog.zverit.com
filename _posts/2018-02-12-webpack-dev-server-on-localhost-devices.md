@@ -7,10 +7,10 @@ author: "Artamoshkin Maxim"
 image: ""
 image_alt: ""
 tags: [Webpack, Development]
-description: "Почти каждый разработчик использовавший [webpack-dev-server](webpack-dev-server "https://github.com/webpack/webpack-dev-server"){:target="_blank"} сталкивался с проблемой отладки локального приложения на мобильных или прочих устройствах находящимися под NAT."
+description: "Почти каждый разработчик использовавший webpack-dev-server сталкивался с проблемой отладки локального приложения на мобильных или прочих устройствах находящимися под NAT."
 ---
 
-Почти каждый разработчик использовавший webpack-dev-server сталкивался с проблемой отладки локального приложения на мобильных или прочих устройствах находящимися под [NAT](NAT "https://ru.wikipedia.org/wiki/NAT"){:target="_blank"}. 
+Почти каждый разработчик использовавший [webpack-dev-server](webpack-dev-server "https://github.com/webpack/webpack-dev-server"){:target="_blank"} сталкивался с проблемой отладки локального приложения на мобильных или прочих устройствах находящимися под [NAT](NAT "https://ru.wikipedia.org/wiki/NAT"){:target="_blank"}. 
 На гугл-просторах каждый вторит о дополнительном параметре ``--host 0.0.0.0`` или простым ``localhost`` для запуска ``webpack-dev-server`` и то, что после этого приложение будет доступно по внешнему IP. 
 Лично у меня данный метод не работает, причем не работает даже на простейших тестовых проектах, данных как пример.
 <!-- more -->
