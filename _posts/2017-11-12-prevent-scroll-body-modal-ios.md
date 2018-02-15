@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Tips #0: Блокировка прокрутки body для модалок на iOS"
+title:  "Блокировка прокрутки body для модалок на iOS"
 date:   2017-11-11 00:37:29 +0300
 category: Frontend
 author: "Artamoshkin Maxim"
