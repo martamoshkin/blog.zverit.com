@@ -35,3 +35,77 @@ body.no-scroll {
 
 Буду рад, если эта заметка кому-то сократит время поиска проблемы и ее решения.
 
+### UPD ###
+
+У предыдущего метода обнаружен большой недостаток, в том, что при каждом откритии модального окна страница прокручивается на самый верх. Да, этот подход может сработать на некоторых сайтах, но точно не на страницах с длинными списками.
+
+Есть другое решение. Но здесь уже не обойтись без js.
+
+Мы все так же устанавливаем для body класс ``no-scroll``, только уже без ``width`` и ``postion``, они будут задаваться динамически в js.
+
+```css
+body.no-scroll {
+   height: 100%;
+   overflow: hidden;
+}
+``` 
+
+При открытии модального окна вызываем функцию ``hideScroll``, в которой задаем ``position: fixed``, ``width`` с учетом того, был вертикальный скролл или нет, задается правило ``top`` равное отрицательному значению прокрутки, это и спасает от скролла до верха страницы.
+
+```ts
+    public hideScroll() {
+        this._body.classList.add('no-scroll');
+
+        this._scrollTop = window.pageYOffset; // запоминаем текущую прокрутку сверху
+        this._body.style.position = 'fixed';
+        if (this._hasScrollbar()) {
+            this._body.style.width = `calc(100% - ${this._getScrollbarSize()}px)`; // с учетом горизонтального скролла. Чтобы небыло рывка при открытии модального окна
+        } else {
+            this._body.style.width = '100%';
+        }
+        this._body.style.top = -this._scrollTop + 'px';
+    }
+
+    private _getScrollbarSize() { // получение ширины скролла
+        let outer = document.createElement('div');
+        outer.style.visibility = 'hidden';
+        outer.style.width = '100px';
+        outer.style.msOverflowStyle = 'scrollbar'; // needed for WinJS apps
+
+        document.body.appendChild(outer);
+
+        let widthNoScroll = outer.offsetWidth;
+        // force scrollbars
+        outer.style.overflow = 'scroll';
+
+        // add innerdiv
+        let inner = document.createElement('div');
+        inner.style.width = '100%';
+        outer.appendChild(inner);
+
+        let widthWithScroll = inner.offsetWidth;
+
+        // remove divs
+        outer.parentNode.removeChild(outer);
+
+        return widthNoScroll - widthWithScroll;
+    }
+
+    private _hasScrollbar() { // проверка на боковой скролл
+        return document.body.scrollHeight > document.body.clientHeight;
+    }
+```
+
+При закрытии необходимо убрать класс ``no-scroll`` и занулить инлайновые правила.
+
+```ts
+
+    public showScroll() {
+        this._body.classList.remove('no-scroll');
+
+        this._body.style.position = '';
+        this._body.style.width = '';
+        this._body.style.top = '';
+        window.scroll(0, this._scrollTop);
+    }
+```
