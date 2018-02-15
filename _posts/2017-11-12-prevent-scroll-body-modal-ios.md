@@ -41,7 +41,7 @@ body.no-scroll {
 
 Есть другое решение. Но здесь уже не обойтись без js.
 
-Мы все так же устанавливаем для body класс ``no-scroll``, только уже без ``width`` и ``postion``, они будут задаваться динамически в js.
+Мы все так же устанавливаем для body класс ``no-scroll``, только уже без ``width`` и ``postion``, они будут динамически задаваться в js.
 
 ```css
 body.no-scroll {
@@ -59,13 +59,18 @@ body.no-scroll {
         this._scrollTop = window.pageYOffset; // запоминаем текущую прокрутку сверху
         this._body.style.position = 'fixed';
         if (this._hasScrollbar()) {
-            this._body.style.width = `calc(100% - ${this._getScrollbarSize()}px)`; // с учетом горизонтального скролла. Чтобы небыло рывка при открытии модального окна
+             // с учетом горизонтального скролла. Чтобы небыло рывка при открытии модального окна
+            this._body.style.width = `calc(100% - ${this._getScrollbarSize()}px)`;
         } else {
             this._body.style.width = '100%';
         }
         this._body.style.top = -this._scrollTop + 'px';
     }
+```
 
+Необходимые функции для детекции скроллбара и его размера.
+
+```
     private _getScrollbarSize() { // получение ширины скролла
         let outer = document.createElement('div');
         outer.style.visibility = 'hidden';
