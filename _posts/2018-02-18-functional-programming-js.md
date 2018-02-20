@@ -179,7 +179,7 @@ console.log(timesTwo(addOne(3))); //8
 
 ```js
 Function.prototype.compose = function(g) {
-     var fn = this;
+     let fn = this;
      return function() {
          return fn.call(this, g.apply(this, arguments));
      };
@@ -222,17 +222,16 @@ function factorial(num)
     else if (num == 0) {
         return 1;
     }
-    var tmp = num;
+
+    let tmp = num;
     while (num-- > 2) {
         tmp *= num;
     }
     return tmp;
 }
 
-var result = factorial(8);
-console.log(result);
-
-// Output: 40320
+let result = factorial(8);
+console.log(result); // 40320
 ```
 
 И то же самое, только используя рекурсивные вызовы:
@@ -251,10 +250,8 @@ function factorial(num)
     }
 }
 
-var result = factorial(8);
-document.write(result);
-
-// Output: 40320
+let result = factorial(8);
+console.log(result); // 40320
 ```
 
 ### Резюме ###
