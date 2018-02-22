@@ -45,7 +45,7 @@ layout: default
 			<div class="pagination">
 				<li>
 					{% if paginator.previous_page %}
-					<a  href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+					<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" ref="prev">
 						<span class="fa fa-angle-double-left"></span>
 					</a>
 					{% else %}
@@ -62,7 +62,7 @@ layout: default
 
 				{% elsif page == 1 %}
 				<li>
-					<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+					<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" ref="prev">{{ page }}</a>
 				</li>
 				{% else %}
 				<li>
@@ -74,7 +74,7 @@ layout: default
 
 				<li>
 					{% if paginator.next_page %}
-					<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><span class="fa fa-angle-double-right"></span></a>
+					<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" ref="next"><span class="fa fa-angle-double-right"></span></a>
 					{% else %}
 					<span class="fa fa-angle-double-right disabled"></span>
 					{% endif %}

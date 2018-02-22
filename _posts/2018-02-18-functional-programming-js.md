@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Разработка на ReactJS. Функциональное программирование"
+title:  "Разработка на React. Функциональное программирование"
 date:   2018-02-18 14:22:29 +0300
 category: Frontend
 author: "Artamoshkin Maxim"
 image: "/assets/react-functional-programming.png"
 image_alt: ""
 tags: [React, ReactJS, Lessons, JavaScript, JS]
-description: "В настоящее время становится популярным такой подход к извлечению информации, как машинное обучение. На базе его принципов и алгоритмов создается множество аналитических решений в бизнесе и процессы формирования коммерческих баз данных."
+description: "Продолжая серию статей о React, поговорим о функциональной парадигме программирования, так как React и Flux основаны на функциональных методах.Функциональное программирование одна из “горячих” тем из мира JavaScript. Но как раздел дискретной математики и парадигма программирования существует еще с давних пор.Функциональному, как правило, противопоставляется императивный подход к программированию."
 ---
 
 Продолжая серию статей о React, поговорим о функциональной парадигме программирования, так как React и Flux основаны на функциональных методах.
@@ -179,7 +179,7 @@ console.log(timesTwo(addOne(3))); //8
 
 ```js
 Function.prototype.compose = function(g) {
-     var fn = this;
+     let fn = this;
      return function() {
          return fn.call(this, g.apply(this, arguments));
      };
@@ -222,17 +222,16 @@ function factorial(num)
     else if (num == 0) {
         return 1;
     }
-    var tmp = num;
+
+    let tmp = num;
     while (num-- > 2) {
         tmp *= num;
     }
     return tmp;
 }
 
-var result = factorial(8);
-console.log(result);
-
-// Output: 40320
+let result = factorial(8);
+console.log(result); // 40320
 ```
 
 И то же самое, только используя рекурсивные вызовы:
@@ -251,10 +250,9 @@ function factorial(num)
     }
 }
 
-var result = factorial(8);
-document.write(result);
-
-// Output: 40320
+let result = factorial(8);
+console.log(result); // 40320
 ```
 
 ### Резюме ###
+Это был краткий обзор основных принципов ФП, который пригодится в следующих статьях о React и Flux, где будет применяться функциональное программирование. 

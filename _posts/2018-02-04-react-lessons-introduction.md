@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Разработка на ReactJS. Введение"
+title:  "Разработка на React. Введение"
 date:   2018-02-04 14:55:32 +0300
 category: Frontend
 author: "Artamoshkin Maxim"
