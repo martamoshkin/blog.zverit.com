@@ -90,7 +90,7 @@ layout: default
 <div class="related expo-section">
 	<h2>Читайте также:</h2>
 	<ul>
-		{% for post in site.related_posts limit:3 %}
+		{% for post in site.related_posts limit:5 %}
 		<a href="{{ post.url }}">
 			<li>
 				<h3>{{ post.title }}</h3>
