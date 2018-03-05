@@ -26,10 +26,11 @@ sitemap: false
 {% endif %}
 {% endfor %}
 
-<h1 class="page-title">Категории</h1>
-<br/>
+
 
 <div class="posts expo-section">
+<h1 class="page-title">Категории</h1>
+
 <p>
 {% for ct in cats %}
 <a href="#{{ ct | slugify }}" class="codinfox-category-mark post-tag" style="text-decoration: none;"> {{ ct }} </a> &nbsp;&nbsp;
@@ -45,8 +46,8 @@ sitemap: false
   <li>
     <h4>
       <a href="{{ post.url }}">
+        <time class="post-meta" datetime="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time>
         {{ post.title }}
-        <small class="post-meta"> | {{ post.date | date_to_string }}</small>
       </a>
     </h4>
   </li>
@@ -62,8 +63,8 @@ sitemap: false
   <li>
     <h3>
       <a href="{{ post.url }}">
+        <time class="post-meta" datetime="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time>
         {{ post.title }}
-        <small>{{ post.date | date_to_string }}</small>
       </a>
       {% for tag in post.tags %}
       <a class="codinfox-tag-mark" href="/blog/tag/#{{ tag | slugify }}">{{ tag }}</a>
@@ -73,5 +74,4 @@ sitemap: false
   {% endunless %}
   {% endfor %}
 </ul>
-
 </div>
