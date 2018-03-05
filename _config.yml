@@ -49,3 +49,6 @@ kramdown:
   coderay_line_number_start: 1
   coderay_line_numbers: inline
   hard_wrap: false
+
+sass:
+  style: compressed
