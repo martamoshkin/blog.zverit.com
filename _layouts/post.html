@@ -10,7 +10,7 @@ layout: default
 		<div class="post-meta">
 
 			<time datetime="{{ page.date | date_to_xmlschema }}"  itemprop="datePublished">{{ page.date | date: "%-d %B %Y в %T" }}</time>,
-			<a class="category" href="{{page.category | slugify}}">{{page.category}} </a>
+			<a class="category" href="/category/{{page.category | slugify}}">{{page.category}} </a>
 		</div>
 	</header>
 
