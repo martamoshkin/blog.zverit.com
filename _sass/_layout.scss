@@ -564,3 +564,73 @@ article, .arcives, .expo-section, #disqus_thread{
 		opacity: .6;
 	}
 }
+
+
+
+.scroll-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+
+  box-sizing: border-box;
+  width: 60px;
+  height: 100%;
+  letft: 0;
+  bottom: 0;
+  visibility: visible;
+  filter: alpha(opacity=50);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all .5s;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -ms-transition: all .5s;
+  -o-transition: all .5s;
+}
+
+
+/* STYLE BUTTON 2 - only outlines */
+.scroll-button{
+background: rgba(66, 66, 66, .1); 
+border: none;
+  color: #262727;
+}
+
+/* SHAPE BUTTON 2 - square */
+.scroll-button{
+  border-radius: 0%;
+}
+
+/* POSITION BUTTON 1 - on the bottom of the screen */
+.scroll-button{
+  position: fixed;
+}
+
+/* POSITION BUTTON 2 - on the bottom of the page */
+/* .scroll-button{
+  position: absolute;
+} */
+
+
+
+.scroll-button:hover{
+  filter: alpha(opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+.scroll-button--hidden{
+  filter: alpha(opacity=0);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+@include media-query(1200px) {
+	.scroll-button {
+		display: none;
+	}
+}

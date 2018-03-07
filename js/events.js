@@ -24,11 +24,11 @@ window.onload = function () {
 	var pageLinkArchive = document.getElementsByClassName('page-link archive')[0];
 	pageLinkArchive.onclick = pageLinkArchiveClick;
 	
-	var pageLinkCategory = document.getElementsByClassName('page-link category')[0];
-	pageLinkCategory.onclick = pageLinkCategoryClick;
+	// var pageLinkCategory = document.getElementsByClassName('page-link category')[0];
+	// pageLinkCategory.onclick = pageLinkCategoryClick;
 	
-	var pageLinkTags = document.getElementsByClassName('page-link tags')[0];
-	pageLinkTags.onclick = pageLinkTagsClick;
+	// var pageLinkTags = document.getElementsByClassName('page-link tags')[0];
+	// pageLinkTags.onclick = pageLinkTagsClick;
 	
 	
 	var rss = document.getElementsByClassName('rss-subscribe')[0];
