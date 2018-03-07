@@ -227,6 +227,7 @@ article, .arcives, .expo-section, #disqus_thread{
 }
 
 .page-content {
+	position: relative;
 	padding: $spacing-unit 0;
 	line-height: 1.6;
 	min-height: 70vh;
@@ -576,18 +577,18 @@ article, .arcives, .expo-section, #disqus_thread{
   box-sizing: border-box;
   width: 60px;
   height: 100%;
-  letft: 0;
+  left: 0;
   bottom: 0;
   visibility: visible;
   filter: alpha(opacity=50);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
   cursor: pointer;
-  transition: all .5s;
-  -webkit-transition: all .5s;
-  -moz-transition: all .5s;
-  -ms-transition: all .5s;
-  -o-transition: all .5s;
+  transition: all .3s;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
 }
 
 
@@ -598,21 +599,13 @@ border: none;
   color: #262727;
 }
 
-/* SHAPE BUTTON 2 - square */
 .scroll-button{
   border-radius: 0%;
 }
 
-/* POSITION BUTTON 1 - on the bottom of the screen */
 .scroll-button{
-  position: fixed;
-}
-
-/* POSITION BUTTON 2 - on the bottom of the page */
-/* .scroll-button{
   position: absolute;
-} */
-
+}
 
 
 .scroll-button:hover{

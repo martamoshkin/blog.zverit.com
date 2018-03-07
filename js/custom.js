@@ -17,7 +17,9 @@ Scroller.prototype.createButton = function() {
   this.button.classList.add('scroll-button');
   this.button.classList.add('scroll-button--hidden');
   this.button.appendChild(icon);
-  document.body.appendChild(this.button);
+  let pageContent = document.getElementsByClassName('page-content')[0];
+
+  pageContent.appendChild(this.button);
 }
   
 Scroller.prototype.init = function() {
@@ -130,12 +132,12 @@ Scroller.prototype.scrollTop = function(){
 // ------------------- USE EXAMPLE ---------------------
 // *Set options
 var options = {
-  'showButtonAfter': 200, // show button after scroling down this amount of px
+  'showButtonAfter': 300, // show button after scroling down this amount of px
   'animate': "normal", // [false|normal|linear] - for false no aditional settings are needed
   // easy out effect
   'normal': { // applys only if [animate: normal] - set scroll loop "distanceLeft"/"steps"|"ms"
     'steps': 15, // more "steps" per loop => slower animation
-    'ms': 500/60 // less "ms" => quicker animation, more "ms" => snapy
+    'ms': 300/60 // less "ms" => quicker animation, more "ms" => snapy
   },
   // linear effect
   'linear': { // applys only if [animate: linear] - set scroll "px"|"ms"
