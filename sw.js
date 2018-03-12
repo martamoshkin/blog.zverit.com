@@ -2,18 +2,21 @@ const CACHE_NAMESPACE = 'main-'
 
 const CACHE = CACHE_NAMESPACE + 'precache-then-runtime';
 const PRECACHE_LIST = [
-  "./",
   "//fonts.googleapis.com/css?family=Roboto+Slab%3A400%7CArimo%3A400%2C400italic%2C700%2C700italic%7CArimo%3A400%2C700%7CRoboto+Slab%3A400&subset=latin%2Ccyrillic&ver=4.7.4",
   "fonts/fontawesome-webfont.woff2",
   "/js/embed.js",
   "assets/copyscape-seal-white-120x100.png",
+  "//blogzverit.disqus.com/embed.js",
   "//fonts.gstatic.com/s/robotoslab/v6/y7lebkjgREBJK96VQi37ZjUj_cnvWIuuBMVgbX098Mw.woff2",
   "//fonts.gstatic.com/s/robotoslab/v6/y7lebkjgREBJK96VQi37Zo4P5ICox8Kq3LLUNMylGO4.woff2",
   "//fonts.gstatic.com/s/arimo/v9/4NN7UQ_VsRBn7NDD9HKUPw.woff2",
   "//c.disquscdn.com/next/embed/styles/lounge.eceee602870fc4ed49dc5f89e270689e.css",
   "//c.disquscdn.com/next/embed/common.bundle.30c6b83b25e15ac64816c512ae56d158.js",
   "//c.disquscdn.com/next/embed/lounge.bundle.aafec1a2f3fa1e486216be04908b0e3a.js",
+  "//c.disquscdn.com/next/embed/common.bundle.774abcf1e2c32f6ee53499b090f48ff0.js",
+  "//c.disquscdn.com/next/embed/lounge.bundle.8241ae5fc761eb94635acdc63f5fd29f.js",
   "//disqus.com/next/config.js",
+  "//c.disquscdn.com/uploads/users/21136/5778/avatar92.jpg?1513880609",
   "//c.disquscdn.com/next/current/embed/lang/ru.js"
   
 ]
