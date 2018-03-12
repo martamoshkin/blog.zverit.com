@@ -5,4 +5,4 @@ Disallow: /archive
 Disallow: /404
 Disallow: /offline
 Sitemap: https://blog.zverit.com/sitemap.xml
-Host: blog.zverit.com
+Host: https://blog.zverit.com
