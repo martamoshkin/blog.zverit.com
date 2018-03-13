@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Разработка на React. Установка"
-date:   2018-03-11 10:22:29 +0300
+date:   2018-03-13 23:17:13 +0300
 category: Frontend
 author: "Artamoshkin Maxim"
 image: "/assets/react-install.png"
