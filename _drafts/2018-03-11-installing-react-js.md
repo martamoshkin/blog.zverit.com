@@ -4,7 +4,7 @@ title:  "Разработка на React. Установка"
 date:   2018-03-11 10:22:29 +0300
 category: Frontend
 author: "Artamoshkin Maxim"
-image: "/assets/react-functional-programming.png"
+image: "/assets/react-install.png"
 image_alt: ""
 tags: [React, ReactJS, Lessons, JavaScript, JS]
 description: "Продолжая серию статей о React, поговорим о функциональной парадигме программирования, так как React и Flux основаны на функциональных методах.Функциональное программирование одна из “горячих” тем из мира JavaScript. Но как раздел дискретной математики и парадигма программирования существует еще с давних пор.Функциональному, как правило, противопоставляется императивный подход к программированию."
@@ -79,7 +79,7 @@ ReactDOM.render(
 ### Создание одностраничного React-приложения ###
 
 #### Create React App ####
-[Create React App](https://github.com/facebook/create-react-app "Create React App") - это один из лучших способов быстро создать минимальное одностраничное приложение на React. Он позволяет создавать уже сконфигурированные и готовые к разработке React-приложения. И лишь в дальнейшем корректировать конфигурации (Webpack, Babel, TSLint и т.д.) по мере необходимости, а не писать их с "нуля".
+[Create React App](https://github.com/facebook/create-react-app "Create React App"){:target="_blank"}{:rel="noopener"} - это один из лучших способов быстро создать минимальное одностраничное приложение на React. Он позволяет создавать уже сконфигурированные и готовые к разработке React-приложения. И лишь в дальнейшем корректировать конфигурации (Webpack, Babel, TSLint и т.д.) по мере необходимости, а не писать их с "нуля".
 Этим инструментом пользуются как новички, так и профессионалы.
 
 Для того, чтобы начать использовать `create-react-app` его необходимо установить.
@@ -95,23 +95,25 @@ npm start
 ```
 #### Starter kits ###
 На официальном сайте имеется список всевозможных бойлерплейтов с React. Требующие лишь клонирование репозитория и установки пакетов.
-[reactjs.org/community/starter-kits](https://reactjs.org/community/starter-kits.html "Starter Kits")
+[reactjs.org/community/starter-kits](https://reactjs.org/community/starter-kits.html "Starter Kits"){:target="_blank"}{:rel="noopener"}
 
 ### Онлайн сервисы ###
+Несомненно, онлайн среды разработки очень удобны, так как можно работать с кодом имея под рукой лишь браузер. Также, можно с легкостью делиться или одновременно работать с этим кодом.
+
 
 ####  CodePen ####
-[CodePen](https://codepen.io/ "CodePen")
+[CodePen](https://codepen.io/ "CodePen"){:target="_blank"}{:rel="noopener"}
 
 <p data-height="265" data-theme-id="light" data-slug-hash="RMPgKy" data-default-tab="js,result" data-user="Zverit" data-embed-version="2" data-pen-title="RMPgKy" class="codepen">See the Pen <a href="https://codepen.io/Zverit/pen/RMPgKy/">RMPgKy</a> by Zverit (<a href="https://codepen.io/Zverit">@Zverit</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 #### JSFiddle ####
-[JSFiddle](https://jsfiddle.net/ "JSFiddle")
+[JSFiddle](https://jsfiddle.net/ "JSFiddle"){:target="_blank"}{:rel="noopener"}
 
 <script async src="//jsfiddle.net/reactjs/69z2wepo/embed/"></script>
 
 #### CodeSandbox ####
-[CodeSandbox](https://codesandbox.io/s/new "CodeSandbox") - онлайн редактор кода с упором на React. Редактор который умеет автоматизировать такие вещи как транспайлинг, пакетирование 
+[CodeSandbox](https://codesandbox.io/s/new "CodeSandbox"){:target="_blank"}{:rel="noopener"} - онлайн редактор кода с упором на React. Редактор который умеет автоматизировать такие вещи как транспайлинг, пакетирование и управление зависимостями.
 
 <iframe src="https://codesandbox.io/embed/new" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
@@ -121,6 +123,7 @@ npm start
 Наличие широкого выбора способов и инструментов для старта, позволяет преодолеть психологический барьер страха конфигурации приложения и приступить к разработке здесь и сейчас.
 
 Приложения с более сложной конфигурацией будут представлены в следующих публикациях. 
+
 Удачного старта!
 
 ### Оглавление ###
