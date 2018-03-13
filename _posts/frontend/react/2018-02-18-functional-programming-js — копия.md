@@ -289,4 +289,5 @@ console.log(result); // 40320
 
 ### Оглавление ###
 1. [Введение](/frontend/2018/02/04/react-lessons-introduction/ "Введение")
-2. [Функциональное программирование](/frontend/2018/02/18/functional-programming-js/ "Функциональное программирование")	
+2. [Функциональное программирование](/frontend/2018/02/18/functional-programming-js/ "Функциональное программирование")
+3. [Установка](/frontend/2018/03/11/installing-react-js/ "Установка")
