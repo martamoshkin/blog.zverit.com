@@ -54,6 +54,7 @@ yarn add react react-dom
     <title>React App</title>
     <script src="./scripts/react.development.js"></script>
     <script src="="./scripts/react-dom.development.js"></script>
+    <script src="="./scripts/app.js"></script>
   </head>
   <body>
     <div id="root"></div>
@@ -65,11 +66,14 @@ yarn add react react-dom
 Далее создадим файл `app.js` и добавим следующий код, который, при помощи React выведет сообщение «First React App».
 
 ```js
+// app.js
+
 ReactDOM.render(
-	React.createElement('h1', null, 'React App'),
+	React.createElement('h1', null, 'First React App'),
 	document.getElementById('root')
 );
 ```
+
 `ReactDOM.reander` принимает два параметра, первый принимает React-компонент, во второй передается корневой элемент для рендеринга.
 
 
@@ -79,23 +83,30 @@ ReactDOM.render(
 ### Создание одностраничного React-приложения ###
 
 #### Create React App ####
+
 [Create React App](https://github.com/facebook/create-react-app "Create React App"){:target="_blank"}{:rel="noopener"} - это один из лучших способов быстро создать минимальное одностраничное приложение на React. Он позволяет создавать уже сконфигурированные и готовые к разработке React-приложения. И лишь в дальнейшем корректировать конфигурации (Webpack, Babel, TSLint и т.д.) по мере необходимости, а не писать их с "нуля".
 Этим инструментом пользуются как новички, так и профессионалы.
 
 Для того, чтобы начать использовать `create-react-app` его необходимо установить.
+
 ```sh
 npm install -g create-react-app
 ```
-После установки перейти в нужную директорию для инициализации нового проекта приложения и выполнить следующие команды:
+
+После установки перейдите в нужную директорию для инициализации нового проекта приложения и выполните следующие команды:
+
 
 ```sh
 create-react-app hello-world
 cd hello-world
 npm start
 ```
+
 #### Starter kits ###
+
 На официальном сайте имеется список всевозможных бойлерплейтов с React. Требующие лишь клонирование репозитория и установки пакетов.
 [reactjs.org/community/starter-kits](https://reactjs.org/community/starter-kits.html "Starter Kits"){:target="_blank"}{:rel="noopener"}
+
 
 ### Онлайн сервисы ###
 Несомненно, онлайн среды разработки очень удобны, так как можно работать с кодом имея под рукой лишь браузер. Также, можно с легкостью делиться или одновременно работать с этим кодом.
@@ -125,6 +136,7 @@ npm start
 Приложения с более сложной конфигурацией будут представлены в следующих публикациях. 
 
 Удачного старта!
+
 
 ### Оглавление ###
 1. [Введение](/frontend/2018/02/04/react-lessons-introduction/ "Введение")
