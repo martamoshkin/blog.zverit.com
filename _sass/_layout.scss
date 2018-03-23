@@ -416,6 +416,30 @@ article, .arcives, .expo-section, #disqus_thread{
 	text-align: center;
 	border-top: 1px solid rgba(0,0,0,0.1);
 
+	.feedly:hover {
+		color: #09B452;
+	}
+
+	.linkedin:hover {
+		color: #0B618C;
+	}
+
+	.pocket:hover {
+		color: #FF1B3E;
+	}
+
+	.gplus:hover {
+		color: #F43E28;
+	}
+
+	.twitter:hover {
+		color: #06A2F3;
+	}
+
+	.facebook:hover {
+		color: #2E5990;
+	}
+
 	li {
 		display: inline;
 	}
