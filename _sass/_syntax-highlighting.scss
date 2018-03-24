@@ -1,5 +1,4 @@
  code.highlighter-rouge {
-    color: red;
     padding: 1px 4px;
     color: #d14;
     background-color: #f7f7f9;
@@ -10,7 +9,7 @@
 .highlight {
     background: #f5f5f526;
     @extend %vertical-rhythm;
-    
+
     code {
         font-size: 14px;
 		line-height: 1.3;

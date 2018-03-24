@@ -1,63 +1,63 @@
 .share-buttons {
-	margin-left: 0;
-	margin-top: $spacing-unit;
-	padding-top: $spacing-unit;
-	list-style: none;
-	text-align: center;
-	border-top: 1px solid rgba(0,0,0,0.1);
+    margin-left: 0;
+    margin-top: $spacing-unit;
+    padding-top: $spacing-unit;
+    list-style: none;
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 
-	.feedly:hover {
-		color: #09B452;
-	}
+    .feedly:hover {
+        color: #09B452;
+    }
 
-	.linkedin:hover {
-		color: #0B618C;
-	}
+    .linkedin:hover {
+        color: #0B618C;
+    }
 
-	.pocket:hover {
-		color: #FF1B3E;
-	}
+    .pocket:hover {
+        color: #FF1B3E;
+    }
 
-	.gplus:hover {
-		color: #F43E28;
-	}
+    .gplus:hover {
+        color: #F43E28;
+    }
 
-	.twitter:hover {
-		color: #06A2F3;
-	}
+    .twitter:hover {
+        color: #06A2F3;
+    }
 
-	.facebook:hover {
-		color: #2E5990;
-	}
-	
-	li {
-		display: inline;
-	}
+    .facebook:hover {
+        color: #2E5990;
+    }
 
-	span {
-		color: #9E9E9E;
-		width: 15%;
-		text-align: center;
-		line-height: 27px;
-		font-size: 20px;
+    li {
+        display: inline;
+    }
 
-		&:hover{
-			color: #212121;
-		}
-	}
+    span {
+        color: #9E9E9E;
+        width: 15%;
+        text-align: center;
+        line-height: 27px;
+        font-size: 20px;
 
-	.sr-only {
-		position: absolute;
-		clip: rect(1px 1px 1px 1px);
-		clip: rect(1px, 1px, 1px, 1px);
-		padding: 0;
-		border: 0;
-		height: 1px;
-		width: 1px;
-		overflow: hidden;
-	}
+        &:hover {
+            color: #212121;
+        }
+    }
 
-	p {
-		line-height: 1.6;
-	}
+    .sr-only {
+        position: absolute;
+        clip: rect(1px 1px 1px 1px);
+        clip: rect(1px, 1px, 1px, 1px);
+        padding: 0;
+        border: 0;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+    }
+
+    p {
+        line-height: 1.6;
+    }
 }

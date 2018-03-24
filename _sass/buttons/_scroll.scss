@@ -1,57 +1,55 @@
-.scroll-button{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 40px;
+.scroll-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
 
-  box-sizing: border-box;
-  width: 60px;
-  height: 100%;
-  left: 0;
-  bottom: 0;
-  visibility: visible;
-  filter: alpha(opacity=50);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-  opacity: 0.5;
-  cursor: pointer;
-  transition: all .3s;
-  -webkit-transition: all .3s;
-  -moz-transition: all .3s;
-  -ms-transition: all .3s;
-  -o-transition: all .3s;
+    box-sizing: border-box;
+    width: 60px;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    visibility: visible;
+    filter: alpha(opacity=50);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
 }
 
-.scroll-button{
-  background: rgba(66, 66, 66, .1); 
-  border: none;
-  color: #262727;
+.scroll-button {
+    background: rgba(66, 66, 66, .1);
+    border: none;
+    color: #262727;
 }
 
-.scroll-button{
-  border-radius: 0%;
+.scroll-button {
+    border-radius: 0%;
 }
 
-.scroll-button{
-  position: fixed;
+.scroll-button {
+    position: fixed;
 }
 
-
-.scroll-button:hover{
-  filter: alpha(opacity=100);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
+.scroll-button:hover {
+    filter: alpha(opacity=100);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
 }
 
-.scroll-button--hidden{
-  filter: alpha(opacity=0);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  visibility: hidden;
+.scroll-button--hidden {
+    filter: alpha(opacity=0);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    visibility: hidden;
 }
-
 
 @include media-query(1200px) {
-	.scroll-button {
-		display: none;
-	}
+    .scroll-button {
+        display: none;
+    }
 }

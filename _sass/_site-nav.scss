@@ -1,68 +1,67 @@
-
 .site-nav {
-	float: right;
-	line-height: 40px;
+    float: right;
+    line-height: 40px;
 
-	.menu-icon {
-		display: none;
-	}
+    .menu-icon {
+        display: none;
+    }
 
-	.page-link {
-		color: $text-color;
-		line-height: $base-line-height;
+    .page-link {
+        color: $text-color;
+        line-height: $base-line-height;
 
-		&:not(:last-child) {
-			margin-right: 20px;
-		}
-	}
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
 
-	@include media-query($on-palm) {
-		position: absolute;
-		top: 1px;
-		right: $spacing-unit / 2;
-		background-color: #fff;
-		border: 1px solid $grey-color-light;
-		border-radius: 3px;
-		text-align: right;
-		z-index: 100;
+    @include media-query($on-palm) {
+        position: absolute;
+        top: 1px;
+        right: $spacing-unit / 2;
+        background-color: #fff;
+        border: 1px solid $grey-color-light;
+        border-radius: 3px;
+        text-align: right;
+        z-index: 100;
 
-		.menu-icon {
-			display: block;
-			float: right;
-			width: 36px;
-			height: 26px;
-			line-height: 0;
-			padding-top: 10px;
-			text-align: center;
+        .menu-icon {
+            display: block;
+            float: right;
+            width: 36px;
+            height: 26px;
+            line-height: 0;
+            padding-top: 10px;
+            text-align: center;
 
-			> svg {
-				width: 18px;
-				height: 15px;
+            > svg {
+                width: 18px;
+                height: 15px;
 
-				path {
-					fill: $grey-color-dark;
-				}
-			}
-		}
+                path {
+                    fill: $grey-color-dark;
+                }
+            }
+        }
 
-		.trigger {
-			clear: both;
-			display: none;
-		}
+        .trigger {
+            clear: both;
+            display: none;
+        }
 
-		&:hover .trigger {
-			display: block;
-			padding-bottom: 5px;
-		}
+        &:hover .trigger {
+            display: block;
+            padding-bottom: 5px;
+        }
 
-		.page-link {
-			display: block;
-			padding: 5px 10px;
+        .page-link {
+            display: block;
+            padding: 5px 10px;
 
-			&:not(:last-child) {
-				margin-right: 0;
-			}
-			margin-left: 20px;
-		}
-	}
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+            margin-left: 20px;
+        }
+    }
 }
