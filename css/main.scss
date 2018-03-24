@@ -26,8 +26,6 @@ $content-width:    950px;
 $on-palm:          600px;
 $on-laptop:        950px;
 
-
-
 // Use media queries like this:
 // @include media-query($on-palm) {
 //     .wrapper {
@@ -41,13 +39,25 @@ $on-laptop:        950px;
     }
 }
 
-
-
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
         "layout",
+        "header",
+        "site-nav",
+        "footer",
+        "pagination",
+        "related",
+        "scrollbar",
+        "post",
+        "signature",
+        "expo-section",
+        "signup",
         "syntax-highlighting",
         "slim-10_7",
         "font-awesome.min"
 ;
+
+@import "./buttons/rss",
+		"./buttons/scroll",
+		"./buttons/share";

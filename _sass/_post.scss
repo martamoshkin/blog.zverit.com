@@ -1,0 +1,152 @@
+article {
+	.tags {
+		padding: 5px 45px;
+		font-size: 15px;
+	}
+}
+
+.post-tag:before {
+	content: "\f02b";
+	font-family: FontAwesome;
+	padding-right: .5em;
+}
+
+.post-tag {
+	display: inline-block;
+	background: #424242;
+	padding: 0 .5rem;
+	margin-right: .5rem;
+	border-radius: 3px;
+	color: #fff;
+	font-family: "PT Sans", Helvetica, Arial, sans-serif;
+	font-size: 80%;
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+
+	&:hover {
+		color: #fff;
+	}
+	&:visited {
+		color: #fff;
+	}
+}
+
+.post-content {
+	padding-top: 25px;
+	word-wrap: break-word;
+
+	a {
+		border-bottom: #333 dashed 1px;
+	}
+
+	h2 {
+		font-size: 32px;
+
+		@include media-query($on-laptop) {
+			font-size: 28px;
+		}
+	}
+
+	h3 {
+		font-size: 26px;
+		margin: 20px 0 10px 0;
+		padding-bottom: 5px;
+		box-shadow: 0 -1px 0 rgba(0,0,0,0.1) inset;
+
+		@include media-query($on-laptop) {
+			font-size: 22px;
+		}
+	}
+
+	h4 {
+		font-size: 20px;
+
+		margin: 20px 0 10px 0;
+		padding-bottom: 5px;
+		box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1) inset;
+		@include media-query($on-laptop) {
+			font-size: 18px;
+		}
+	}
+}
+
+.post-list {
+
+	margin-left: 0;
+	list-style: none;
+
+	img {
+		display: none;
+	}
+
+	blockquote {
+		display: none;
+	}
+
+	> li {
+		padding: 15px 45px 22px 45px;
+		background: #fff;
+		box-shadow: 0 0.005em 0.01em 0 rgba(0, 0, 0, .12), 0 2px 10px 0 rgba(0, 0, 0, .12) !important;
+		margin-bottom: $spacing-unit;
+	}
+}
+
+@include media-query($on-palm) {
+	.post-list{
+		> li {
+			padding: 15px 20px 22px 20px;
+		}
+	}
+}
+
+.post-meta {
+	color: $grey-color;
+	font-size: 15px;
+}
+
+.post-preview {
+	color: $text-color;
+	text-align: justify;
+	margin-top: 10px;
+}
+
+.post-link {
+	display: block;
+	font-size: 24px;
+	color: #000;
+}
+
+.post-more {
+	a {
+		padding-left: 15px;
+	}
+
+	font-size: 15px;
+	text-align: right;
+}
+
+.post-title {
+	font-size: 28px;
+	letter-spacing: -1px;
+	font-family: "Roboto Slab", serif;
+
+	@include media-query($on-laptop) {
+		font-size: 36px;
+	}
+}
+
+.post-logo {
+	display: flex;
+	width: 100%;
+	max-height: 300px;
+	height: 100%;
+	text-align: center;
+	flex-direction: column;
+	background-color: $background-color;
+	justify-content: center;
+	
+	.image {
+		max-height: 270px;
+	}
+}

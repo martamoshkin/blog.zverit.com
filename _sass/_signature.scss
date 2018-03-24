@@ -1,0 +1,13 @@
+.signature {
+	text-align: right;
+	margin-bottom: 0px;
+	font-size: smaller;
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 5px;
+	padding-bottom: 15px;
+
+	.name {
+		padding-left: 5px;
+	}
+}
