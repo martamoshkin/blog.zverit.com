@@ -43,15 +43,17 @@ layout: default
 		{% if paginator.total_pages > 1 %}
 		<nav>
 			<div class="pagination">
+				{% if paginator.previous_page %}
 				<li>
-					{% if paginator.previous_page %}
 					<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" ref="prev">
 						<span class="fa fa-angle-double-left"></span>
 					</a>
-					{% else %}
-					<span class="fa fa-angle-double-left disabled"></span>
-					{% endif %}
 				</li>
+				{% else %}
+				<li class="active-prev">
+					<span class="fa fa-angle-double-left disabled"></span>
+				</li>
+				{% endif %}
 
 				{% for page in (1..paginator.total_pages) %}
 
@@ -62,7 +64,7 @@ layout: default
 
 				{% elsif page == 1 %}
 				<li>
-					<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" ref="prev">{{ page }}</a>
+					<a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}" ref="prev">{{ page }}</a>
 				</li>
 				{% else %}
 				<li>
@@ -71,14 +73,15 @@ layout: default
 
 				{% endif %}
 				{% endfor %}
-
+				{% if paginator.next_page %}
 				<li>
-					{% if paginator.next_page %}
 					<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" ref="next"><span class="fa fa-angle-double-right"></span></a>
-					{% else %}
-					<span class="fa fa-angle-double-right disabled"></span>
-					{% endif %}
 				</li>
+				{% else %}
+				<li class="active-next">
+					<span class="fa fa-angle-double-right disabled"></span>
+				</li>
+				{% endif %}
 			</div>
 		</nav>
 		{% endif %}
