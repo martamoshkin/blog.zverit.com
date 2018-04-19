@@ -16,14 +16,14 @@ permalink: pretty
 
 paginate: 5
 paginate_path: "/page/:num"
-gems: 
+plugins: 
   - jekyll-sitemap 
   - jekyll-feed
   - jekyll-paginate
   
 # Build settings
 markdown: kramdown
-
+timezone: Europe/Moscow
 url: https://blog.zverit.com   # with the https protocol
 enforce_ssl: blog.zverit.com   # without any protocol
 

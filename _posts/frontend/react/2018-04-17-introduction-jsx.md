@@ -4,10 +4,10 @@ title:  "Разработка на React. JSX"
 date:   2018-04-17 22:17:13 +0300
 category: Frontend
 author: "Artamoshkin Maxim"
-image: "/assets/react-install.png"
+image: "/assets/introduction-jsx.png"
 image_alt: ""
 tags: [React, ReactJS, Lessons, JavaScript, JS, JSX]
-description: "В данной статье рассмотрены основные способы для создания React-приложения на горячую. Способы инициализировать приложения как локально, так и в облачных сервисах."
+description: "В данной статье рассмотрен формат JSX и пути его применения в React приложениях, а также пути его внедрения."
 ---
 
 Ранее мы создавали React элемент при помощи следующего синтаксиса.
