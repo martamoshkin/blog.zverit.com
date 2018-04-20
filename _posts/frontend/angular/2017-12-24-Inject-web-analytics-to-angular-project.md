@@ -4,6 +4,8 @@ title:  "Внедрение веб-аналитики в крупный Angular 
 date:   2017-12-24 11:15:29 +0300
 category: Frontend
 author: "Artamoshkin Maxim"
+redirect_from:
+    - /frontend/2017/12/24/Inject-web-analytics-to-angular-project/frontend
 image: "/assets/analytics.png"
 image_alt: ""
 tags: [Angular, Google Analytics, Tracking Events]

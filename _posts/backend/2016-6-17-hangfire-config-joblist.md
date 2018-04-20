@@ -4,6 +4,8 @@ title:  "JSON конфигурация списка задач Hangfire и их 
 date:   2016-06-17 23:30:29 +0300
 image: "/assets/hangfire-logo.png"
 image_alt: "Hangfire scheduler"
+redirect_from: 
+    - backend/2016/06/17/hangfire-config-joblist/backend/
 category: Backend
 author: "Artamoshkin Maxim"
 tags: [Hangfire, Scheduler, C#]

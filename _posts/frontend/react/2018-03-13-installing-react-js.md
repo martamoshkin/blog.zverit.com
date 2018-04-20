@@ -4,6 +4,8 @@ title:  "Разработка на React. Установка"
 date:   2018-03-13 23:17:13 +0300
 category: Frontend
 author: "Artamoshkin Maxim"
+redirect_from:
+  - /frontend/2018/03/11/installing-react-js/
 image: "/assets/react-install.png"
 image_alt: ""
 tags: [React, ReactJS, Lessons, JavaScript, JS]

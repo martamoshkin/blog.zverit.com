@@ -6,6 +6,8 @@ category: Frontend
 image: "/assets/superhero-catching.png"
 image_alt: "Callback catching"
 author: "Artamoshkin Maxim"
+redirect_from:
+    - /frontend/2017/07/24/angular-popup-oauth/frontend
 tags:
 - Angular
 - OAuth

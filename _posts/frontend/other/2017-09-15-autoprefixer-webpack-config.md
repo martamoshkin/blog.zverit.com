@@ -4,6 +4,8 @@ title:  "Настройка Autoprefixer под Webpack"
 date:   2017-09-15 22:13:29 +0300
 category: Frontend
 author: "Artamoshkin Maxim"
+redirect_from:
+    - /frontend/2017/09/15/autoprefixer-webpack-config/frontend
 image: "/assets/autoprefixer.png"
 image_alt: "Autoprefixer PostCSS plugin and Webpack"
 tags: [Autoprefixer, PostCSS, Loaders, Webpack]

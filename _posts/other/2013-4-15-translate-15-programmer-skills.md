@@ -4,6 +4,8 @@ title:  "15 востребованных навыков программиста
 date:   2013-04-15 15:15:29 +0300
 category: Other
 author: "Artamoshkin Maxim"
+redirect_from:
+    - /other/2013/04/15/translate-15-programmer-skills.html
 tags: [Skill, Programmer skill, Programming language]
 description: "Обзор на востребованные навыки программистов. Топ востребованных технологий"
 ---

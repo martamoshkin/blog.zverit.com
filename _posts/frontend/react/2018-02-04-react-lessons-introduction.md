@@ -4,6 +4,8 @@ title:  "Разработка на React. Введение"
 date:   2018-02-04 14:55:32 +0300
 category: Frontend
 author: "Artamoshkin Maxim"
+redirect_from:
+    - /frontend/2018/02/04/react-lessons-introduction/frontend
 image: "/assets/react_lessons_intro.png"
 image_alt: ""
 tags: [React, ReactJS, Redux, Lessons]
