@@ -5,6 +5,8 @@ date:   2017-11-11 00:37:29 +0300
 category: Frontend
 author: "Artamoshkin Maxim"
 image: "/assets/prevent-body-scroll.png"
+redirect_from: 
+    - /frontend/2017/11/10/prevent-scroll-body-modal-ios/
 image_alt: ""
 tags: [CSS, iOS, tips]
 description: "Одна из известных проблем на iOS с прокручиваемым ``body`` при скролле на фиксированно или абсолютно расположенных элементах."

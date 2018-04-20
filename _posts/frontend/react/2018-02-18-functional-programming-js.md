@@ -4,6 +4,8 @@ title:  "Разработка на React. Функциональное прог�
 date:   2018-02-18 14:22:29 +0300
 category: Frontend
 author: "Artamoshkin Maxim"
+redirect_from: 
+    - /frontend/2018/02/18/functional-programming-js-копия/
 image: "/assets/react-functional-programming.png"
 image_alt: ""
 tags: [React, ReactJS, Lessons, JavaScript, JS]
