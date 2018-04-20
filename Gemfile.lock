@@ -251,6 +251,7 @@ DEPENDENCIES
   jekyll-feed
   jekyll-minifier
   jekyll-paginate
+  jekyll-redirect-from
   jekyll-sitemap
   jekyll-watch
   tzinfo-data

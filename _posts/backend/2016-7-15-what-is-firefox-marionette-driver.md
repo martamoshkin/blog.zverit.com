@@ -4,6 +4,8 @@ title:  "Что такое Firefox Marionette Driver?"
 date:   2016-07-15 00:19:29 +0300
 image: "/assets/marionette.png"
 image_alt: "Firefox Marionette Driver"
+redirect_from:
+    - /backend/2016/07/14/what-is-firefox-marionette-driver/
 author: "Artamoshkin Maxim"
 category: Backend
 tags: [Firefox, Marionette, Selenium]
