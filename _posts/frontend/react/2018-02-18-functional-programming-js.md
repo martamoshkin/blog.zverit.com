@@ -6,6 +6,7 @@ category: Frontend
 author: "Artamoshkin Maxim"
 redirect_from: 
     - /frontend/2018/02/18/functional-programming-js-копия/
+    - /frontend/2018/02/18/functional-programming-js/frontend
 image: "/assets/react-functional-programming.png"
 image_alt: ""
 tags: [React, ReactJS, Lessons, JavaScript, JS]

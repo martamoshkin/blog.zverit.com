@@ -4,6 +4,8 @@ title:  "Отладка на локальных устройствах прил�
 date: 2018-02-12 22:37:32 +0300
 category: Frontend
 author: "Artamoshkin Maxim"
+redirect_from:
+    - /frontend/2018/02/12/webpack-dev-server-on-localhost-devices/frontend
 image: "/assets/webpack-dev-server-share.png"
 image_alt: ""
 tags: [Webpack, Dev Server, Debugging, Development]

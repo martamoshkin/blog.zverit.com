@@ -6,6 +6,7 @@ category: Machine Learning
 author: "Artamoshkin Maxim"
 redirect_from: 
     - /machine%20learning/2017/12/15/feature-selection-social-network-ml-model/
+    - /machine%20learning/2017/12/16/feature-selection-social-network-ml-model/machine-learning/
 image: "/assets/people-search.png"
 image_alt: ""
 tags: [ML, Machine Learning, Social Network, Feature Engineering]

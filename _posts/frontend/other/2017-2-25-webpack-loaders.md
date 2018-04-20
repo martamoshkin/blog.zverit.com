@@ -4,6 +4,8 @@ title:  "Подключение сторонних библиотек при п�
 date:   2017-02-25 20:19:29 +0300
 category: Frontend
 author: "Artamoshkin Maxim"
+redirect_from:
+  - /frontend/2017/02/25/webpack-loaders/frontend
 image: "/assets/webpack-loaders.png"
 image_alt: "Webpack loaders"
 tags: [Webpack, TypeScript, Loaders, CommonJS, AMD]

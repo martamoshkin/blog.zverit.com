@@ -4,6 +4,8 @@ layout: post
 date: '2017-06-17 15:05:11 +0300'
 category: Frontend
 author: "Artamoshkin Maxim"
+redirect_from:
+    - /frontend/2017/06/17/app-initializer-bootstrap-service-method/frontend
 image: "/assets/before-start-rocket.png"
 image_alt: "Выполнение кода до рендеринга приложения"
 tags:

@@ -5,6 +5,8 @@ date:   2016-06-11 15:15:29 +0300
 image: "/assets/akkalogo.png"
 image_alt: "Akka.NET"
 author: "Artamoshkin Maxim"
+redirect_from:
+  - /backend/2016/06/11/akka-net-web-system/backend
 category: Backend
 tags: [Akka.net, Aktor, C#]
 description: "В статье рассматриваются основные принципы разработки на Akka.NET, модель акторов"

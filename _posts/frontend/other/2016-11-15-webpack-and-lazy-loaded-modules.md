@@ -6,6 +6,8 @@ image: "/assets/webpack-failed-to-load.png"
 image_alt: "Chrome console"
 category: Frontend
 author: "Artamoshkin Maxim"
+redirect_from:
+  - /frontend/2016/11/15/webpack-and-lazy-loaded-modules/frontend
 tags: [Angular, TypeScript, Webpack]
 description: "Обзор возможности создания LazyLoad компонентов в Angular, возможность ленивой загрузки в Router 3.0"
 ---

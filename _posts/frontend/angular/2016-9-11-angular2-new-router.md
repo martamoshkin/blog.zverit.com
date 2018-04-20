@@ -5,6 +5,8 @@ date:   2016-09-11 04:53:10 +0300
 image: "/assets/angular2-router.png"
 image_alt: "Angular2 router"
 author: "Artamoshkin Maxim"
+redirect_from:
+  - /frontend/2016/09/11/angular2-new-router/frontend
 category: Frontend
 tags: [Angular2, TypeScript, Router]
 ---

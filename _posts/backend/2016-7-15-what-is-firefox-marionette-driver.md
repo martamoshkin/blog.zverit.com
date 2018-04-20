@@ -6,6 +6,7 @@ image: "/assets/marionette.png"
 image_alt: "Firefox Marionette Driver"
 redirect_from:
     - /backend/2016/07/14/what-is-firefox-marionette-driver/
+    - /backend/2016/07/15/what-is-firefox-marionette-driver/backend
 author: "Artamoshkin Maxim"
 category: Backend
 tags: [Firefox, Marionette, Selenium]
