@@ -4,7 +4,7 @@ title:  "Паттерн MVC на клиенте"
 date: 2018-05-21 22:35:21 +0300
 category: Frontend
 author: "Artamoshkin Maxim"
-image: ""
+image: "/assets/mvc-page-head.jpg"
 image_alt: ""
 tags: [Frontend, MVC, Pattern]
 description: "Краткий обзор MVC паттерна в веб-разработке. Рассмотрены различия его использования сврерной и клиентской частью приложения."
