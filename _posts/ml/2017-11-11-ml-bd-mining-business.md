@@ -4,8 +4,10 @@ title:  "Применение машинного обучения при фор�
 date:   2017-11-11 00:37:29 +0300
 category: Machine Learning
 author: "Artamoshkin Maxim"
+permalink: /machine-learning/2017/11/11/ml-bd-mining-business/
 redirect_from: 
     - /machine%20learning/2017/11/10/ml-bd-mining-business/
+    - /machine%20learning/2017/11/11/ml-bd-mining-business/
 image: "/assets/machine-learning-and-business.png"
 image_alt: "Machine Learning and Business"
 tags: [Machine Learning, Business]
