@@ -10,7 +10,7 @@ tags: [Frontend, MVC, Pattern]
 description: "Краткий обзор MVC паттерна в веб-разработке. Рассмотрены различия его использования сврерной и клиентской частью приложения."
 ---
 
-[MVC - паттерн](https://ru.wikipedia.org/wiki/Model-View-Controller "MVC - Wikipedia"){:target="_blank"}{:rel="noopener"} разделения приложения на 3 основных компонента: модель (*Model*),  представление (*View*), контроллер (*Controller*).
+[MVC](https://ru.wikipedia.org/wiki/Model-View-Controller "MVC - Wikipedia"){:target="_blank"}{:rel="noopener"} - паттерн разделения приложения на 3 основных компонента: модель (*Model*),  представление (*View*), контроллер (*Controller*).
 
 MVC паттерн был впервые описан Трюгве Реенскаугом в 1978 году. Который изначально использовался для построения графических приложений.
 Со временем этот паттерн перешел и в веб-приложения. Сначала MVC пришел на серверную сторону с такими фреймворками Ruby and Rails и ASP.NET MVC Framework.
