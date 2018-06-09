@@ -7,10 +7,10 @@ author: "Artamoshkin Maxim"
 image: "/assets/mvc-page-head.jpg"
 image_alt: ""
 tags: [Frontend, MVC, Pattern]
-description: "Краткий обзор MVC паттерна в веб-разработке. Рассмотрены различия его использования сврерной и клиентской частью приложения."
+description: "Краткий обзор MVC паттерна в веб–разработке. Рассмотрены особенности использования клиентской частью приложения"
 ---
 
-[MVC](https://ru.wikipedia.org/wiki/Model-View-Controller "MVC - Wikipedia"){:target="_blank"}{:rel="noopener"} - паттерн разделения приложения на 3 основных компонента: модель (*Model*),  представление (*View*), контроллер (*Controller*).
+[MVC](https://ru.wikipedia.org/wiki/Model-View-Controller "MVC - Wikipedia"){:target="_blank"}{:rel="noopener"} – паттерн разделения приложения на 3 основных компонента: модель (*Model*),  представление (*View*), контроллер (*Controller*).
 
 MVC паттерн был впервые описан Трюгве Реенскаугом в 1978 году. Который изначально использовался для построения графических приложений.
 Со временем этот паттерн перешел и в веб-приложения. Сначала MVC пришел на серверную сторону с такими фреймворками Ruby and Rails и ASP.NET MVC Framework.
@@ -83,5 +83,5 @@ View на клиенте отвечает за отображение данны
 ### Заключение ###
 
 Многие предвещали смерть MVC на стороне клиента, но к концу 2010х снова обрел популярность.
-Фреймворки [Angular](https://angular.io/ "Angular"){:target="_blank"}{:rel="noopener"} и [Backbone](http://backbonejs.org/ "Backbone"){:target="_blank"}{:rel="noopener"} - яркие его представители, которые подарили MVC вторую жизнь на клиенте.
+Фреймворки [Angular](https://angular.io/ "Angular"){:target="_blank"}{:rel="noopener"} и [Backbone](http://backbonejs.org/ "Backbone"){:target="_blank"}{:rel="noopener"} – яркие его представители, которые подарили MVC вторую жизнь на клиенте.
 Будет ли  MVC на фронтенде таким же популярным в будущем? Можно лишь только гадать.
