@@ -4,9 +4,11 @@ title:  "Отбор признаков пользователя социальн
 date:   2017-12-16 01:25:29 +0300
 category: Machine Learning
 author: "Artamoshkin Maxim"
+permalink: /machine-learning/2017/12/16/feature-selection-social-network-ml-model/
 redirect_from: 
     - /machine%20learning/2017/12/15/feature-selection-social-network-ml-model/
     - /machine%20learning/2017/12/16/feature-selection-social-network-ml-model/machine-learning/
+    - /machine%20learning/2017/12/16/feature-selection-social-network-ml-model/
 image: "/assets/people-search.png"
 image_alt: ""
 tags: [ML, Machine Learning, Social Network, Feature Engineering]
