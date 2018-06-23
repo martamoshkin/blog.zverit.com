@@ -18,10 +18,13 @@ description: "Autoprefixer - это плагин PostCSS для добавлен
 
 ### 1. Установка ###
 Для начала необходимо установить `postcss-loader`, который позволяет использовать `PostCSS` в экосистеме Webpack, без лишних "телодвижений" :
+
 ```sh
 npm install postcss-loader
 ```
+
 Также устанавливаем сам плагин:
+
 ```sh
 npm install autoprefixer
 ```
