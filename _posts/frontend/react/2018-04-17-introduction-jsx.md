@@ -8,7 +8,7 @@ image: "/assets/introduction-jsx.png"
 redirect_from:
 image_alt: ""
 redirect_from:
-	- /frontend/2018/04/16/introduction-jsx/
+    - /frontend/2018/04/16/introduction-jsx/
 tags: [React, ReactJS, Lessons, JavaScript, JS, JSX]
 description: "В данной статье рассмотрен синтаксис и особенности JSX, его применение в React приложениях, а также пути его внедрения."
 ---
