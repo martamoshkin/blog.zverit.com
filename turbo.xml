@@ -1,0 +1,35 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:yandex="http://news.yandex.ru"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:turbo="http://turbo.yandex.ru"
+     version="2.0">
+    <channel>
+        <!-- Информация о сайте-источнике -->
+        <title>{{ site.title | xml_escape }}</title>
+        <description>{{ site.description | xml_escape }}</description>
+        <link>{{ site.url }}{{ site.baseurl }}/</link>
+        <language>ru</language>
+        <turbo:analytics></turbo:analytics>
+        <turbo:adNetwork></turbo:adNetwork>
+            {% for post in site.posts limit:10 %}
+            <item turbo="true">
+                <!-- Информация о странице -->
+                 <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
+                <turbo:source>{{ post.url | prepend: site.baseurl | prepend: site.url }}</turbo:source>
+                <turbo:topic>{{ post.title | xml_escape }}</turbo:topic>
+                <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+                <author>{{post.author}}</author>
+                <yandex:related></yandex:related>
+                <turbo:content>
+                   <![CDATA[
+                   {% include head.html %}
+                   {{ post.content}} 
+                    ]]>
+                </turbo:content>
+            </item>
+            {% endfor %}
+    </channel>
+</rss>
