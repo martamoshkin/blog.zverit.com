@@ -24,6 +24,7 @@ layout: null
                 <turbo:content>
                    <![CDATA[
                    {% include head.html %}
+                   <h1>{{ post.title }}</h1>
                    {{ post.content}} 
                     ]]>
                 </turbo:content>
