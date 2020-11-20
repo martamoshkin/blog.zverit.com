@@ -12,7 +12,7 @@ layout: null
         <description>{{ site.description | xml_escape }}</description>
         <link>{{ site.url }}{{ site.baseurl }}/</link>
         <language>ru</language>
-            {% for post in site.posts limit:10 %}
+            {% for post in site.posts %}
             <item turbo="true">
                 <!-- Информация о странице -->
                  <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
