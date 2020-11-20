@@ -12,8 +12,6 @@ layout: null
         <description>{{ site.description | xml_escape }}</description>
         <link>{{ site.url }}{{ site.baseurl }}/</link>
         <language>ru</language>
-        <turbo:analytics></turbo:analytics>
-        <turbo:adNetwork></turbo:adNetwork>
             {% for post in site.posts limit:10 %}
             <item turbo="true">
                 <!-- Информация о странице -->
