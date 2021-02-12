@@ -7,7 +7,7 @@ author: "Artamoshkin Maxim"
 image: "/assets/mvc-page-head.jpg"
 image_alt: ""
 tags: [Frontend, MVC, Pattern]
-description: "Краткий обзор MVC паттерна в веб–разработке. Рассмотрены особенности использования клиентской частью приложения"
+description: "Краткий обзор MVC паттерна в веб–разработке. Рассмотрены особенности использования клиентской частью приложения. Ответ на вопрос, MVC что это"
 ---
 
 [MVC](https://ru.wikipedia.org/wiki/Model-View-Controller "MVC - Wikipedia"){:target="_blank"}{:rel="noopener"} – паттерн разделения приложения на 3 основных компонента: модель (*Model*),  представление (*View*), контроллер (*Controller*).
