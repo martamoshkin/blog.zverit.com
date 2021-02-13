@@ -42,6 +42,10 @@ jekyll-archives:
     tag: '/tag/:name/'
     category: '/category/:name/'
 
+gems:
+  - jekyll/tagging
+  - jekyll-tagging-related_posts
+
 kramdown:
   auto_ids:       true
   toc_levels:     1..6
