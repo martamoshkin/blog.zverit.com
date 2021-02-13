@@ -21,6 +21,8 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-redirect-from
+  - jekyll/tagging
+  - jekyll-tagging-related_posts
   
 # Build settings
 markdown: kramdown
