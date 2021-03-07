@@ -9,6 +9,7 @@ redirect_from:
     - /frontend/2018/02/18/functional-programming-js/frontend
 image: "/assets/react-functional-programming.png"
 image_alt: ""
+image_height: "auto"
 tags: [React, ReactJS, Lessons, JavaScript, JS]
 description: "Продолжая серию статей о React, поговорим о функциональной парадигме программирования, так как React и Flux основаны на функциональных методах.Функциональное программирование одна из “горячих” тем из мира JavaScript. Но как раздел дискретной математики и парадигма программирования существует еще с давних пор.Функциональному, как правило, противопоставляется императивный подход к программированию."
 ---

@@ -6,6 +6,7 @@ category: Other
 author: "Artamoshkin Maxim"
 image: "/assets/on-air.png"
 image_alt: ""
+image_height: "auto"
 tags: [Podcast, Lifehack, Self-Improvement]
 description: "В данной статье рассмотрены основные способы для создания React-приложения на горячую. Способы инициализировать приложения как локально, так и в облачных сервисах."
 ---

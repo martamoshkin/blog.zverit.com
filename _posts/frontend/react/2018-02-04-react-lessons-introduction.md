@@ -8,6 +8,7 @@ redirect_from:
     - /frontend/2018/02/04/react-lessons-introduction/frontend
 image: "/assets/react_lessons_intro.png"
 image_alt: ""
+image_height: "auto"
 tags: [React, ReactJS, Redux, Lessons]
 description: "Этой публикацией я открываю цикл статей по изучению ReactJS в связке с Redux, применяя функциональный подход программирования"
 ---

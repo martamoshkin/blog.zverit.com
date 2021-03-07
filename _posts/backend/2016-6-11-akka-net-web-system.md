@@ -5,6 +5,7 @@ date:   2016-06-11 15:15:29 +0300
 image: "/assets/akkalogo.png"
 image_alt: "Akka.NET"
 author: "Artamoshkin Maxim"
+image_height: "auto"
 redirect_from:
   - /backend/2016/06/11/akka-net-web-system/backend
 category: Backend

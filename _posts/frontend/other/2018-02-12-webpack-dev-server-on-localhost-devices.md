@@ -8,6 +8,7 @@ redirect_from:
     - /frontend/2018/02/12/webpack-dev-server-on-localhost-devices/frontend
 image: "/assets/webpack-dev-server-share.png"
 image_alt: ""
+image_height: "auto"
 tags: [Webpack, Dev Server, Debugging, Development]
 description: "Почти каждый разработчик использовавший webpack-dev-server сталкивался с проблемой отладки локального приложения на мобильных или прочих устройствах находящимися под NAT."
 ---

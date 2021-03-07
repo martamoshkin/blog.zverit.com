@@ -6,6 +6,7 @@ category: Frontend
 author: "Artamoshkin Maxim"
 image: "/assets/markdown-angular.png"
 image_alt: ""
+image_height: "auto"
 tags: [Angular, Markdown]
 description: "В статье описан простой путь использования markdown верстки в angular приложении"
 ---

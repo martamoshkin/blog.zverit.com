@@ -5,6 +5,7 @@ date: '2017-07-24 21:47:11 +0300'
 category: Frontend
 image: "/assets/superhero-catching.png"
 image_alt: "Callback catching"
+image_height: "auto"
 author: "Artamoshkin Maxim"
 redirect_from:
     - /frontend/2017/07/24/angular-popup-oauth/frontend

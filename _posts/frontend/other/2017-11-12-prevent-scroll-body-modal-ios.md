@@ -9,6 +9,7 @@ redirect_from:
     - /frontend/2017/11/10/prevent-scroll-body-modal-ios/
     - /frontend/2017/11/11/prevent-scroll-body-modal-ios/frontend
 image_alt: ""
+image_height: "auto"
 tags: [CSS, iOS, tips]
 description: "Одна из известных проблем на iOS с прокручиваемым ``body`` при скролле на фиксированно или абсолютно расположенных элементах."
 ---

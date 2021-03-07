@@ -8,6 +8,7 @@ redirect_from:
     - /frontend/2017/06/17/app-initializer-bootstrap-service-method/frontend
 image: "/assets/before-start-rocket.png"
 image_alt: "Выполнение кода до рендеринга приложения"
+image_height: "auto"
 tags:
 - Angular
 - APP_INITIALIZER

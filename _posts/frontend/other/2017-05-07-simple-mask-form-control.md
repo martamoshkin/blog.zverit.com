@@ -6,6 +6,7 @@ image_alt: "Card mask Angular form control"
 date: '2017-05-31 11:25:11 +0300'
 category: Frontend
 author: "Artamoshkin Maxim"
+image_height: "auto"
 redirect_from:
     - /frontend/2017/05/31/simple-mask-form-control/frontend
 tags:

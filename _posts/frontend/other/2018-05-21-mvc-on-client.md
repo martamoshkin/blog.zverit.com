@@ -6,6 +6,7 @@ category: Frontend
 author: "Artamoshkin Maxim"
 image: "/assets/mvc-page-head.jpg"
 image_alt: ""
+image_height: "auto"
 tags: [Frontend, MVC, Pattern]
 description: "Краткий обзор MVC паттерна в веб–разработке. Рассмотрены особенности использования клиентской частью приложения. Ответ на вопрос, MVC что это"
 ---

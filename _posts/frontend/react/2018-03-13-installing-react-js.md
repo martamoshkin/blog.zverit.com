@@ -8,6 +8,7 @@ redirect_from:
   - /frontend/2018/03/11/installing-react-js/
 image: "/assets/react-install.png"
 image_alt: ""
+image_height: "auto"
 tags: [React, ReactJS, Lessons, JavaScript, JS]
 description: "В данной статье рассмотрены основные способы для создания React-приложения на горячую. Способы инициализировать приложения как локально, так и в облачных сервисах. Реакт что это?"
 ---

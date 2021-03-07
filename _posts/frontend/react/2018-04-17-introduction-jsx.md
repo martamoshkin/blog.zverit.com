@@ -7,6 +7,7 @@ author: "Artamoshkin Maxim"
 image: "/assets/introduction-jsx.png"
 redirect_from:
 image_alt: ""
+image_height: "auto"
 redirect_from:
     - /frontend/2018/04/16/introduction-jsx/
 tags: [React, ReactJS, Lessons, JavaScript, JS, JSX]

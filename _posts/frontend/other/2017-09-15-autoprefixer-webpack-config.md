@@ -9,6 +9,7 @@ redirect_from:
 image: "/assets/autoprefixer.png"
 image_alt: "Autoprefixer PostCSS plugin and Webpack"
 tags: [Autoprefixer, PostCSS, Loaders, Webpack]
+image_height: "auto"
 description: "Autoprefixer - это плагин PostCSS для добавления вендорных префиксов на основе данных сервиса Can I Use. Благодаря этому плагину, создание кроссбраузерного CSS стало проще. Не нужно добавлять 'мусорный' код, так как `PostCSS` является постобработчиком и добавляет уже, непосредственно, при сборке web-приложения."
 ---
 
