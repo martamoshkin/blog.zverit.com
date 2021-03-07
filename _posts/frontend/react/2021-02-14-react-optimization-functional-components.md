@@ -6,7 +6,7 @@ category: Frontend
 author: "Artamoshkin Maxim"
 image: "/assets/react-functional-performance.jpg"
 image_alt: "Artamoshkin Maxim Photo. Moscow 2019"
-image_height: "100%"
+image_height: "auto"
 tags: [React, ReactJS, Optimization, Hooks, Performance, Stateless, Оптимизация]
 description: "В статье рассмотрены основные подходы оптимизации функциональных компонентов React. Использование хуков useEffect, useMemo, useCallback."
 ---
