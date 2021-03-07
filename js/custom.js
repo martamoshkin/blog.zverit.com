@@ -148,3 +148,10 @@ var options = {
 // *Create new Scroller and run it.
 var scroll = new Scroller(options);
 scroll.init();
+
+const terminationEvent = 'onpagehide' in self ? 'pagehide' : 'unload';
+
+addEventListener(terminationEvent, (event) => {
+  // Note: if the browser is able to cache the page, `event.persisted`
+  // is `true`, and the state is frozen rather than terminated.
+}, {capture: true});
