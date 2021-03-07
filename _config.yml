@@ -27,7 +27,6 @@ plugins:
 # Build settings
 markdown: kramdown
 timezone: Europe/Moscow
-url: https://blog.zverit.com   # with the https protocol
 enforce_ssl: blog.zverit.com   # without any protocol
 
 jekyll-archives:
@@ -55,7 +54,6 @@ kramdown:
   footnote_nr:    1
   coderay_line_number_start: 1
   coderay_line_numbers: inline
-  hard_wrap: false
 
 sass:
   style: compressed

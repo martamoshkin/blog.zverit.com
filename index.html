@@ -14,7 +14,7 @@ layout: default
 <div class="home">
 	<ul class="post-list">
 		{% for post in paginator.posts %}
-		{% if post.secondary != 'yes' %} 
+		{% if post.secondary != 'yes' %}
 		<li>
 			<span class="post-meta">
 				<h2>
@@ -64,7 +64,7 @@ layout: default
 		</li>
 		{% if paginator.total_pages > 1 %}
 		<nav>
-			<div class="pagination">
+			<ul class="pagination">
 				{% if paginator.previous_page %}
 				<li>
 					<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" ref="prev">
@@ -86,25 +86,25 @@ layout: default
 
 				{% elsif page == 1 %}
 				<li>
-					<a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}" ref="prev">{{ page }}</a>
+					<a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}" title="{{page}}" ref="prev">{{ page }}</a>
 				</li>
 				{% else %}
 				<li>
-					<a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+					<a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" title="{{page}}">{{ page }}</a>
 				</li>
 
 				{% endif %}
 				{% endfor %}
 				{% if paginator.next_page %}
 				<li>
-					<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" ref="next"><span class="fa fa-angle-double-right"></span></a>
+					<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" title="Next page" ref="next"><span class="fa fa-angle-double-right"></span></a>
 				</li>
 				{% else %}
 				<li class="active-next">
 					<span class="fa fa-angle-double-right disabled"></span>
 				</li>
 				{% endif %}
-			</div>
+			</ul>
 		</nav>
 		{% endif %}
 	</ul>
