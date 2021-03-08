@@ -3,8 +3,8 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar {
-    width: 7px;
-    height: 7px;
+    width: .5rem;
+    height: .5rem;
     background-color: $scroll-bar-color;
 }
 
@@ -18,8 +18,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .highlight::-webkit-scrollbar {
-    width: 7px;
-    height: 7px;
+    width: .5rem;
+    height: .5rem;
     background-color: $scroll-bar-color;
 }
 

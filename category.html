@@ -3,7 +3,8 @@ title:    Категории · Artamoshkin Maxim
 layout:   default
 sitemap: false
 ---
-{% assign rawcats = "" %} 
+
+{% assign rawcats = "" %}
 {% for post in site.posts %}
 {% assign tcats = post.category | join:'|' | append:'|' %}
 {% assign rawcats = rawcats | append:tcats %}
@@ -28,10 +29,10 @@ sitemap: false
 
 
 
-<div class="posts expo-section">
+<div class="posts expo-section categories">
 <h1 class="page-title">Категории</h1>
 
-<p>
+<p class="category-marks">
 {% for ct in cats %}
 <a href="#{{ ct | slugify }}" class="codinfox-category-mark post-tag" style="text-decoration: none;"> {{ ct }} </a> &nbsp;&nbsp;
 {% endfor %}

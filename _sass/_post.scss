@@ -99,7 +99,8 @@ article {
 }
 
 .post-meta {
-    color: $grey-color;
+    color: rgba($text-color, .7);
+    line-height: 1rem;
     font-size: 15px;
 }
 

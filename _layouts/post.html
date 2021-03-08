@@ -8,11 +8,8 @@ layout: default
         <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
         <meta itemprop="dateModified" content="{{ page.date | date_to_xmlschema }}">
         <div class="post-meta">
-
             <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%-d %B
-                %Y в %T" }}
-            </time>
-            ,
+                %Y в %T" }}</time>,
             <a class="category" href="/category#{{page.category | slugify}}">{{page.category}} </a>
         </div>
     </header>
@@ -27,8 +24,6 @@ layout: default
             <img class="image" height="400px" itemprop="url contentUrl" src="{{ site.url }}{{ page.image }}"
                  alt="{{ page.image_alt }}">
             {% endif %}
-
-            <!-- <img width="920" height="270" itemprop="url contentUrl" src="{{ site.url }}{{ page.image }}" alt="{{ page.image_alt }}"> -->
         </picture>
         <meta itemprop="width" content="120">
         <meta itemprop="height" content="90">

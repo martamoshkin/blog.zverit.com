@@ -1,6 +1,6 @@
 // Our variables
 $base-font-family: "Arimo", Helvetica, sans-serif;
-;
+
 $base-font-size: 16px;
 $base-font-weight: 400;
 $small-font-size: $base-font-size * 0.875;
@@ -14,35 +14,33 @@ $font-weight-medium: 500 !default;
 $font-weight-bold: 700 !default;
 $font-weight-bolder: bolder !default;
 
-$spacing-unit: 20px;
-
 $white: #fff;
 $black: #000;
-$text-color: #333;
-$background-color: #F5F5F5;
-$brand-color: #303030;
 
+$gray-500:  #333;
 $grey-color: #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark: darken($grey-color, 25%);
 
-$rss-gray-color: #3D3D3D;
+$background-color: #F5F5F5;
+$brand-color: #303030;
+$text-color: $gray-500;
+
+$footer-btn-color: #3D3D3D;
+$rss-gray-color: $footer-btn-color;
+$subscribe-btn-color: $footer-btn-color;
 
 $post-tag-color: rgba($brand-color, .8);
 $footer-color: #212121;
-$post-links-border-color: #333;
+$post-links-border-color: $gray-500;
 
 $pagination-active-color: $brand-color;
 $pagination-arrow-color: $text-color;
-$pagination-prev-next-hover-bg: #e5e5e5;
+$pagination-prev-next-hover-bg: rgba($brand-color, .1);
 
-$scroll-bar-track-color: #eee;
+$scroll-bar-track-color: $grey-color-light;
 $scroll-bar-color: $background-color;
-$scroll-bar-thumb: #b5b5b5;
-
-// Width of the content area
-$content-width: 950px;
-
+$scroll-bar-thumb: rgba($grey-color, .5);
 
 // Social button colors
 $feedly-color: #09B452;
@@ -51,3 +49,7 @@ $pocket-color: #FF1B3E;
 $gplus-color: #F43E28;
 $twitter-color: #06A2F3;
 $facebook-color: #2E5990;
+
+// Width of the content area
+$content-width: 950px;
+$spacing-unit: 20px;
