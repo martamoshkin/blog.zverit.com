@@ -1,29 +1,29 @@
 body::-webkit-scrollbar-track {
-    background-color: #EEEEEE;
+    background-color: $scroll-bar-track-color;
 }
 
 body::-webkit-scrollbar {
     width: 7px;
     height: 7px;
-    background-color: #F5F5F5;
+    background-color: $scroll-bar-color;
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #b5b5b5;
+    background-color: $scroll-bar-thumb;
     border-radius: 3px;
 }
 
 .highlight::-webkit-scrollbar-track {
-    background-color: #EEEEEE;
+    background-color: $scroll-bar-track-color;
 }
 
 .highlight::-webkit-scrollbar {
     width: 7px;
     height: 7px;
-    background-color: #F5F5F5;
+    background-color: $scroll-bar-color;
 }
 
 .highlight::-webkit-scrollbar-thumb {
-    background-color: #b5b5b5;
+    background-color: $scroll-bar-thumb;
     border-radius: 3px;
 }

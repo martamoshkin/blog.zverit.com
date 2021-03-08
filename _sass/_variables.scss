@@ -1,0 +1,53 @@
+// Our variables
+$base-font-family: "Arimo", Helvetica, sans-serif;
+;
+$base-font-size: 16px;
+$base-font-weight: 400;
+$small-font-size: $base-font-size * 0.875;
+$base-line-height: 1.5;
+$site-title-font-size: 1.125rem;
+
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: bolder !default;
+
+$spacing-unit: 20px;
+
+$white: #fff;
+$black: #000;
+$text-color: #333;
+$background-color: #F5F5F5;
+$brand-color: #303030;
+
+$grey-color: #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark: darken($grey-color, 25%);
+
+$rss-gray-color: #3D3D3D;
+
+$post-tag-color: rgba($brand-color, .8);
+$footer-color: #212121;
+$post-links-border-color: #333;
+
+$pagination-active-color: $brand-color;
+$pagination-arrow-color: $text-color;
+$pagination-prev-next-hover-bg: #e5e5e5;
+
+$scroll-bar-track-color: #eee;
+$scroll-bar-color: $background-color;
+$scroll-bar-thumb: #b5b5b5;
+
+// Width of the content area
+$content-width: 950px;
+
+
+// Social button colors
+$feedly-color: #09B452;
+$linkedin-color: #0B618C;
+$pocket-color: #FF1B3E;
+$gplus-color: #F43E28;
+$twitter-color: #06A2F3;
+$facebook-color: #2E5990;

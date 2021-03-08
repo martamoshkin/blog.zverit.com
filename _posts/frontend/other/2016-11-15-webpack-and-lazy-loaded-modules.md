@@ -4,6 +4,7 @@ title:  "Webpack и LazyLoad модули Angular"
 date:   2016-11-15 21:25:43 +0300
 image: "/assets/webpack-failed-to-load.png"
 image_alt: "Chrome console"
+image_height: 'auto'
 category: Frontend
 author: "Artamoshkin Maxim"
 redirect_from:

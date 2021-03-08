@@ -1,63 +1,62 @@
 .share-buttons {
-    margin-left: 0;
-    margin-top: $spacing-unit;
-    padding-top: $spacing-unit;
-    list-style: none;
+  margin-left: 0;
+  margin-top: $spacing-unit;
+  padding-top: $spacing-unit;
+  list-style: none;
+  text-align: center;
+  border-top: 1px solid rgba($black, 0.1);
+
+  .feedly:hover {
+    color: $feedly-color;
+  }
+
+  .linkedin:hover {
+    color: $linkedin-color;
+  }
+
+  .pocket:hover {
+    color: $pocket-color;
+  }
+
+  .gplus:hover {
+    color: $gplus-color;
+  }
+
+  .twitter:hover {
+    color: $twitter-color;
+  }
+
+  .facebook:hover {
+    color: $facebook-color;
+  }
+
+  li {
+    display: inline;
+  }
+
+  span {
+    color: #9E9E9E;
+    width: 15%;
     text-align: center;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    line-height: 27px;
+    font-size: 1.25rem;
 
-    .feedly:hover {
-        color: #09B452;
+    &:hover {
+      color: #212121;
     }
+  }
 
-    .linkedin:hover {
-        color: #0B618C;
-    }
+  .sr-only {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  }
 
-    .pocket:hover {
-        color: #FF1B3E;
-    }
-
-    .gplus:hover {
-        color: #F43E28;
-    }
-
-    .twitter:hover {
-        color: #06A2F3;
-    }
-
-    .facebook:hover {
-        color: #2E5990;
-    }
-
-    li {
-        display: inline;
-    }
-
-    span {
-        color: #9E9E9E;
-        width: 15%;
-        text-align: center;
-        line-height: 27px;
-        font-size: 20px;
-
-        &:hover {
-            color: #212121;
-        }
-    }
-
-    .sr-only {
-        position: absolute;
-        clip: rect(1px 1px 1px 1px);
-        clip: rect(1px, 1px, 1px, 1px);
-        padding: 0;
-        border: 0;
-        height: 1px;
-        width: 1px;
-        overflow: hidden;
-    }
-
-    p {
-        line-height: 1.6;
-    }
+  p {
+    line-height: 1.6;
+  }
 }
