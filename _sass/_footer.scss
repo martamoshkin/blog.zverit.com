@@ -79,3 +79,14 @@
     background: $footer-color;
   }
 }
+
+.telegram {
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: 1rem;
+  margin-left: 0.675rem;
+  fill: $white;
+  background: url(../assets/telegram-brands.svg);
+  background-repeat: no-repeat;
+}
