@@ -28,15 +28,15 @@
     .menu-icon {
       display: block;
       float: right;
-      width: 36px;
-      height: 26px;
+      width: 2.25rem;
+      height: 1.625rem;
       line-height: 0;
-      padding-top: 10px;
+      padding-top: .625rem;
       text-align: center;
 
       > svg {
-        width: 18px;
-        height: 15px;
+        width: 1.125rem;
+        height: .9375rem;
 
         path {
           fill: $grey-color-dark;

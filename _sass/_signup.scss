@@ -6,8 +6,8 @@
 	#mc_embed_signup input.button {
 		display: inline-block;
 		width: 15%;
-		min-width: 105px;
-		height: 34px;
+		min-width: 6.5625rem;
+		height: 2.125rem;
 	}
 
 	#mc_embed_signup .button {
@@ -15,10 +15,10 @@
 	}
 
 	#mc_embed_signup input.email {
-		margin: 0 -5px -20px 0;
+		margin: 0 -0.3125rem -1.25rem 0;
 		display: inline-block;
 		border-radius: 3px 0 0 3px;
-		min-width: 150px;
+		min-width: 9.375rem;
 		width: 30%;
 	}
 }
