@@ -1,181 +1,293 @@
 ---
 layout: default
 ---
+
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <meta itemprop="keywords" content="{{ page.tags | join: ',' }}"/>
-    <meta itemprop="description" content="{{ content | strip_html | truncatewords: 40 }}"/>
-    <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-        <meta itemprop="dateModified" content="{{ page.date | date_to_xmlschema }}">
-        <div class="post-meta">
-            <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%-d %B
-                %Y в %T" }}</time>,
-            <a class="category" href="/category#{{page.category | slugify}}">{{page.category}} </a>
-        </div>
-    </header>
-
-    {% if page.image %}
-    <figure class="post-logo" itemscope itemprop="image" itemtype="http://schema.org/ImageObject">
-        <picture>
-            {% if page.image_height %}
-            <img class="image" height="{{page.image_height}}" itemprop="url contentUrl" src="{{ site.url }}{{ page.image }}"
-                 alt="{{ page.image_alt }}">
-            {% else %}
-            <img class="image" height="400px" itemprop="url contentUrl" src="{{ site.url }}{{ page.image }}"
-                 alt="{{ page.image_alt }}">
-            {% endif %}
-        </picture>
-        <meta itemprop="width" content="120">
-        <meta itemprop="height" content="90">
-        <meta itemprop="datePublished" content="{{ page.date | date: " %-d %B %Y
-        " }}"/>
-        <figcaption itemprop="caption description">{{ page.image_alt }}</figcaption>
-    </figure>
-    {% endif %}
-
-    <div class="post-content" itemprop="articleBody">
-        {{ content }}
+  <meta itemprop="keywords" content="{{ page.tags | join: ',' }}" />
+  <meta
+    itemprop="description"
+    content="{{ content | strip_html | truncatewords: 40 }}"
+  />
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+    <meta
+      itemprop="dateModified"
+      content="{{ page.date | date_to_xmlschema }}"
+    />
+    <div class="post-meta">
+      <span>
+        <span class="post-meta-label">Категория: </span>
+        <a class="category" href="/category#{{page.category | slugify}}"
+          >{{page.category}}
+        </a></span
+      >
+      <span
+        ><span class="post-meta-label">Дата: </span>
+        <time
+          datetime="{{ page.date | date_to_xmlschema }}"
+          itemprop="datePublished"
+          >{{ page.date | date: "%-d %B %Y в %H:%M" }}</time
+        ></span
+      >
     </div>
-    {% if page.author %}
-    <span class="signature" itemprop="author" itemscope itemtype="http://schema.org/Person">
-		Автор:
-		<span class="name" itemprop="name">
-			<a href="https://zverit.com" itemprop="url" rel="author">
-				{{ page.author }}
-			</a>
-		</span>
-	</span>
-    {% endif %}
+  </header>
 
-    <div class="tags"> Метки:
-        {% for tag in page.tags %}
-        <a class="codinfox-tag-mark post-tag" href="/tag#{{ tag | slugify }}">{{ tag }}</a>
-        {% endfor %}
+  {% if page.image %}
+  <figure
+    class="post-logo"
+    itemscope
+    itemprop="image"
+    itemtype="http://schema.org/ImageObject"
+  >
+    <picture>
+      {% if page.image_height %}
+      <img
+        class="image"
+        height="{{page.image_height}}"
+        itemprop="url contentUrl"
+        src="{{ site.url }}{{ page.image }}"
+        alt="{{ page.image_alt }}"
+      />
+      {% else %}
+      <img
+        class="image"
+        height="400px"
+        itemprop="url contentUrl"
+        src="{{ site.url }}{{ page.image }}"
+        alt="{{ page.image_alt }}"
+      />
+      {% endif %}
+    </picture>
+    <meta itemprop="width" content="120" />
+    <meta itemprop="height" content="90" />
+    <meta itemprop="datePublished" content="{{ page.date | date: " %-d %B %Y "
+    }}"/>
+    <figcaption itemprop="caption description">{{ page.image_alt }}</figcaption>
+  </figure>
+  {% endif %}
+
+  <div class="post-content" itemprop="articleBody">{{ content }}</div>
+  {% if page.author %}
+  <span
+    class="signature"
+    itemprop="author"
+    itemscope
+    itemtype="http://schema.org/Person"
+  >
+    Автор:
+    <span class="name" itemprop="name">
+      <a href="https://zverit.com" itemprop="url" rel="author">
+        {{ page.author }}
+      </a>
+    </span>
+  </span>
+  {% endif %}
+
+  <div class="tags">
+    Метки: {% for tag in page.tags %}
+    <a class="codinfox-tag-mark post-tag" href="/tag#{{ tag | slugify }}"
+      >{{ tag }}</a
+    >
+    {% endfor %}
+  </div>
+
+  <div class="post-content">
+    <!-- Yandex.RTB R-A-279962-3 -->
+    <div id="yandex_rtb_R-A-279962-3"></div>
+  </div>
+
+  <ul class="share-buttons">
+    <li>
+      <a
+        href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}&t="
+        rel="noopener"
+        title="Share on Facebook"
+        target="_blank"
+        ><span class="facebook fa fa-facebook"></span
+      ></a>
+    </li>
+    <li>
+      <a
+        href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}"
+        rel="noopener"
+        target="_blank"
+        title="Tweet"
+        ><span class="twitter fa fa-twitter"> </span
+      ></a>
+    </li>
+    <li>
+      <a
+        href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}"
+        rel="noopener"
+        target="_blank"
+        title="Share on Google+"
+        ><span class="gplus fa fa-google-plus"></span
+      ></a>
+    </li>
+    <li>
+      <a
+        href="https://getpocket.com/save?url={{ site.url }}{{ page.url }}&title={{ page.title }}"
+        rel="noopener"
+        target="_blank"
+        title="Add to Pocket"
+        ><span class="pocket fa fa-get-pocket"> </span
+      ></a>
+    </li>
+    <li>
+      <a
+        href="https://feedly.com/i/subscription/feed%2Fhttp%3A%2F%2Fblog.zverit.com%2Ffeed.xml"
+        rel="noopener"
+        target="blank"
+        title="Subscribe in Feedly"
+        ><span class="feedly fa fa-rss-square"></span
+      ></a>
+    </li>
+
+    <li></li>
+    <li>
+      <a
+        href="http://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}&summary=&source={{ site.title }}+#zveritblog"
+        rel="noopener"
+        target="_blank"
+        title="Share on LinkedIn"
+        ><span class="linkedin fa fa-linkedin"></span
+      ></a>
+    </li>
+  </ul>
+
+  <div
+    itemprop="publisher"
+    itemscope
+    itemtype="https://schema.org/Organization"
+  >
+    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+      <meta
+        itemprop="url"
+        content="https://blog.zverit.com/assets/avatar.jpg"
+      />
     </div>
-
-    <div class="post-content">
-        <!-- Yandex.RTB R-A-279962-3 -->
-        <div id="yandex_rtb_R-A-279962-3"></div>
-    </div>
-
-    <ul class="share-buttons">
-        <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}&t=" rel="noopener"
-               title="Share on Facebook" target="_blank"><span class="facebook fa fa-facebook"></span></a></li>
-        <li><a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}"
-               rel="noopener" target="_blank" title="Tweet"><span class="twitter fa fa-twitter"> </span></a></li>
-        <li><a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" rel="noopener" target="_blank"
-               title="Share on Google+"><span class="gplus fa fa-google-plus"></span></a></li>
-        <li><a href="https://getpocket.com/save?url={{ site.url }}{{ page.url }}&title={{ page.title }}" rel="noopener"
-               target="_blank" title="Add to Pocket"><span class="pocket fa fa-get-pocket"> </span></a></li>
-        <li><a href='https://feedly.com/i/subscription/feed%2Fhttp%3A%2F%2Fblog.zverit.com%2Ffeed.xml' rel="noopener"
-               target='blank' title="Subscribe in Feedly"><span class="feedly fa fa-rss-square"></span></a>
-        <li>
-        <li>
-            <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}&summary=&source={{ site.title }}+#zveritblog"
-               rel="noopener" target="_blank" title="Share on LinkedIn"><span
-                    class="linkedin fa fa-linkedin"></span></a></li>
-    </ul>
-
-    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
-        <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-            <meta itemprop="url" content="https://blog.zverit.com/assets/avatar.jpg">
-        </div>
-        <meta itemprop="name" content="Artamoshkin Maxim">
-    </div>
-    <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage"
-          itemid="{{site.url}}{{page.url}}"/>
+    <meta itemprop="name" content="Artamoshkin Maxim" />
+  </div>
+  <meta
+    itemscope
+    itemprop="mainEntityOfPage"
+    itemtype="https://schema.org/WebPage"
+    itemid="{{site.url}}{{page.url}}"
+  />
 </article>
 
-<div id='subscribe' class="expo-section">
-    <h2> Подписка на новости блога: </h2>
-    <div id="mc_embed_signup">
-        <form action="//zverit.us13.list-manage.com/subscribe/post?u=a8b392fd06c991f284242671f&amp;id=576b0f82b2"
-              method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-              class="validate" target="_blank" novalidate>
-            <div id="mc_embed_signup_scroll">
-
-                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL"
-                       placeholder="Введите ваш E-mail" required>
-                <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                    <input type="text"
-                           name="b_a8b392fd06c991f284242671f_576b0f82b2"
-                           tabindex="-1"
-                           value=""></div>
-                <div class="clear"><input type="submit" value="Подписаться" name="subscribe"
-                                          id="mc-embedded-subscribe" class="button raised grey">
-                </div>
-            </div>
-        </form>
-    </div>
+<div id="subscribe" class="expo-section">
+  <h2>Подписка на новости блога:</h2>
+  <div id="mc_embed_signup">
+    <form
+      action="//zverit.us13.list-manage.com/subscribe/post?u=a8b392fd06c991f284242671f&amp;id=576b0f82b2"
+      method="post"
+      id="mc-embedded-subscribe-form"
+      name="mc-embedded-subscribe-form"
+      class="validate"
+      target="_blank"
+      novalidate
+    >
+      <div id="mc_embed_signup_scroll">
+        <input
+          type="email"
+          value=""
+          name="EMAIL"
+          class="email"
+          id="mce-EMAIL"
+          placeholder="Введите ваш E-mail"
+          required
+        />
+        <div style="position: absolute; left: -5000px" aria-hidden="true">
+          <input
+            type="text"
+            name="b_a8b392fd06c991f284242671f_576b0f82b2"
+            tabindex="-1"
+            value=""
+          />
+        </div>
+        <div class="clear">
+          <input
+            type="submit"
+            value="Подписаться"
+            name="subscribe"
+            id="mc-embedded-subscribe"
+            class="button raised grey"
+          />
+        </div>
+      </div>
+    </form>
+  </div>
 </div>
 
 <div class="related expo-section">
-    <h2>Читайте также:</h2>
-    <ul>
-        {% for post in site.related_posts limit:5 %}
-        <a href="{{ post.url }}">
-            <li>
-                <h3>{{ post.title }}</h3>
-            </li>
-        </a>
-        {% endfor %}
-    </ul>
+  <h2>Читайте также:</h2>
+  <ul>
+    {% for post in site.related_posts limit:5 %}
+    <a href="{{ post.url }}">
+      <li>
+        <h3>{{ post.title }}</h3>
+      </li>
+    </a>
+    {% endfor %}
+  </ul>
 </div>
 
 <div class="expo-section">
-    <!-- Yandex.RTB R-A-279962-1 -->
-    <div id="yandex_rtb_R-A-279962-1"></div>
-    <script type="text/javascript">
-        (function (w, d, n, s, t) {
-            w[n] = w[n] || [];
-            w[n].push(function () {
-                Ya.Context.AdvManager.render({
-                    blockId: "R-A-279962-1",
-                    renderTo: "yandex_rtb_R-A-279962-1",
-                    async: true
-                });
-            });
-            t = d.getElementsByTagName("script")[0];
-            s = d.createElement("script");
-            s.type = "text/javascript";
-            s.src = "//an.yandex.ru/system/context.js";
-            s.async = true;
-            t.parentNode.insertBefore(s, t);
-        })(this, this.document, "yandexContextAsyncCallbacks");
-    </script>
+  <!-- Yandex.RTB R-A-279962-1 -->
+  <div id="yandex_rtb_R-A-279962-1"></div>
+  <script type="text/javascript">
+    (function (w, d, n, s, t) {
+      w[n] = w[n] || [];
+      w[n].push(function () {
+        Ya.Context.AdvManager.render({
+          blockId: "R-A-279962-1",
+          renderTo: "yandex_rtb_R-A-279962-1",
+          async: true,
+        });
+      });
+      t = d.getElementsByTagName("script")[0];
+      s = d.createElement("script");
+      s.type = "text/javascript";
+      s.src = "//an.yandex.ru/system/context.js";
+      s.async = true;
+      t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+  </script>
 </div>
 
 <div id="disqus_thread"></div>
 <script>
-    var disqus_config = function () {
-        this.page.url = "{{site.url}}{{page.url}}";
-        this.page.identifier = "{{page.url}}";
-    };
-    (function () {
-        var d = document, s = d.createElement('script');
+  var disqus_config = function () {
+    this.page.url = "{{site.url}}{{page.url}}";
+    this.page.identifier = "{{page.url}}";
+  };
+  (function () {
+    var d = document,
+      s = d.createElement("script");
 
-        s.src = '//blogzverit.disqus.com/embed.js';
+    s.src = "//blogzverit.disqus.com/embed.js";
 
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
 </script>
 <noscript>Please enable JavaScript to view the comments</noscript>
 <script type="text/javascript">
-    (function (w, d, n, s, t) {
-        w[n] = w[n] || [];
-        w[n].push(function () {
-            Ya.Context.AdvManager.render({
-                blockId: "R-A-279962-3",
-                renderTo: "yandex_rtb_R-A-279962-3",
-                async: true
-            });
-        });
-        t = d.getElementsByTagName("script")[0];
-        s = d.createElement("script");
-        s.type = "text/javascript";
-        s.src = "//an.yandex.ru/system/context.js";
-        s.async = true;
-        t.parentNode.insertBefore(s, t);
-    })(this, this.document, "yandexContextAsyncCallbacks");
+  (function (w, d, n, s, t) {
+    w[n] = w[n] || [];
+    w[n].push(function () {
+      Ya.Context.AdvManager.render({
+        blockId: "R-A-279962-3",
+        renderTo: "yandex_rtb_R-A-279962-3",
+        async: true,
+      });
+    });
+    t = d.getElementsByTagName("script")[0];
+    s = d.createElement("script");
+    s.type = "text/javascript";
+    s.src = "//an.yandex.ru/system/context.js";
+    s.async = true;
+    t.parentNode.insertBefore(s, t);
+  })(this, this.document, "yandexContextAsyncCallbacks");
 </script>

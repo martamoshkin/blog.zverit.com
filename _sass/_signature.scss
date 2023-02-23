@@ -3,11 +3,12 @@
   text-align: right;
   font-size: $font-weight-lighter;
   justify-content: flex-end;
-  padding-top: 5px;
-  padding-bottom: 15px;
+  padding-top: .3125rem;
+  padding-bottom: 1rem;
   margin-bottom: 0;
+  font-family: "Montserrat";
 
   .name {
-    padding-left: 5px;
+    padding-left: .3125rem;
   }
 }

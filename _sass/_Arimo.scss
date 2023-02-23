@@ -1,0 +1,20 @@
+/* montserrat-regular - latin_cyrillic */
+@font-face {
+    font-family: 'Arimo';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/Arimo/Arimo-Regular');
+  }
+  /* montserrat-italic - latin_cyrillic */
+  @font-face { 
+    font-family: 'Arimo';
+    font-style: italic;
+    font-weight: 400;
+    src: url('./fonts/Arimo/Arimo-Italic'); /* IE9 Compat Modes */
+  }
+  @font-face { 
+    font-family: 'Arimo';
+    font-style: normal;
+    font-weight: bold;
+    src: url('./fonts/Arimo/Arimo-SemiBold'); /* IE9 Compat Modes */
+  }

@@ -1,6 +1,6 @@
 .site-nav {
   float: right;
-  line-height: 40px;
+  line-height: 2.5rem;
 
   .menu-icon {
     display: none;
@@ -11,7 +11,7 @@
     line-height: $base-line-height;
 
     &:not(:last-child) {
-      margin-right: 20px;
+      margin-right: 1.25rem;
     }
   }
 
@@ -51,18 +51,18 @@
 
     &:hover .trigger {
       display: block;
-      padding-bottom: 5px;
+      padding-bottom: .3125rem;
     }
 
     .page-link {
       display: block;
-      padding: 5px 10px;
+      padding: .3125rem .625rem;
 
       &:not(:last-child) {
         margin-right: 0;
       }
 
-      margin-left: 20px;
+      margin-left: 1.25rem;
     }
   }
 }

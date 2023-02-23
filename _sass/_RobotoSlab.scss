@@ -1,0 +1,20 @@
+/* montserrat-regular - latin_cyrillic */
+@font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/RobotoSlab/RobotoSlab-Regular.ttf');
+  }
+  /* montserrat-italic - latin_cyrillic */
+  @font-face { 
+    font-family: 'Roboto Slab';
+    font-style: italic;
+    font-weight: 400;
+    src: url('./fonts/RobotoSlab/RobotoSlab-Italic'); /* IE9 Compat Modes */
+  }
+  @font-face { 
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./fonts/RobotoSlab/RobotoSlab-SemiBold.ttf'); /* IE9 Compat Modes */
+  }

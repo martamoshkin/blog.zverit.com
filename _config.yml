@@ -1,10 +1,10 @@
-title: Artamoshkin Maxim · Blog
+title: Артамошкин Максим
 # Site settings
 email: admin@zverit.com
 description: > # this means to ignore newlines until "baseurl:"
-  Блог fullstack-разработчика. 
+  Блог ИТ-руководителя, ex. fullstack-разработчика. 
   <br/>
-  Пишу о веб-разработке, по большей части о frontend. 
+  Пишу об управлении, веб-разработке и в целом об ИТ.
   <br/>
   Angular, React, JS, CSS3, ASP.NET, C#
 baseurl: "" # the subpath of your site, e.g. /blog
