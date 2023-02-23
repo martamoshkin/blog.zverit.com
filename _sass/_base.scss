@@ -21,7 +21,9 @@ figure {
   margin: 0;
   padding: 0;
 }
-
+#gallery-body {
+  background-color: #212121;
+}
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height}
     $base-font-family;

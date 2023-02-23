@@ -1,0 +1,70 @@
+---
+title: "Галерея · Артамошкин Максим"
+sitemap: false
+
+images:
+  - image_path: https://drscdn.500px.org/photo/1061110333/m%3D900/v2?sig=a7bb8b8557eb61de77ba6a1b2195f7840c5bf863c8b415e420e0215d3f5baf40
+    title: Apple Pie
+    link: https://500px.com/photo/1056767432/light-in-corridor-by-artamoshkinm
+  - image_path: https://drscdn.500px.org/photo/1061110133/q%3D80_m%3D1000/v2?sig=0a5e817ae210de5d40da81da35255f71e42e7aff3c444ce003f94b104750af86
+    title: Birthday Cake
+  - image_path: https://drscdn.500px.org/photo/1056767432/q%3D80_m%3D1000/v2?sig=502f18134cb352d69e5c20f307a2ade461dcc931716f31e7b563deb45c150ce8
+    title: Black Forest
+  - image_path: https://drscdn.500px.org/photo/1056766976/q%3D80_m%3D2000/v2?sig=93157b1d0a1a63ec60d1ce7e9f49189b2d2ec0817f13c7ef4e2aa904f3bf4e8c
+    title: Black Forest
+  - image_path: https://drscdn.500px.org/photo/1056767047/q%3D80_m%3D2000/v2?sig=a64670845b6b10c83ad0967308057ac08f62c096733f7ff741939ab2aabb3b6b
+    title: Black Forest
+  - image_path: https://drscdn.500px.org/photo/1056766901/q%3D80_m%3D1000/v2?sig=e4fc2d6ea17b13670cf4a1debfea03c2ebea7ac7b7d884727744cb6fe46be10d
+    title: Rain on the street
+  - image_path: https://drscdn.500px.org/photo/1056766933/q%3D80_m%3D1000/v2?sig=50eb59e346665cd5c4d2400adc795b31c259f63b2be7aa7345e4b61c615660c3
+    title: Light on Column
+---
+
+<!DOCTYPE html>
+<html lang="ru">
+  {% include head.html %}
+
+  <body id="gallery-body">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Blog",
+        "keywords": "software engineering angular react redux front-end c# javascript typescript frontend programmer программист разработчик блог программирование фронтенд",
+        "url": "https://blog.zverit.com",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://blog.zverit.com"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Artamoshkin Maxim",
+          "sameAs": [
+            "https://twitter.com/Zverit",
+            "https://plus.google.com/u/0/+ArtamoshkinZveritMaxim",
+            "https://vk.com/zverit",
+            "https://instagram.com/zverit",
+            "https://www.facebook.com/maximArtamoshkin"
+          ]
+        }
+      }
+    </script>
+
+    {% include header.html %}
+
+    <div class="page-content">
+      <section>
+        <h1 class="page-title">Галерея</h1>
+        <ul class="gallery">
+          {% for image in page.images %}
+          <div class="blur">
+            <img src="{{ image.image_path }}" alt="{{ image.title}}" />
+            <span class="title">{{image.title}}</span>
+          </div>
+          {% endfor %}
+        </ul>
+      </section>
+    </div>
+
+    {% include footer.html %}
+  </body>
+</html>

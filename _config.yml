@@ -12,7 +12,6 @@ url: "https://blog.zverit.com" # the base hostname & protocol for your site
 twitter_username: zverit 
 github_username:  Zverit
 permalink: pretty
-# safe: true
 
 paginate: 5
 paginate_path: "/page/:num"

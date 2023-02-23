@@ -1,0 +1,76 @@
+.gallery {
+  margin: auto;
+  padding: 1rem;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  -ms-flex-direction: column;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  display: -webkit-box;
+  display: flex;
+
+  div {
+    -webkit-box-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+    width: 20%;
+    margin: 0.5vw;
+
+    &:hover img {
+      filter: drop-shadow();
+      cursor: pointer;
+    }
+
+    .title {
+      color: $grey-color-light;
+      font-family: "Montserrat";
+    }
+  }
+
+  div img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+}
+
+@media screen and (min-width: $on-laptop) {
+  .gallery {
+    div {
+      width: 20%;
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .gallery {
+    div {
+      width: 33%;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+    .gallery {
+      div {
+        width: 50%;
+      }
+    }
+  }
+  
+
+/*BLUR*/
+.blur {
+  img {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  img:hover {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+  }
+}
