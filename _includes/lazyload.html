@@ -12,22 +12,22 @@
     })(this, function (root) {
       "use strict";
 
-      var echo = {};
+      let echo = {};
 
-      var callback = function () {};
+      let callback = function () {};
 
-      var offset, poll, delay, useDebounce, unload;
+      let offset, poll, delay, useDebounce, unload;
 
-      var isHidden = function (element) {
+      let isHidden = function (element) {
         return element.offsetParent === null;
       };
 
-      var inView = function (element, view) {
+      let inView = function (element, view) {
         if (isHidden(element)) {
           return false;
         }
 
-        var box = element.getBoundingClientRect();
+        let box = element.getBoundingClientRect();
         return (
           box.right >= view.l &&
           box.bottom >= view.t &&
@@ -36,7 +36,7 @@
         );
       };
 
-      var debounceOrThrottle = function () {
+      let debounceOrThrottle = function () {
         if (!useDebounce && !!poll) {
           return;
         }
@@ -49,10 +49,10 @@
 
       echo.init = function (opts) {
         opts = opts || {};
-        var offsetAll = opts.offset || 0;
-        var offsetVertical = opts.offsetVertical || offsetAll;
-        var offsetHorizontal = opts.offsetHorizontal || offsetAll;
-        var optionToInt = function (opt, fallback) {
+        let offsetAll = opts.offset || 0;
+        let offsetVertical = opts.offsetVertical || offsetAll;
+        let offsetHorizontal = opts.offsetHorizontal || offsetAll;
+        let optionToInt = function (opt, fallback) {
           return parseInt(opt || fallback, 10);
         };
         offset = {
@@ -76,12 +76,12 @@
       };
 
       echo.render = function (context) {
-        var nodes = (context || document).querySelectorAll(
+        let nodes = (context || document).querySelectorAll(
           "[data-echo], [data-echo-background]"
         );
-        var length = nodes.length;
-        var src, elem;
-        var view = {
+        let length = nodes.length;
+        let src, elem;
+        let view = {
           l: 0 - offset.l,
           t: 0 - offset.t,
           b:
@@ -91,9 +91,10 @@
             (root.innerWidth || document.documentElement.clientWidth) +
             offset.r,
         };
-        for (var i = 0; i < length; i++) {
+        for (let i = 0; i < length; i++) {
           elem = nodes[i];
           if (inView(elem, view)) {
+            elem.src = '';
             if (unload) {
               elem.setAttribute("data-echo-placeholder", elem.src);
             }
