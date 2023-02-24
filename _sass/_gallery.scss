@@ -17,12 +17,11 @@
     margin: 0.5vw;
 
     img[src*="/assets/loading-opaque.gif"] {
-      width: 5rem;
-      padding: 15rem;
+      width: 3rem;
+      padding: 30rem;
     }
 
     &:hover img {
-      filter: drop-shadow();
       cursor: pointer;
     }
 
@@ -67,7 +66,7 @@
 /*BLUR*/
 .blur {
   // img {
-  //   -webkit-transition: all 0.1s ease;
+  //   -webkit-transition: all 0.1s linear;
   //   -moz-transition: all 0.1s ease;
   //   -o-transition: all 0.1s ease;
   //   -ms-transition: all 0.1s ease;
