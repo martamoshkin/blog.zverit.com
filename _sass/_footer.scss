@@ -1,5 +1,5 @@
 .footer-col-wrapper {
-  font-size: 15px;
+  font-size: 1rem;
   color: $grey-color;
 
   margin-left: -$spacing-unit / 2;
@@ -56,9 +56,9 @@
         display: flex;
 
         input.button {
-          height: 40px;
-          line-height: 40px;
-          min-width: 120px;
+          height: 2.5rem;
+          line-height: 2.5rem;
+          min-width: 7.5rem;
           font-size: 1rem;
         }
       }
@@ -72,7 +72,7 @@
   background-color: $footer-color;
 
   .copyscape {
-    margin: 35px 0 0 0;
+    margin: 2.1875rem 0 0 0;
   }
 
   #mc_embed_signup form {

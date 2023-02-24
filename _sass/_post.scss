@@ -35,7 +35,7 @@ article {
 }
 
 .post-content {
-  padding-top: 25px;
+  padding-top: 1.5625rem;
   word-wrap: break-word;
 
   a {
@@ -46,30 +46,30 @@ article {
     font-size: 2rem;
 
     @include media-query($on-laptop) {
-      font-size: 28px;
+      font-size: 1.75rem;
     }
   }
 
   h3 {
     font-size: 1.625rem;
-    margin: 20px 0 10px 0;
-    padding-bottom: 5px;
+    margin: 1.25rem 0 .625rem 0;
+    padding-bottom: .3125rem;
     box-shadow: 0 -1px 0 rgba($black, 0.1) inset;
 
     @include media-query($on-laptop) {
-      font-size: 22px;
+      font-size: 1.375rem;
     }
   }
 
   h4 {
-    font-size: 20px;
+    font-size: 1.25rem;
 
-    margin: 20px 0 10px 0;
+    margin: 1.25rem 0 .625rem 0;
     padding-bottom: 5px;
     box-shadow: 0 -1px 0 rgba($black, 0.1) inset;
 
     @include media-query($on-laptop) {
-      font-size: 18px;
+      font-size: 1.125rem;
     }
   }
 }
