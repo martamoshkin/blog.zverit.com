@@ -50,6 +50,11 @@
   .gallery {
     div {
       width: 33%;
+
+      img[src*="/assets/loading-opaque.gif"] {
+        width: 3rem;
+        padding: 15rem;
+      }
     }
   }
 }
@@ -66,11 +71,12 @@
 /*BLUR*/
 .blur {
   img {
-    -webkit-transition: all 0.1s ease;
-    -moz-transition: all 0.1s ease;
-    -o-transition: all 0.1s ease;
-    -ms-transition: all 0.1s ease;
-    transition: all 0.1s ease;
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 
   // img:hover {
