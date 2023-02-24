@@ -18,25 +18,33 @@
   @include media-query($on-palm) {
     position: absolute;
     top: 1px;
-    right: $spacing-unit / 2;
     background-color: $white;
-    border: 1px solid $grey-color-light;
     border-radius: 3px;
     text-align: right;
+    right: 0;
     z-index: 100;
+
+    .trigger {
+      box-shadow: 0 0.005em 0.01em 0 rgba($black, 0.12),
+        0 2px 10px 0 rgba($black, 0.12) !important;
+      width: 100vw;
+      border-radius: 5px;
+      text-align: left;
+      right: 0;
+    }
 
     .menu-icon {
       display: block;
       float: right;
-      width: 2.25rem;
+      width: 3rem;
       height: 1.625rem;
       line-height: 0;
-      padding-top: .625rem;
+      padding-top: 0.625rem;
       text-align: center;
 
       > svg {
         width: 1.125rem;
-        height: .9375rem;
+        height: 0.9375rem;
 
         path {
           fill: $grey-color-dark;
@@ -51,18 +59,18 @@
 
     &:hover .trigger {
       display: block;
-      padding-bottom: .3125rem;
+      padding-bottom: 0.3125rem;
     }
 
     .page-link {
       display: block;
-      padding: .3125rem .625rem;
+      padding: 0.5rem 0.625rem;
 
       &:not(:last-child) {
         margin-right: 0;
       }
 
-      margin-left: 1.25rem;
+      margin-left: 1rem;
     }
   }
 }
