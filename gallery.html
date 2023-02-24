@@ -23,6 +23,7 @@ images:
 <!DOCTYPE html>
 <html lang="ru">
   {% include head.html %}
+  {% include lazyload.html %}
 
   <body id="gallery-body">
     <script type="application/ld+json">
@@ -57,7 +58,7 @@ images:
         <ul class="gallery">
           {% for image in page.images %}
           <div class="blur">
-            <img src="{{ image.image_path }}" alt="{{ image.title}}" />
+            <img data-echo="{{ image.image_path }}" src="/assets/loading-opaque.gif" alt="{{ image.title}}" />
             <span class="title">{{image.title}}</span>
           </div>
           {% endfor %}
