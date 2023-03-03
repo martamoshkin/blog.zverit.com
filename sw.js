@@ -32,7 +32,7 @@ const getCacheBustingUrl = (req) => {
   return url.href
 }
 
-const isNavigationReq = (req) => (req.mode === 'navigate' || (req.method === 'GET' && req.headers.get('accept').includes('text/html')))
+const isNavigationReq = (req) => (req.mode === 'navigate' || (req.method === 'GET' && req.headers.get('content-type').includes('text/html')))
 
 const endWithExtension = (req) => Boolean(new URL(req.url).pathname.match(/\.\w+$/))
 
