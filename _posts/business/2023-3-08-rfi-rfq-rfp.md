@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Различия RFI, RFQ и RFP"
-date: 2023-08-04 09:40:21 +0300
+date: 2023-03-08 09:40:21 +0300
 category: Business
 author: "Артамошкин Максим"
 image: "/assets/rfi-rfp-rfq.jpg"
