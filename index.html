@@ -3,47 +3,64 @@ layout: default
 ---
 
 <script type="application/ld+json">
-	{
-		"@context": "http://schema.org",
-		"@type": "WebSite",
-		"name": "Artamoshkin Maxim · Blog",
-		"url": "https://blog.zverit.com"
-	}
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Artamoshkin Maxim · Blog",
+    "url": "https://blog.zverit.com"
+  }
 </script>
 
 <div class="home">
-	<ul class="post-list">
-		{% for post in paginator.posts %}
-		{% if post.secondary != 'yes' %}
-		<li>
-			<h2>
-				<a class="post-link" title="{{post.title}}" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-			</h2>
+  <ul class="post-list">
+    {% for post in paginator.posts %} {% if post.secondary != 'yes' %}
+    <li>
+      <h2>
+        <a
+          class="post-link"
+          title="{{post.title}}"
+          href="{{ post.url | prepend: site.baseurl }}"
+          >{{ post.title }}</a
+        >
+      </h2>
 
-			<span class="post-meta">
-				<time>{{ post.date | date: "%-d %B %Y" }}</time>
+      <span class="post-meta">
+        <time>{{ post.date | date: "%-d %B %Y" }}</time>
 
-				{% if post.tags != empty %}
-				<span>|</span>
-				{% for tag in post.tags %} 
-				<a class="codinfox-tag-mark post-tag" href="/tag#{{ tag | slugify }}" title="{{ tag }}">{{ tag }}</a>
-				{% endfor %}
-				{% endif %} 
-			</span>
-			<div class="post-preview">
-				{{ post.content | split:"<!-- more -->" | first }}
-			</div>
-			<div class="post-more">
-				<a href="{{ post.url }}#disqus_thread" title="Комментарии"><i class="fa fa-comments"></i> Комментарии </a>&nbsp;
-				<a href="{{ post.url }}" title="Читать далее"><i class="fa fa-plus-circle" aria-hidden="true"></i> Читать далее </a>
-			</div>
-		</li>
-		{% endif %}
-		{% endfor %}
+		<span>  |  </span>
+        <span class="post-time" title="Время на прочтение">
+          {% capture words %} {{ post.content | number_of_words | minus: 250 }}
+          {% endcapture %}{% unless words contains "-" %} {{ words | plus: 250
+          | divided_by: 180 | append: " мин" }} {% endunless %}
+        </span>
+        {% if post.tags != empty %}
+        <span>|</span>
+        {% for tag in post.tags %}
+        <a
+          class="codinfox-tag-mark post-tag"
+          href="/tag#{{ tag | slugify }}"
+          title="{{ tag }}"
+          >{{ tag }}</a
+        >
+        {% endfor %} {% endif %}
+      </span>
+      <div class="post-preview">
+        {{ post.content | split:"<!-- more -->" | first }}
+      </div>
+      <div class="post-more">
+        <a href="{{ post.url }}#disqus_thread" title="Комментарии"
+          ><i class="fa fa-comments"></i> Комментарии </a
+        >&nbsp;
+        <a href="{{ post.url }}" title="Читать далее"
+          ><i class="fa fa-plus-circle" aria-hidden="true"></i> Читать далее
+        </a>
+      </div>
+    </li>
+    {% endif %} {% endfor %}
 
-		<!-- <li class="ads yandex_rtb"> -->
-			<!-- Yandex.RTB R-A-279962-2 -->
-			<!-- <div id="yandex_rtb_R-A-279962-2"></div>
+    <!-- <li class="ads yandex_rtb"> -->
+    <!-- Yandex.RTB R-A-279962-2 -->
+    <!-- <div id="yandex_rtb_R-A-279962-2"></div>
 			<script type="text/javascript">
 				(function(w, d, n, s, t) {
 					w[n] = w[n] || [];
@@ -62,51 +79,63 @@ layout: default
 					t.parentNode.insertBefore(s, t);
 				})(this, this.document, "yandexContextAsyncCallbacks");
 			</script> -->
-		<!-- </li> -->
-		{% if paginator.total_pages > 1 %}
-		<nav>
-			<ul class="pagination">
-				{% if paginator.previous_page %}
-				<li>
-					<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" ref="prev">
-						<span class="fa fa-angle-double-left"></span>
-					</a>
-				</li>
-				{% else %}
-				<li class="active-prev">
-					<span class="fa fa-angle-double-left disabled"></span>
-				</li>
-				{% endif %}
+    <!-- </li> -->
+    {% if paginator.total_pages > 1 %}
+    <nav>
+      <ul class="pagination">
+        {% if paginator.previous_page %}
+        <li>
+          <a
+            href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"
+            ref="prev"
+          >
+            <span class="fa fa-angle-double-left"></span>
+          </a>
+        </li>
+        {% else %}
+        <li class="active-prev">
+          <span class="fa fa-angle-double-left disabled"></span>
+        </li>
+        {% endif %} {% for page in (1..paginator.total_pages) %} {% if page ==
+        paginator.page %}
+        <li class="active">
+          <b>{{ page }}</b>
+        </li>
 
-				{% for page in (1..paginator.total_pages) %}
+        {% elsif page == 1 %}
+        <li>
+          <a
+            href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}"
+            title="{{page}}"
+            ref="prev"
+            >{{ page }}</a
+          >
+        </li>
+        {% else %}
+        <li>
+          <a
+            href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}"
+            title="{{page}}"
+            >{{ page }}</a
+          >
+        </li>
 
-				{% if page == paginator.page %}
-				<li class="active">
-					<b >{{ page }}</b>
-				</li>
-
-				{% elsif page == 1 %}
-				<li>
-					<a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}" title="{{page}}" ref="prev">{{ page }}</a>
-				</li>
-				{% else %}
-				<li>
-					<a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" title="{{page}}">{{ page }}</a>
-				</li>
-
-				{% endif %}
-				{% endfor %}
-				{% if paginator.next_page %}
-				<li>
-					<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" title="Next page" ref="next"><span class="fa fa-angle-double-right"></span></a>
-				</li>
-				{% else %}
-				<li class="active-next">
-					<span class="fa fa-angle-double-right disabled"></span>
-				</li>
-				{% endif %}
-			</ul>
-		</nav>
-		{% endif %}
-	</ul>
+        {% endif %} {% endfor %} {% if paginator.next_page %}
+        <li>
+          <a
+            href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"
+            title="Next page"
+            ref="next"
+            ><span class="fa fa-angle-double-right"></span
+          ></a>
+        </li>
+        {% else %}
+        <li class="active-next">
+          <span class="fa fa-angle-double-right disabled"></span>
+        </li>
+        {% endif %}
+      </ul>
+    </nav>
+    {% endif %}
+  </ul>
 </div>

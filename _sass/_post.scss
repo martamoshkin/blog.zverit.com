@@ -5,6 +5,13 @@ article {
   }
 }
 
+.post-time {
+  &::before{
+    content:"\f017";
+    font-family: FontAwesome;
+  }
+}
+
 .post-tag {
   display: inline-block;
   background: $post-tag-color;

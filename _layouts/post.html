@@ -4,10 +4,13 @@ layout: default
 
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <meta itemprop="keywords" content="{{ page.tags | join: ',' }}" />
+  <meta itemprop="wordCount" content="{{ page.content | number_of_words }}">
+
   <meta
     itemprop="description"
     content="{{ content | strip_html | truncatewords: 40 }}"
   />
+  
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
     <meta
@@ -19,13 +22,21 @@ layout: default
         <span class="post-meta-label">Категория: </span>
         <a class="category" href="/category#{{page.category | slugify}}"
           >{{page.category}}
-        </a></span
+        </a>
+        <span class="post-time ml-2" title="Время на прочтение">
+          {% capture words %} {{ page.content | number_of_words | minus: 250 }}
+          {% endcapture %}{% unless words contains "-" %} {{ words | plus: 250
+          | divided_by: 180 | append: " мин" }} {% endunless %}
+        </span></span
       >
+
       <span
         ><span class="post-meta-label">Дата: </span>
         <time
           datetime="{{ page.date | date_to_xmlschema }}"
           itemprop="datePublished"
+          content="{{ page.date | date_to_xmlschema }}"
+          title="{{ page.date | date: "%-d %B %Y в %H:%M" }}"
           >{{ page.date | date: "%-d %B %Y в %H:%M" }}</time
         ></span
       >
@@ -81,6 +92,7 @@ layout: default
     </span>
   </span>
   {% endif %}
+
 
   <div class="tags">
     Метки: {% for tag in page.tags %}
