@@ -25,7 +25,12 @@ layout: default
       </h2>
 
       <span class="post-meta">
-        <time>{{ post.date | date: "%-d %B %Y" }}</time>
+        <time
+        datetime="{{ post.date | date_to_xmlschema }}"
+        itemprop="datePublished"
+        content="{{ post.date | date_to_xmlschema }}"
+        title="{{ post.date | date: "%-d %B %Y в %H:%M" }}"
+        >{{ post.date | date: "%-d %B %Y" }}</time>
 
 		<span>  |  </span>
         <span class="post-time" title="Время на прочтение">
