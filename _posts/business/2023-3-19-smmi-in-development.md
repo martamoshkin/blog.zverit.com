@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "CMM/CMMI - оценка процесса разработки"
+title: "CMM/CMMI - модель оценки процесса разработки"
 date: 2023-03-19 18:21:21 +0300
 category: Business
 author: "Артамошкин Максим"
