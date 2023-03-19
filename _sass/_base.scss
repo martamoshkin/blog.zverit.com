@@ -227,3 +227,17 @@ pre {
 .ml-2 {
   margin-left: 1rem;
 }
+
+table, td, th {
+  border: 1px solid $gray-500;
+  border-radius: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td, th {
+ padding: 0.2rem;
+}
