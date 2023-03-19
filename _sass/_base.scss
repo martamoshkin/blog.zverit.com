@@ -228,14 +228,15 @@ pre {
   margin-left: 1rem;
 }
 
-table, td, th {
+ td, th {
   border: 1px solid $gray-500;
-  border-radius: 1rem;
 }
 
 table {
+  display: block;
   width: 100%;
   border-collapse: collapse;
+  overflow-x: scroll;
 }
 
 td, th {
