@@ -4,6 +4,7 @@ title: "DevOps, SRE и Platform Engineering"
 date: 2023-04-01 12:00:29 +0300
 category: Other
 author: "Artamoshkin Maxim"
+image_alt: "Artamoshkin Maxim Photo from Cryptography Museum "
 image: "/assets/computers.jpg"
 tags: [Инженерия]
 description: "15 различий между DevOps, SRE и Platform Engineering. В частности, он описывает различия в целях, истории, основных задачах, фокусе, области применения, автоматизации, ответственности, сотрудничестве, цели оптимизации, инструментах, работе с кодом, масштабируемости, мониторинге, доступности и сроках. Хотя эти роли могут использовать общие методы и инструменты, у каждой из них есть свои уникальные особенности и цели."
