@@ -29,4 +29,4 @@ description: "Перемотивация может привести к избы
 
 *“Каждый покойник на Эвересте когда-то был невероятно мотивированной личностью.”* Jason Statham
 {:.center}
-![Сравнение RFI, RFQ, RFP](https://blog.zverit.com/assets/motivation.jpg)
+![Зависимость эффективности от уровня мотивации](https://blog.zverit.com/assets/motivation.jpg)
