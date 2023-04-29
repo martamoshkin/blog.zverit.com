@@ -4,13 +4,13 @@ email: admin@zverit.com
 description: > # this means to ignore newlines until "baseurl:"
   Блог ИТ-руководителя, ex. fullstack-разработчика. 
   <br/>
-  Пишу об управлении, веб-разработке и в целом об ИТ.
+  Путь от разработки до топ-менеджмента. Пишу об управлении, веб-разработке и в целом об ИТ.
   <br/>
-  Angular, React, JS, CSS3, ASP.NET, C#
+  Менеджмент, Создание digital-команд.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://blog.zverit.com" # the base hostname & protocol for your site
-twitter_username: zverit 
-github_username:  Zverit
+# twitter_username: zverit 
+github_username:  martamoshkin
 permalink: pretty
 
 paginate: 5
