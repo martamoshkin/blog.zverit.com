@@ -20,9 +20,8 @@ layout: default
     <div class="post-meta">
       <span>
         <span class="post-meta-label">Категория: </span>
-        <a class="category" href="/category#{{page.category | slugify}}"
-          >{{page.category}}
-        </a>
+        <a class="category link" href="/category#{{page.category | slugify}}"
+          >{{page.category}}</a>
         <span class="post-time ml-2" title="Время на прочтение">
           {% capture words %} {{ page.content | number_of_words | minus: 250 }}
           {% endcapture %}{% unless words contains "-" %} {{ words | plus: 250
@@ -77,6 +76,8 @@ layout: default
   {% endif %}
 
   <div class="post-content" itemprop="articleBody">{{ content }}</div>
+  <div class="d-flex justify-space-between">
+
   {% if page.author %}
   <span
     class="signature"
@@ -84,16 +85,18 @@ layout: default
     itemscope
     itemtype="http://schema.org/Person"
   >
+
   <span class="label">Автор: </span>
     <span class="name" itemprop="name">
-      <a href="https://zverit.com" itemprop="url" rel="author">
+      <a class="link" href="https://zverit.com" itemprop="url" rel="author">
         {{ page.author }}
       </a>
     </span>
   </span>
   {% endif %}
 
-
+  <div class="telegram-link"><span class="label">Telegram-канал: </span><a href="https://t.me/dev_to_executive" target="_blank" class="link">Из Кода в Руководы</a></div>
+</div>
 
   <div class="tags">
    <span class="label">Метки: </span>{% for tag in page.tags %}
@@ -102,8 +105,6 @@ layout: default
     >
     {% endfor %}
   </div>
-  <div class="telegram-link"><span class="label">Telegram-канал: </span><a href="https://t.me/dev_to_executive" target="_blank">Из Кода в Руководы</a></div>
-
 
   <div class="post-content">
     <!-- Yandex.RTB R-A-279962-3 -->
