@@ -1,16 +1,17 @@
 article {
-  font-family: "Montserrat";
   .tags {
+    font-family: "Montserrat";
     padding: 0.3125rem 2.8125rem;
     font-size: 0.9375rem;
   }
 
   .telegram-link {
+    font-family: "Montserrat";
     padding: 0.3125rem 2.8125rem;
 
     > a {
       font-weight: 500;
-      text-decoration:solid;
+      text-decoration: solid;
     }
   }
 }
