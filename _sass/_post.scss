@@ -1,13 +1,23 @@
 article {
+  font-family: "Montserrat";
   .tags {
     padding: 0.3125rem 2.8125rem;
     font-size: 0.9375rem;
   }
+
+  .telegram-link {
+    padding: 0.3125rem 2.8125rem;
+
+    > a {
+      font-weight: 500;
+      text-decoration:solid;
+    }
+  }
 }
 
 .post-time {
-  &::before{
-    content:"\f017";
+  &::before {
+    content: "\f017";
     font-family: FontAwesome;
   }
 }
@@ -59,8 +69,8 @@ article {
 
   h3 {
     font-size: 1.625rem;
-    margin: 1.25rem 0 .625rem 0;
-    padding-bottom: .3125rem;
+    margin: 1.25rem 0 0.625rem 0;
+    padding-bottom: 0.3125rem;
     box-shadow: 0 -1px 0 rgba($black, 0.1) inset;
 
     @include media-query($on-laptop) {
@@ -71,7 +81,7 @@ article {
   h4 {
     font-size: 1.25rem;
 
-    margin: 1.25rem 0 .625rem 0;
+    margin: 1.25rem 0 0.625rem 0;
     padding-bottom: 5px;
     box-shadow: 0 -1px 0 rgba($black, 0.1) inset;
 

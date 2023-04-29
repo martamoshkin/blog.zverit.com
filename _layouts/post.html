@@ -84,7 +84,7 @@ layout: default
     itemscope
     itemtype="http://schema.org/Person"
   >
-    Автор:
+  <span class="label">Автор: </span>
     <span class="name" itemprop="name">
       <a href="https://zverit.com" itemprop="url" rel="author">
         {{ page.author }}
@@ -94,13 +94,16 @@ layout: default
   {% endif %}
 
 
+
   <div class="tags">
-    Метки: {% for tag in page.tags %}
+   <span class="label">Метки: </span>{% for tag in page.tags %}
     <a class="codinfox-tag-mark post-tag" href="/tag#{{ tag | slugify }}"
       >{{ tag }}</a
     >
     {% endfor %}
   </div>
+  <div class="telegram-link"><span class="label">Telegram-канал: </span><a href="https://t.me/dev_to_executive" target="_blank">Из Кода в Руководы</a></div>
+
 
   <div class="post-content">
     <!-- Yandex.RTB R-A-279962-3 -->
