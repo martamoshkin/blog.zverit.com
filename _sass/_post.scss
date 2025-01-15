@@ -7,7 +7,9 @@ article {
 
   .telegram-link {
     font-family: "Montserrat";
-    padding: 0.3125rem 2.8125rem;
+    padding: 0 2.8125rem;
+    text-align: left;
+    font-size: .9rem;
 
     > a {
       font-weight: 500;
