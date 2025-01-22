@@ -4,6 +4,7 @@ title: "​Фаворитизм на рабочем месте: как он ра
 date: 2025-01-22 12:00:33 +0300
 category: Management
 author: "Артамошкин Максим"
+image: "/assets/a_supervisor_praises_one_employee_the_other_4_people_are_upset_everyone_is_sitting_at_their_compute_djt6dwuqjee0bpg0qd9j_3.jpg"
 tags: [Управление, Лидерство]
 description: "Фаворитизм на рабочем месте — это не просто неприятность, а настоящий камень преткновения для многих команд"
 ---
