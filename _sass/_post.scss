@@ -63,7 +63,7 @@ article {
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
 
     @include media-query($on-laptop) {
       font-size: 1.75rem;
