@@ -4,7 +4,6 @@ title:  "Горы или долина: где ваша команда работ
 date:   2025-02-20 20:17:13 +0300
 category: Other
 author: "Artamoshkin Maxim"
-image: "/assets/mountain-valley.jpg"
 image_alt: ""
 image_height: "auto"
 tags: [Разработка, Управление, Команда]
