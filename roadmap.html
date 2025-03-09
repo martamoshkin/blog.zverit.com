@@ -2,8 +2,340 @@
 title: "CTO Roadmap · Артамошкин Максим"
 layout: default
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mindmap: Рост до CTO</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    .node {
+      cursor: pointer;
+    }
+    .node rect {
+      fill: #fff;
+      stroke: #333;
+      stroke-width: 2px;
+      rx: 5; /* Закругленные углы */
+      ry: 5;
+    }
+    .node text {
+      font-size: 14px;
+      font-weight: bold;
+      text-anchor: middle;
+      alignment-baseline: middle;
+    }
+    .link {
+      fill: none;
+      stroke: #ccc;
+      stroke-width: 2px;
+      transition: stroke 0.3s ease;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      max-width: 500px;
+      width: 90%;
+      animation: fadeIn 0.3s ease;
+    }
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+      animation: fadeIn 0.3s ease;
+    }
+    .modal-content {
+      max-width: 100%;
+    }
+    .close-button {
+      float: right;
+      cursor: pointer;
+      font-size: 20px;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    /* Адаптивность */
+    @media (max-width: 768px) {
+      .node text {
+        font-size: 12px;
+      }
+    }
+    @media (max-width: 480px) {
+      .node text {
+        font-size: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="mindmap"></div>
 
-<section id="roadmap" class="expo-section archive">
-	<h1 class="page-title">Roadmap CTO</h1>
-	
-</section>
+  <!-- Модальное окно -->
+  <div class="modal-overlay" id="modal-overlay"></div>
+  <div class="modal" id="modal">
+    <span class="close-button" id="close-button">&times;</span>
+    <div class="modal-content" id="modal-content"></div>
+  </div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+    // Данные для mindmap
+    const data = {
+      name: "Рост до CTO",
+      details: "Основные направления роста от руководителя разработки до CTO.",
+      links: ["https://example.com"],
+      children: [
+        {
+          name: "1. Стратегическое мышление",
+          details: "Развитие стратегического видения и планирования.",
+          links: ["https://example.com/strategy"],
+          children: [
+            {
+              name: "1.1. Видение и миссия компании",
+              details: "Понимание бизнес-целей и создание технологической стратегии.",
+              links: ["https://example.com/vision"],
+            },
+            {
+              name: "1.2. Долгосрочное планирование",
+              details: "Разработка дорожной карты на 3-5 лет вперед.",
+              links: ["https://example.com/planning"],
+            },
+            {
+              name: "1.3. Принятие решений на уровне C-level",
+              details: "Работа с данными и аналитикой для принятия решений.",
+              links: ["https://example.com/decision-making"],
+            },
+          ],
+        },
+        {
+          name: "2. Лидерство и управление",
+          details: "Управление командами и развитие лидерских качеств.",
+          links: ["https://example.com/leadership"],
+          children: [
+            {
+              name: "2.1. Управление командами",
+              details: "Построение и масштабирование команд.",
+              links: ["https://example.com/team-management"],
+            },
+            {
+              name: "2.2. Коммуникация",
+              details: "Эффективная коммуникация с CEO и другими руководителями.",
+              links: ["https://example.com/communication"],
+            },
+            {
+              name: "2.3. Культура и ценности",
+              details: "Формирование корпоративной культуры.",
+              links: ["https://example.com/culture"],
+            },
+          ],
+        },
+        {
+          name: "3. Техническая экспертиза",
+          details: "Глубокие знания технологий и управление продуктом.",
+          links: ["https://example.com/tech-expertise"],
+          children: [
+            {
+              name: "3.1. Глубокие знания технологий",
+              details: "Понимание современных технологических стеков.",
+              links: ["https://example.com/tech-stacks"],
+            },
+            {
+              name: "3.2. Управление продуктом",
+              details: "Работа с продукт-менеджерами и аналитиками.",
+              links: ["https://example.com/product-management"],
+            },
+            {
+              name: "3.3. Инновации и R&D",
+              details: "Исследование новых технологий и подходов.",
+              links: ["https://example.com/innovation"],
+            },
+          ],
+        },
+        {
+          name: "4. Бизнес-навыки",
+          details: "Финансовое управление и партнерства.",
+          links: ["https://example.com/business-skills"],
+          children: [
+            {
+              name: "4.1. Финансовое управление",
+              details: "Понимание финансовой отчетности и управление бюджетом.",
+              links: ["https://example.com/financial-management"],
+            },
+            {
+              name: "4.2. Партнерства и экосистемы",
+              details: "Построение отношений с вендорами и партнерами.",
+              links: ["https://example.com/partnerships"],
+            },
+          ],
+        },
+      ],
+    };
+
+    // Настройки для mindmap
+    const width = window.innerWidth * 0.9; // Адаптивная ширина
+    const height = window.innerHeight * 0.8; // Адаптивная высота
+    const margin = { top: 50, right: 120, bottom: 50, left: 120 };
+
+    const svg = d3
+      .select("#mindmap")
+      .append("svg")
+      .attr("width", width)
+      .attr("height", height)
+      .append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
+
+    // Иерархическая структура данных
+    const root = d3.hierarchy(data);
+    const tree = d3.tree().size([height - margin.top - margin.bottom, width - margin.left - margin.right]);
+
+    tree(root);
+
+    // Создание связей
+    const links = svg
+      .selectAll(".link")
+      .data(root.links())
+      .enter()
+      .append("path")
+      .attr("class", "link")
+      .attr("d", d3.linkVertical().x((d) => d.y).y((d) => d.x));
+
+    // Создание узлов
+    const nodes = svg
+      .selectAll(".node")
+      .data(root.descendants())
+      .enter()
+      .append("g")
+      .attr("class", "node")
+      .attr("transform", (d) => `translate(${d.y},${d.x})`);
+
+    // Прямоугольники для узлов (динамический размер)
+    nodes
+      .append("rect")
+      .attr("x", -60) // Начальная позиция (будет изменена)
+      .attr("y", -20) // Начальная позиция (будет изменена)
+      .attr("rx", 5) // Закругленные углы
+      .attr("ry", 5)
+      .attr("width", (d) => d.data.name.length * 8 + 20) // Динамическая ширина
+      .attr("height", 40) // Фиксированная высота
+      .attr("x", (d) => -(d.data.name.length * 8 + 20) / 2) // Центрирование по горизонтали
+      .attr("y", -20); // Центрирование по вертикали
+
+    // Текст для узлов
+    nodes
+      .append("text")
+      .attr("dy", "0.31em")
+      .attr("text-anchor", "middle")
+      .text((d) => d.data.name);
+
+    // Модальное окно
+    const modal = document.getElementById("modal");
+    const modalOverlay = document.getElementById("modal-overlay");
+    const modalContent = document.getElementById("modal-content");
+    const closeButton = document.getElementById("close-button");
+
+    // Обработчик клика на узлы
+    nodes.on("click", (event, d) => {
+      const details = d.data.details || "Нет подробностей";
+      const links = d.data.links
+        ? d.data.links.map((link) => `<a href="${link}" target="_blank">${link}</a>`).join("<br>")
+        : "Нет ссылок";
+      modalContent.innerHTML = `
+        <strong>${d.data.name}</strong><br>
+        <p>${details}</p>
+        <p><strong>Ссылки:</strong><br>${links}</p>
+      `;
+      modal.style.display = "block";
+      modalOverlay.style.display = "block";
+    });
+
+    // Закрытие модального окна
+    closeButton.onclick = () => {
+      modal.style.display = "none";
+      modalOverlay.style.display = "none";
+    };
+
+    modalOverlay.onclick = () => {
+      modal.style.display = "none";
+      modalOverlay.style.display = "none";
+    };
+
+    // Анимация раскрытия/сворачивания узлов
+    nodes.on("click", (event, d) => {
+      if (d.children) {
+        d._children = d.children;
+        d.children = null;
+      } else {
+        d.children = d._children;
+        d._children = null;
+      }
+      update(d);
+    });
+
+    function update(source) {
+      const duration = 750; // Длительность анимации
+
+      // Пересчитываем позиции узлов
+      tree(root);
+      const nodes = root.descendants();
+      const links = root.links();
+
+      // Анимация для узлов
+      const nodeUpdate = nodes
+        .transition()
+        .duration(duration)
+        .attr("transform", (d) => `translate(${d.y},${d.x})`);
+
+      // Анимация для связей
+      links
+        .transition()
+        .duration(duration)
+        .attr("d", d3.linkVertical().x((d) => d.y).y((d) => d.x));
+    }
+
+    // Адаптивность при изменении размера окна
+    window.addEventListener("resize", () => {
+      const newWidth = window.innerWidth * 0.9;
+      const newHeight = window.innerHeight * 0.8;
+
+      svg
+        .attr("width", newWidth)
+        .attr("height", newHeight);
+
+      tree.size([newHeight - margin.top - margin.bottom, newWidth - margin.left - margin.right]);
+      tree(root);
+
+      // Обновляем позиции узлов и связей
+      svg.selectAll(".link")
+        .attr("d", d3.linkVertical().x((d) => d.y).y((d) => d.x));
+
+      svg.selectAll(".node")
+        .attr("transform", (d) => `translate(${d.y},${d.x})`);
+    });
+  </script>
+</body>
+</html>
