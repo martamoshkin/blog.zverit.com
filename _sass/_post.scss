@@ -9,7 +9,7 @@ article {
     font-family: "Montserrat";
     padding: 0 2.8125rem;
     text-align: right;
-    font-size: .9rem;
+    font-size: 1rem;
 
     > a {
       font-weight: 500;
@@ -62,16 +62,23 @@ article {
     border-bottom: $post-links-border-color dashed 1px;
   }
 
+  h1 {
+    font-size: 2rem;
+  }
+
   h2 {
-    font-size: 1.8rem;
+    font-size: 1.75rem;
+    box-shadow: 0 -1px 0 rgba($black, 0.1) inset;
+    margin-left: .125rem;
+    margin-top: 1.5rem;
 
     @include media-query($on-laptop) {
-      font-size: 1.75rem;
+      font-size: 1.625rem;
     }
   }
 
   h3 {
-    font-size: 1.625rem;
+    font-size: 1.5rem;
     margin: 1.25rem 0 0.625rem 0;
     padding-bottom: 0.3125rem;
     box-shadow: 0 -1px 0 rgba($black, 0.1) inset;
@@ -92,6 +99,7 @@ article {
       font-size: 1.125rem;
     }
   }
+
 }
 
 .post-list {
